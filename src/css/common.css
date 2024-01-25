@@ -1,6 +1,6 @@
 /* base styles */
 
-@import 'node_modules/modern-normalize/modern-normalize.css';
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
 
  @font-face {
 	font-family: 'DM Sans'; 
@@ -23,3 +23,41 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+
+  @media screen and (max-width: 480px) {
+    background-color: #F6F6F6;/*according to Figma; Masha*/
+  }
+}
