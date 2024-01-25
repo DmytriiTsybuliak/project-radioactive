@@ -9,7 +9,6 @@
 @import url('./section.css');
 @import url('./fav_hero.css');
 @import url('./fav_list.css');
-@import "@fontsource/dm-sans";
 
 :root {
   font-family: "DM Sans";
