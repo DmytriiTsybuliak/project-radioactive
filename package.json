@@ -15,7 +15,6 @@
   "author": "Dmytrii Tsybuliak <tonistark1997@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@fontsource/dm-sans": "^5.0.18",
     "modern-normalize": "^2.0.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
