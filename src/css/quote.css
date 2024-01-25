@@ -1,0 +1,83 @@
+
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+Reset styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 767.98px) { 
+    
+   .quote-of-the-day{
+    width: auto;
+    height: 272px;
+    border-radius: 30px;
+    background: #7E847F;
+   }
+
+   .font-image { 
+    background-image: url(../img/quote/mobile-background-image.png);
+    width: auto;
+    height: 272px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   }
+   
+   .top-container {
+    display: flex;
+   }
+
+   .icon-before {
+       display: inline-block;
+       width: 34px;
+       height: 32px;
+       background-image: url('../img/quote/icon-before-text.svg');
+       background-size: cover;
+   }
+
+   .icon-after { 
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url('../img/quote/icon-after-text.svg');
+    background-size: cover;
+   }
+
+}
+
