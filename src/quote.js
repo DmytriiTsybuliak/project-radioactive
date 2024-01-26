@@ -1,7 +1,5 @@
-import 'modern-normalize';
-import './css/quote.css';
 import axios from 'axios';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const quoteBlock = document.querySelector('.quote-container');
 const date = new Date().toLocaleDateString();
@@ -17,7 +15,7 @@ async function getQuote() {
       .then(response => response.data);
     return response;
   } catch (error) {
-    Notify.failure(`Something went wrong, try again`);
+    // Notify.failure(`Something went wrong, try again`);
   }
 }
 
