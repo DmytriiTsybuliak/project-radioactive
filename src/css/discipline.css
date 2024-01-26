@@ -1,0 +1,52 @@
+
+.div-for-discipline {
+    width: calc(100% - 40px);
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #1B1B1B;
+   
+}
+
+.discipline-for-daily {
+    color: rgba(246, 246, 246, 0.60);
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-left: 70px;
+    margin-top: 2px;
+}
+
+.recomendecation-for-discipline {
+    margin-right: 20px;
+    flex-shrink: 0;
+    color: rgba(246, 246, 246, 0.60);
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-left: 70px;
+    padding-bottom: 40px;
+}
+
+.discipline-time {
+    color: #F6F6F6;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    padding-top: 40px;
+    padding-left: 70px;
+    margin-bottom: 2px;
+    
+}
+.img-disc {
+    border-radius: 30px;
+}
+.sect-for-min {
+margin-bottom: 20px;
+}
