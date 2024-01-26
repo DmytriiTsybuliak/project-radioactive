@@ -25,12 +25,10 @@ function getAndRenderQuote() {
     localStorage.getItem('savedDate') === date
   ) {
     //* Рисуем разметку из localStotrage
-
     const { author, quote } = JSON.parse(localStorage.getItem('quote'));
     quoteBlock.innerHTML = createMarkup(author, quote);
   } else {
     //* Рисуем разметку из backend'a
-
     getQuote()
       .then(({ author, quote }) => {
         const localStorageQuote = {
