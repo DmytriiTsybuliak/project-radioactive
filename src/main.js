@@ -1,1 +1,0 @@
-import '../src/js/fav_quote';
