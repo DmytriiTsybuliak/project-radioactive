@@ -7,11 +7,6 @@
   src: url('../fonts/DMSans-Italic-VariableFont_opsz,wght.ttf');
 }
 
-/* @font-face {
-	font-family: 'DM Sans Italic'; 
-	src: url('../fonts/DMSans-Italic-VariableFont_opsz,wght.ttf'); 
-} */
-
 /* root */
 :root {
   --main-cl: #050505;
