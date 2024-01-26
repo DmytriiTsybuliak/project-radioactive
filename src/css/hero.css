@@ -113,3 +113,29 @@
       font-size: 18px;
     }
   }
+/* ================DESKTOP================= */
+
+@media screen and (min-width: 1440px) {
+    .container-hero {
+      width: 1408px;
+    }
+    .background-container {
+      width: 704px;
+      background-image: url(../img/hero/hero-desktop.png);
+      padding: 52px 58px;
+    }
+  
+    .hero-container-text {
+      max-height: 884px;
+      width: 704px;
+    }
+  
+    .hero-text {
+      width: 528px;
+      font-size: 18px;
+    }
+  
+    .hero-text-list {
+      width: 196px;
+    }
+  }
