@@ -1,0 +1,52 @@
+/* Для мобильных устройств */
+.pop-up-exercise {
+    width: 100%;
+    max-width: 716px;
+}
+
+/* Для планшетов */
+@media (min-width: 768px) {
+    .pop-up-exercise {
+        width: 716px;
+    }
+}
+
+/* Для десктопов */
+@media (min-width: 1280px) {
+    .pop-up-exercise {
+        width: 732px;
+    }
+}
+
+
+.pop-up-exercise {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-exercise-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.pop-up-exercise-details {
+    display: flex;
+}
+
+.exercise-info {
+    margin-left: 20px;
+}
+
+.pop-up-exercise img {
+    max-width: 270px;
+    max-height: 259px;
+}
