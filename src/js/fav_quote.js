@@ -54,8 +54,10 @@ function createMarkup(author, quote) {
               <span class='quote-icon_after'></span>
             </div>
 
-            <p class='quote-text'>${quote}</p>
-            <p class='quote-author'>${author}</p>
+           <div class='text-containet'>
+              <p class='quote-text'>${quote}</p>
+              <p class='quote-author'>${author}</p>
+           </div>
       `;
 }
 
