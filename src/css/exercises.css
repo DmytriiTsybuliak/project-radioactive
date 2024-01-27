@@ -256,6 +256,12 @@
   padding: 12px 14px;
   background-color: #f6f6f6;
 }
+
+.exercises-search-icon {
+  stroke: #1b1b1b;
+  fill: none;
+}
+
 .exercises-list-page2 {
   display: flex;
   flex-direction: column;
@@ -268,11 +274,26 @@
   width: 295px;
   height: 165px;
   display: flex;
+  flex-direction: column;
   padding: 16px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid rgba(246, 246, 246, 0.3);
   background-color: #ffffff;
+}
+
+.exercises-card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.exercises-kind-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: baseline;
 }
 
 .exercises-card-kind {
@@ -292,11 +313,67 @@
 }
 
 .exercises-card-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.exercises-rating-value {
   color: #1b1b1b;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.exercises-start-button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border: none;
+  width: 54px;
+  height: 18px;
+  background-color: transparent;
+  color: #1b1b1b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.285;
+  padding: 0;
+}
+
+.exercises-start-icon {
+  stroke: #1b1b1b;
+}
+
+.exercises-card-namewrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-bottom: 18px;
+}
+
+.exercises-card-exname {
+  color: #1b1b1b;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  padding: 2px 0;
+}
+
+.exercises-info-data {
+  display: inline-block;
+  color: #1b1b1b;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.exercises-data-name {
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .exercises-bottom-buttons {
