@@ -1,7 +1,5 @@
 footer {
     margin-bottom:20px;
-    height: 471px;
-    /* width: 335px; */
 }
 .footer--inside {
     padding: 40px 20px 20px 20px;
@@ -10,6 +8,8 @@ footer {
     background-size: cover; 
     background-color:rgba(27, 27, 27, 0.7);
     border-radius: 30px;
+    width: 335px;
+    height: 471px;
 }
 .footer--social.logo {
     margin-bottom: 9px;
@@ -93,23 +93,59 @@ footer {
     font-size: 12px;
     line-height: 0.75em;
     color: #F6F6F6;
-}
-.footer--signature.top {
-    margin-bottom: 10px;
+    opacity: 90%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    footer {
+        margin-bottom: 16px;
+    }
     .footer--inside {
         background-image: url(../img/footer/footer-tablet.jpg);
         width: 736px;
+        height:576px;
+        padding: 64px 41px 32px 48px;
+    }
+    .footer--social.logo {
+        margin-bottom: 30px;
+    }
+    .footer--social.item svg {
+        width: 44px;
+        height: 44px;
     }
     .footer--flex {
         display: flex;
         flex-direction: row; 
+        gap: 139px;
     }
     .footer--social.item svg{
         width: 44px;
         height: 44px;
+    }
+    .footer--text {
+        font-size: 54px;
+        margin-bottom: 32px;
+    }
+    .footer--form p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .footer--form input {
+        height: 48px;
+        margin-bottom: 20px;
+    }
+
+    .footer--form input::placeholder {
+        font-size: 16px;
+    }
+    .footer--form button {
+        height: 48px;
+        /* margin-bottom: 120px; */
+    }
+    .footer--signature ul {
+        display: flex;
+        gap: 32px;
+        justify-content: center;
     }
 }
 
@@ -122,14 +158,30 @@ footer {
 }
 .footer--flex{
     display: flex;
+    margin-bottom: 160px;
 }
 .footer--right-side {
     display: flex;
+}
+.footer--social {
+    /* margin-right: 156px; */
+}
+.footer--social.logo {
+    margin-bottom: 30px;
+}
+.footer--text {
+    /* margin-right: 160px; */
+    font-size: 64px;
 }
 .footer--form input {
     margin-bottom: 20px;
 }
 .footer--form button {
     margin-bottom: 0;
+}
+.footer--signature ul {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
 }
 }
