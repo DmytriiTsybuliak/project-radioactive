@@ -34,7 +34,7 @@
   padding: 4px 10px;
 }
 
-.hero-teg-list {
+.hero-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -83,7 +83,7 @@
     padding: 64px 20px;
   }
 
-  .hero-teg-list {
+  .hero-tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
