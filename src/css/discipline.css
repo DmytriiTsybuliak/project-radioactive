@@ -1,6 +1,4 @@
-
 .div-for-discipline {
-    width: calc(100% - 40px);
     flex-shrink: 0;
     border-radius: 30px;
     background: #1B1B1B;
@@ -15,7 +13,7 @@
     font-weight: 400;
     line-height: 18px;
     padding-left: 70px;
-    margin-top: 2px;
+    margin-bottom: 14px;
 }
 
 .recomendecation-for-discipline {
@@ -49,4 +47,19 @@
 }
 .sect-for-min {
 margin-bottom: 20px;
+}
+
+
+
+
+
+@media screen and (min-width: 32і0px) and (max-width: 767.98px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+
 }
