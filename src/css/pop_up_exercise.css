@@ -1,18 +1,21 @@
 /* Для мобильных устройств */
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
 .pop-up-exercise {
     width: 100%;
     max-width: 716px;
 }
 
+}
+
 /* Для планшетов */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
     .pop-up-exercise {
         width: 716px;
     }
 }
 
 /* Для десктопов */
-@media (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
     .pop-up-exercise {
         width: 732px;
     }
@@ -20,7 +23,7 @@
 
 
 .pop-up-exercise {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
@@ -31,9 +34,9 @@
 }
 
 .pop-up-exercise-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    background-color: #F6F6F6;
+    /* padding: 20px; */
+    border-radius: 20px;
 }
 
 .pop-up-exercise-details {
@@ -47,4 +50,8 @@
 .pop-up-exercise img {
     max-width: 270px;
     max-height: 259px;
+}
+
+.info-item {
+    display: flex;
 }
