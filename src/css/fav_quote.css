@@ -1,6 +1,7 @@
 /* @import './common.css' */
 
 .loader {
+  display: block;
   width: 200px;
   height: 140px;
   background: #979794;
@@ -8,8 +9,9 @@
   position: relative;
   border-radius: 8px;
   perspective: 1000px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .loader:before {
@@ -161,7 +163,7 @@
   height: 23px;
   background-image: url('../img/quote/icon-before-text.svg');
   background-size: cover;
-  margin-top: 42px;
+  margin-top: 40px;
 }
 
 .quote-icon_after {
@@ -170,26 +172,24 @@
   height: 25px;
   background-image: url('../img/quote/icon-after-text.svg');
   background-size: cover;
-  margin-top: 42px;
-  margin-left: 29px;
+  margin-top: 40px;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 375px) {
   .block {
     width: 335px;
   }
-.quote-icon_before {
-  width: 34px;
-  height: 32px;
-}
+  .quote-icon_before {
+    width: 34px;
+    height: 32px;
+  }
 
-.quote-icon_after {
-  width: 28px;
-  height: 28px;
-  margin-left: 61px;
-
-}
-  
+  .quote-icon_after {
+    width: 28px;
+    height: 28px;
+    margin-left: 61px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -215,8 +215,8 @@
   .fav-quote-section {
     display: flex;
     max-width: 1408px;
-  }
-  /* .container {
+    /* }
+  .container {
     flex-direction: row;
   }
   .block {
@@ -225,13 +225,14 @@
   }
   .sport-container {
     min-width: 704px;
-  }
+  } */
 
-  .quote-img {
-    background-image: url(../img/desktop_quote_img.png);
-  }
-
+    .quote-img {
+      background-image: url(../img/fav-quote/fav-quote-desktop-image.png);
+    }
+    /* 
   .quote-container.block {
   min-width: 704px;
 } */
+  }
 }

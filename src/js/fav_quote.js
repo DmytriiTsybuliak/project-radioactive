@@ -7,7 +7,6 @@ const date = new Date().toLocaleDateString();
 async function getQuote() {
   quoteBlock.innerHTML = `
         <span class="loader"></span>
-        <span>We're looking for a quote for you...</span>
     `;
   try {
     const response = await axios
