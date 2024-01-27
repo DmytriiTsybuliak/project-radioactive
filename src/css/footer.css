@@ -8,7 +8,7 @@ footer {
     background-size: cover; 
     background-color:rgba(27, 27, 27, 0.7);
     border-radius: 30px;
-    width: 335px;
+    width: 375px;
     height: 471px;
 }
 .footer--social.logo {
@@ -96,14 +96,14 @@ footer {
     opacity: 90%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
     footer {
         margin-bottom: 16px;
     }
     .footer--inside {
         background-image: url(../img/footer/footer-tablet.jpg);
-        width: 736px;
-        height:576px;
+        width: 768px;
+        height: 576px;
         padding: 64px 41px 32px 48px;
     }
     .footer--social.logo {
@@ -149,7 +149,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
 .footer--inside {
     background-image: url(../img/footer/footer-desktop.jpg);
     width: 1408px;
