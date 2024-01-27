@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const quoteBlock = document.querySelector('.quote-container');
 const date = new Date().toLocaleDateString();
@@ -7,7 +7,7 @@ const date = new Date().toLocaleDateString();
 async function getQuote() {
   quoteBlock.innerHTML = `
         <span class="loader"></span>
-        <span>We're looking a quote for you...</span>
+        <span>We're looking for a quote for you...</span>
     `;
   try {
     const response = await axios
@@ -15,7 +15,7 @@ async function getQuote() {
       .then(response => response.data);
     return response;
   } catch (error) {
-    // Notify.failure(`Something went wrong, try again`);
+    Notify.failure(`Something went wrong, try again`);
   }
 }
 
@@ -25,10 +25,12 @@ function getAndRenderQuote() {
     localStorage.getItem('savedDate') === date
   ) {
     //* Рисуем разметку из localStotrage
+
     const { author, quote } = JSON.parse(localStorage.getItem('quote'));
     quoteBlock.innerHTML = createMarkup(author, quote);
   } else {
     //* Рисуем разметку из backend'a
+
     getQuote()
       .then(({ author, quote }) => {
         const localStorageQuote = {
@@ -47,9 +49,14 @@ function getAndRenderQuote() {
 
 function createMarkup(author, quote) {
   return `
-            <h2>Quote of the day</h2>
-            <p><span>${quote}</span></p>
-            <p>${author}</p>
+            <div class='title-container'>
+              <span class='quote-icon_before'></span>
+              <h2 class="quote-title">Quote of the day</h2>
+              <span class='quote-icon_after'></span>
+            </div>
+
+            <p class='quote-text'>${quote}</p>
+            <p class='quote-author'>${author}</p>
       `;
 }
 
