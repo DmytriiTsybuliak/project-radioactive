@@ -1,25 +1,81 @@
 /* base styles */
 
 @import 'node_modules/modern-normalize/modern-normalize.css';
-
- @font-face {
+@font-face {
 	font-family: 'DM Sans'; 
-	src: url(/src/fonts/DMSans-VariableFont_opsz\,wght.ttf); 
+  font-style: normal;
+	src: url('../fonts/DMSans-VariableFont_opsz\,wght.ttf'); 
 }
 
+@font-face {
+	font-family: 'DM Sans'; 
+  font-style: italic;
+  src: url('../fonts/DMSans-Italic-VariableFont_opsz,wght.ttf');
+}
+
+
+/* root */
 :root {
+  --main-cl: #050505;
+  --back-cl: #f8f8f8;
+  --lt-green: #9bb537;
+  --inactive-el-cl: rgba(5, 5, 5, 0.5);
+  --inactive-list-cl: rgba(5, 5, 5, 0.3);
+  --border-cl: rgba(5, 5, 5, 0.2);
+  --star-cl: #eea10c;
+  --trans-hv: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --white: #ffffff;
+  --dark-theme-bgc: #161616;
+}
+
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: unset;
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* body */
+body {
   font-family: 'DM Sans';
   font-size: 16px;
   line-height: 24px; 
   font-weight: 400;
-  
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
+  color: var(--main-cl);
+  background: var(--back-cl);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
