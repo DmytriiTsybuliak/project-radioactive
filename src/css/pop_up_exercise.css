@@ -41,6 +41,7 @@
 
 .pop-up-exercise-details {
     display: flex;
+    flex-direction: column;
 }
 
 .exercise-info {
