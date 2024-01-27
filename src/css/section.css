@@ -1,9 +1,6 @@
 .section {
-    /* padding-top: 20px; Outer gap is always a margin; Masha */
     margin-top: 20px;
-
-    @media screen and (min-width: 480px) {
-    /* padding-top: 16px; */
+    @media screen and (min-width: 375px) {
     margin-top: 16px;
     }
 }
