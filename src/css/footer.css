@@ -11,6 +11,9 @@ footer {
     width: 375px;
     height: 471px;
 }
+.footer--flex {
+    margin-bottom: 50px;
+}
 .footer--social.logo {
     margin-bottom: 9px;
 }
@@ -19,25 +22,24 @@ footer {
     margin-bottom: 40px;
 }
 .footer--social.item {
-    gap:12px
+    gap:12px;
 }
 .footer--social.item svg {
     width: 40px;
     height: 40px;
-    color:rgba(246, 246, 246, 0.2);
+    fill:rgba(246, 246, 246, 0.2);
     border-radius: 10px;
     border: 1px solid rgba(246, 246, 246, 0.2);
     padding: 8px;
 }
 .footer--social.item svg:hover,
 .footer--social.item svg:focus {
-    color:rgba(95, 101, 96, 0.2);
+    fill:rgba(95, 101, 96, 0.2);
     border:1px solid rgba(95, 101, 96, 0.2);
 }
 .footer--social.item {
     margin-right: 12px;
 }
-
 .footer--text {
     font-family: "DM Sans";
     font-weight: 400;
@@ -82,13 +84,11 @@ footer {
     border-color: transparent;
     background-color:#7E847F ;
     color: #F6F6F6;
-    margin-bottom: 60px;
 }
 .footer--form button:hover,
 .footer--form button:focus {
     background-color:#5F6560;
 }
-
 .footer--signature {
     font-size: 12px;
     line-height: 0.75em;
@@ -117,6 +117,7 @@ footer {
         display: flex;
         flex-direction: row; 
         gap: 139px;
+        margin-bottom: 100px;
     }
     .footer--social.item svg{
         width: 44px;
@@ -140,7 +141,6 @@ footer {
     }
     .footer--form button {
         height: 48px;
-        /* margin-bottom: 120px; */
     }
     .footer--signature ul {
         display: flex;
@@ -158,23 +158,29 @@ footer {
 }
 .footer--flex{
     display: flex;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
 }
 .footer--right-side {
     display: flex;
 }
-.footer--social {
-    /* margin-right: 156px; */
-}
+
 .footer--social.logo {
     margin-bottom: 30px;
+    width: 150px;
 }
 .footer--text {
-    /* margin-right: 160px; */
     font-size: 64px;
+    margin-right: 160px;
+    margin-left: 156px;
+    margin-bottom: 0;
+}
+.footer--form p {
+    font-size: 18px;
 }
 .footer--form input {
     margin-bottom: 20px;
+    width: 352px;
+    height: 48px;
 }
 .footer--form button {
     margin-bottom: 0;
