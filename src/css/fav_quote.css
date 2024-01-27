@@ -73,7 +73,7 @@
 } */
 .fav-quote-section {
   margin: 0 auto;
-  margin: 0 15px;
+  padding: 0 15px;
 }
 .block {
   min-width: 280px;
@@ -116,7 +116,7 @@
   height: auto;
   color: rgba(246, 246, 246, 0.6);
   font-family: 'DM Sans';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.3;
   margin-left: 46px;
@@ -193,24 +193,30 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .block {
+  .block {
     width: 368px;
     height: 302px;
   }
   .quote-container {
-    max-width: 736px;
+    width: 736px;
     margin-bottom: 16px;
   }
   .quote-img {
-    background-image: url(../img/tablet_quote_img.png);
-  } */
+    background-image: url(../img/fav-quote/fav-quote-tablet-image.png);
+  }
+  .sport-container {
+    display: flex;
+    max-width: 736px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  /* .fav-quote-section {
+  .fav-quote-section {
     display: flex;
+    max-width: 1408px;
   }
-  .container {
+  /* .container {
     flex-direction: row;
   }
   .block {
