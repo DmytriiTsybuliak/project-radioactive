@@ -49,29 +49,18 @@
 .sect-for-min {
 margin-bottom: 20px;
 }
-.li-disc {
-    display: flex;
-    align-items: center;
+
+
+
+
+
+@media screen and (min-width: 32і0px) and (max-width: 767.98px) {
+
 }
-
-
-
-
-/* MOBILE */
-@media screen and (min-width: 320px) and (max-width: 767.98px) {
- 
-    
-    
-}
-
-
-
-/* TABLET */
-
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-
+    
 }
-/* Desktop */
+
 @media screen and (min-width: 1200px) {
 
 }
