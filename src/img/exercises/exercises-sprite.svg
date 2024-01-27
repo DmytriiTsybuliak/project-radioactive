@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
     <defs>
         <symbol id="icon-arrow" viewBox="0 0 32 32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.971" d="m15 28 13-13m0 0L15 2m13 13H2" /></symbol>
+        <symbol id="icon-search" viewBox="0 0 32 32">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M14.667 25.333c5.891 0 10.667-4.776 10.667-10.667S20.558 3.999 14.667 3.999 4 8.775 4 14.666s4.776 10.667 10.667 10.667zM28 28l-5.8-5.8" />
+        </symbol>
         <symbol id="icon-icon" viewBox="0 0 32 32">
             <path fill="#7e847f" d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16z" style="fill: var(--color1, #7e847f);" />
             <path
@@ -9,10 +12,7 @@
                 style="fill: var(--color2, #f6f6f6);"
             />
         </symbol>
-        <symbol id="icon-search" viewBox="0 0 32 32">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M14.667 25.333c5.891 0 10.667-4.776 10.667-10.667S20.558 3.999 14.667 3.999 4 8.775 4 14.666s4.776 10.667 10.667 10.667zM28 28l-5.8-5.8" />
-        </symbol>
-        <symbol id="icon-star" viewBox="0 0 34 32">
+        <symbol id="icon-star" viewBox="0 0 32 32">
             <path
                 fill="#eea10c"
                 d="M14.89 2.282c.737-2.268 3.945-2.268 4.682 0l2.08 6.402a2.463 2.463 0 0 0 2.341 1.701h6.731c2.384 0 3.376 3.051 1.447 4.453l-5.446 3.957a2.46 2.46 0 0 0-.894 2.752l2.08 6.402c.737 2.268-1.859 4.154-3.788 2.752l-5.446-3.957a2.461 2.461 0 0 0-2.894 0l-5.446 3.957c-1.929 1.402-4.525-.484-3.788-2.752l2.08-6.402a2.46 2.46 0 0 0-.894-2.752l-5.446-3.957c-1.929-1.402-.938-4.453 1.447-4.453h6.731a2.462 2.462 0 0 0 2.341-1.701l2.08-6.402z"
