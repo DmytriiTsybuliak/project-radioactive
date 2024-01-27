@@ -1,11 +1,15 @@
 <section class="sect-for-min section">
-    <img class="img-disc container" 
-    srcset="
-    ./img/discipline/disc-mobile.jpg 335w,
-    ./img/discipline/disc-tabl.jpg 736w,
-    ./img/discipline/disc-desk.jpg 704w"
-    sizes="(min-width: 1200px) 335px, (min-width:768px) 736px, (min-width:320px) 704px"
-    src="../img/discipline/disc-mobile.jpg" alt="">
+
+
+    <picture class="img-disc container">
+            <source srcset="./src/img/discipline/dis_mob_1x.png 320w, ./src/img/discipline/dis_mob_2x.png 640w" media="(max-width: 767px)"
+              sizes="(min-width: 320px) 320px, 100vw">
+            <source srcset="./src/img/discipline/dis_tab_1x.png 768w, ./src/img/discipline/dis_tab_2x.png 1536w"
+              media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+            <source srcset="./src/img/discipline/dis_desktop_1x.png 1200w, ./src/img/discipline/dis_desktop_2x.png 2400w"
+              media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+            <img src="./src/img/discipline/dis_mob_1x.png" alt="gallery picture" title="gallery picture">
+    </picture>
     <div class="div-for-discipline container">
         <ul> <!-- Wrap the list items in a <ul> element -->
             <li class="li-disc">
