@@ -140,6 +140,7 @@
   }
 }
 
+
 /* ================Media for retina (@x2 images)================ */
 @media screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px),
