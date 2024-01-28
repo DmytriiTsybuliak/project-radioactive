@@ -1,6 +1,6 @@
 /* ================Mobile================ */
 
-.section-hero {
+.container section-hero {
   display: flex;
   flex-direction: column;
   width: 100%;
