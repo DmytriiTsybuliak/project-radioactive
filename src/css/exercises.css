@@ -351,6 +351,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 14px;
+    justify-content: left;
   }
 
   .exercises-list-page2 {
@@ -358,6 +359,7 @@
     flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 14px;
+    justify-content: left;
   }
 
   .exercises-item {
