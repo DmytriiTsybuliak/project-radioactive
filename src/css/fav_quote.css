@@ -143,6 +143,7 @@
   background-image: url('../img/quote/icon-before-text.svg');
   background-size: cover;
   margin-top: 40px;
+  margin-left: 15px;
 }
 
 .quote-icon_after {
@@ -154,6 +155,10 @@
   position: absolute;
   top: 40px;
   right: 40px;
+}
+.text-container {
+  margin-left: 54px;
+  padding-right: 35px;
 }
 
 @media screen and (min-width: 375px) {
@@ -191,10 +196,6 @@
     height: 302px;
   }
 
-  .quote-container {
-    width: 368px;
-  }
-
   .quote-icon_after {
     width: 28px;
     height: 28px;
@@ -207,7 +208,7 @@
     margin-left: 20px;
   }
 
-  .text-containet {
+  .text-container {
     margin-left: 66px;
     padding-right: 20px;
   }
@@ -279,7 +280,7 @@
     margin-left: 80px;
   }
 
-  .text-containet {
+  .text-container {
     margin-left: 130px;
     margin-right: 80px;
     max-width: 526px;
@@ -349,7 +350,7 @@
     margin-left: 64px;
   }
 
-  .text-containet {
+  .text-container {
     margin-left: 114px;
     margin-right: 64px;
     max-width: 500px;
