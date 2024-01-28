@@ -1,13 +1,5 @@
-
-
 /* MOBILE */
-
-.quote-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-   .quote-of-the-day{
+   .quote__of-the-day{
     width: 335px;
     height: 272px;
     border-radius: 30px;
@@ -27,13 +19,12 @@
     margin: 0 auto;
    }
    
-   .title-container {
+   .quote__container {
     display: flex;
     margin: 0 auto;
-    
    }
 
-   .icon-before {
+   .quote__icon-before {
        display: inline-block;
        width: 34px;
        height: 32px;
@@ -43,7 +34,7 @@
        margin-left: 20px;
    }
 
-   .icon-after { 
+   .quote__icon-after { 
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -53,10 +44,9 @@
     margin-left: 61px;
    }
 
-   .title { 
+   .quote__title { 
     color: #F6F6F6;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: "DM Sans";
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -65,17 +55,14 @@
     margin-left: 12px;
    }
 
-   .quote-container{
+   .quote__backend{
    padding-left: 20px;
    padding-right: 20px;
    padding-bottom: 20px;
 
    }
-   .quote-text {
-    width: auto;
-    height: auto;
+   .quote__backend-text {
     color: rgba(246, 246, 246, 0.60);
-    font-family: "DM Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -84,9 +71,8 @@
     margin-top: 14px;
    }
 
-   .quote-author{
+   .quote__backend-author{
     color: #F6F6F6;
-    font-family: "DM Sans";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -95,20 +81,9 @@
     margin-left: 46px;
    }
 
-   @media screen and (min-width: 375px) and (max-width: 767.98px) {
-       
-   }
-
-/* Tablet */
-
+   /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-
-.quote-section {
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-    
-.quote-of-the-day { 
+.quote__of-the-day { 
     width: 736px;
     height: 302px;
     border-radius: 50px;
@@ -122,32 +97,32 @@
     background-color: #E8E8E8;
 }
 
- .icon-before {
+ .quote__icon-before {
      margin-top: 64px;
      margin-left: 80px;
  }
 
- .icon-after {
+ .quote__icon-after {
      width: 48px;
      height: 48px;
      margin-top: 32px;
      margin-left: 254px;
  }
 
- .quote-container {
+ .quote__backend {
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 32px;
 }
 
- .title {
+ .quote__title {
     font-size: 24px;
     line-height: 1.33;
-     margin-top: 64px;
-     margin-left: 16px;
+    margin-top: 64px;
+    margin-left: 16px;
  }
 
- .quote-text {
+ .quote__backend-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -156,25 +131,24 @@
     margin-top: 16px;
 }
 
-.quote-author {
+.quote__backend-author {
     margin-top: 25px;
     margin-left: 98px;
 }
-
 }
 
-/* Laptop */
-
+/* Desktop */
 @media screen and (min-width: 1440px) {
-
-.quote-section {
-    width: 1408px;
+.quote__title{
+    margin-top: 64px;
+    margin-left: 16px;
+}
+.quote {
     display: flex;
     margin-top: 0px;
-    
     }
 
-.quote-of-the-day {
+.quote__of-the-day {
     width: 704px;
     height: 302px
     }
@@ -186,24 +160,26 @@
     background-color: #E8E8E8;
 }
 
-.icon-before {
+.quote__icon-before {
     margin-top: 64px;
     margin-left: 64px;
 }
-.icon-after {
+.quote__icon-after {
+    width: 48px;
+    height: 48px;
     margin-top: 32px;
-    margin-left: 286px;
+    margin-left: auto;
+    margin-right: 64px;
 }
 
-.quote-text {
-    margin-left: 84px;
+.quote__backend-text {
+    margin-left: 94px;
     margin-right: 32px;
 }
 
-.quote-author {
+.quote__backend-author {
     margin-top: 25px;
-    margin-left: 84px;
+    margin-left: 94px;
 }
-
 }
 

@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 335px;
-  height: 385px;
+  height: 387px;
   background-image: url(../img/hero/hero-mobile.png);
   background-repeat: no-repeat;
   padding: 20px 10px;
@@ -134,6 +134,7 @@
     width: 1408px;
   }
   .background-container {
+    height: 884px;
     width: 704px;
     background-image: url(../img/hero/hero-desktop.png);
     padding: 52px 58px;
