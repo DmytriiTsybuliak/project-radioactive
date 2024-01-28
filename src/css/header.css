@@ -6,6 +6,7 @@
     background-color: transparent;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     border-radius: 30px;
     position: absolute;
@@ -56,9 +57,9 @@
                 clip-path: inset(50%);
         margin: -1px;
 }
+
+
 /* ----------------Mobile-Menu-Shirm------------------ */
-
-
 .shirm-header-logo-link {
     color: #F6F6F6;
 }
@@ -95,7 +96,7 @@
     gap: 16px;    
 }
 
-.social-networks {    /*---------element position-------*/
+.shirm-social-networks {    /*---------element position-------*/
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -129,8 +130,7 @@
     display: flex;                 /*---text position---*/
     align-items: center;
     justify-content: center;
-    color: #F6F6F6;                 /*---text format---*/
-    /* font-family: "DM Sans"; */
+    color: #F6F6F6;          /*---text format---*/
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -142,4 +142,103 @@
     outline: none;
     background: #FFF;
     color: #1B1B1B;
+}
+
+
+/* ----------------Hidden------------------ */
+@media screen and (min-width: 768px) {
+    .burger-menu {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+                clip-path: inset(50%);
+        margin: -1px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .lap-tab-menu,
+    .lap-tab-social-networks {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+                clip-path: inset(50%);
+        margin: -1px;
+    }
+}
+
+
+/* ----------------Tablet-Header------------------ */
+@media screen and (min-width: 768px) {
+    .header {
+        width: 728px;
+    }
+}
+/* ----------------Laptop-Header------------------ */
+@media screen and (min-width: 1440px) {
+    .header {
+        width: 1400px;
+    }
+}
+/* ----------------Lap-Tab-Header-Settings------------------ */
+@media screen and (min-width: 768px) {
+    .logo-link {
+        color: #1B1B1B;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 100% */
+        letter-spacing: -0.56px;
+    }
+}
+
+.lap-tab-menu,
+.lap-tab-social-networks {
+    display: flex;
+}
+
+.lap-tab-menu{
+    width: 211px;
+    height: 52px;
+    padding: 8px 16px;
+    border-radius: 60px;
+    background: #7E847F;
+}
+
+.lap-tab-social-networks {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.lap-tab-soc-frame {
+    display: flex;          /*---svg position---*/
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid rgba(126, 132, 127, 0.20);
+}
+.lap-tab-soc-frame:hover,
+.lap-tab-soc-frame:focus {
+    border: 1px solid rgba(17, 17, 17, 0.2);
 }
