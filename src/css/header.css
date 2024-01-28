@@ -138,12 +138,15 @@
     padding: 0;
 }
 .menu-link-button:hover,
-.menu-link-button:focus {
+.menu-link-button:focus,
+.current {
     outline: none;
     background: #FFF;
     color: #1B1B1B;
 }
-
+/* .current {
+    color: red
+} */
 
 /* ----------------Hidden------------------ */
 @media screen and (min-width: 768px) {
