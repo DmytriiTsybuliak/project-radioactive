@@ -93,6 +93,18 @@
   background-color: #f6f6f6;
 }
 
+.exercises-inputclear-icon {
+  stroke: #1b1b1b;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 37px;
+}
+
+.exercises-is-hidden {
+  display: none;
+}
+
 .exercises-search-icon {
   stroke: #1b1b1b;
   fill: none;
@@ -211,6 +223,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.exercises-star-icon {
+  display: inline-flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
 }
 
 .exercises-start-button {
