@@ -464,3 +464,24 @@
     height: 141px;
   }
 }
+.error-message{
+color: #7E847F;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+
+}
+.no-results-message {
+  color: #1B1B1B;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+}
+

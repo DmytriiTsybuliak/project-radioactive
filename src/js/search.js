@@ -1,14 +1,13 @@
 import axios from "axios";
 
-const inputWrapper = document.querySelector(".exercises-input-wrapper");
-const searchInput = inputWrapper.querySelector(".exercises-search-input");
+const form = document.getElementById("exercises-search-form");
+const searchInput = form.querySelector(".exercises-search-input");
 const exercisesList = document.querySelector(".exercises-list-page2");
 
-// Додайте обробник події submit для виклику функції пошуку
-inputWrapper.addEventListener("submit", async (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const query = searchInput.value.trim();
+  const query = searchInput.value.trim().toLowerCase();
 
   try {
     await renderExercises(query);
@@ -19,14 +18,11 @@ inputWrapper.addEventListener("submit", async (event) => {
 
 async function renderExercises(query) {
   try {
-    // Ваш API-запит для отримання вправ з урахуванням фільтрів та ключового слова
     const response = await axios.get(`https://energyflow.b.goit.study/api/exercises?bodypart=back&muscles=lats&equipment=barbell&keyword=${query}&page=1&limit=10`);
     const exercises = response.data;
 
-    // Очистка списку перед додаванням нових результатів
     exercisesList.innerHTML = '';
 
-    // Відображення результатів
     if (exercises.length > 0) {
       const exercisesHTML = exercises.map((exercise) => `
         <li class="exercises-item-page2">
@@ -71,11 +67,9 @@ async function renderExercises(query) {
 
       exercisesList.innerHTML = exercisesHTML;
     } else {
-      // Відобразіть повідомлення про відсутність результатів
-      exercisesList.innerHTML = '<p class="no-results-message">Unfortunately, no results were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p>';
+      exercisesList.innerHTML = '<p class="no-results-message">Unfortunately, <span class="error-message">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p>';
     }
   } catch (error) {
     console.error(error);
-    // Відобразіть повідомлення про помилку або здійсніть інші дії за необхідності
   }
 }
