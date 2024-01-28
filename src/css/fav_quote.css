@@ -1,6 +1,5 @@
-/* @import './common.css' */
-
 .loader {
+  display: block;
   width: 200px;
   height: 140px;
   background: #979794;
@@ -8,8 +7,9 @@
   position: relative;
   border-radius: 8px;
   perspective: 1000px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .loader:before {
@@ -60,20 +60,9 @@
 
 /**============================*/
 
-/* .quote-container.block {
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; 
-} */
-
-/* .sport-container {
-  display: flex;
-  flex-wrap: wrap;
-} */
 .fav-quote-section {
+  padding-top: 96px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 .block {
   min-width: 280px;
@@ -82,22 +71,15 @@
   margin: 0 auto;
 }
 
-/* .quote-container,
-.schedule {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
 .quote-container {
   background-color: #7e847f;
   color: #f6f6f6;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
-.quote-container .quote-title {
+.quote-title {
   color: #f6f6f6;
   font-family: 'DM Sans';
   font-size: 20px;
@@ -106,7 +88,8 @@
   margin-top: 42px;
   margin-left: 12px;
 }
-.quote-container .title-container {
+
+.title-container {
   display: flex;
   margin: 0 auto;
 }
@@ -115,19 +98,15 @@
   width: auto;
   height: auto;
   color: rgba(246, 246, 246, 0.6);
-  font-family: 'DM Sans';
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.3;
   margin-left: 46px;
   margin-top: 14px;
 }
+
 .quote-author {
   color: #f6f6f6;
-  font-family: 'DM Sans';
   font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
   line-height: 1.5;
   margin-top: 14px;
   margin-left: 46px;
@@ -135,11 +114,8 @@
 
 .schedule {
   background-color: #fff;
+  position: relative;
 }
-/* 
-.schedule p {
-  color: rgba(27, 27, 27, 0.6);
-} */
 
 .sport-tool {
   background-image: url(../img/fav-quote/fluent_food-24-filled.svg);
@@ -148,9 +124,10 @@
   display: inline-block;
 }
 
-.quote-img {
+.sport-img {
   background-color: #e8e8e8;
-  background-image: url(../img/fav-quote/fav-quote-mobile-image.png);
+  background-image: url(../img/fav-quote/fav-quote-mobile-1x.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -161,7 +138,7 @@
   height: 23px;
   background-image: url('../img/quote/icon-before-text.svg');
   background-size: cover;
-  margin-top: 42px;
+  margin-top: 40px;
 }
 
 .quote-icon_after {
@@ -170,26 +147,33 @@
   height: 25px;
   background-image: url('../img/quote/icon-after-text.svg');
   background-size: cover;
-  margin-top: 42px;
-  margin-left: 29px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
 
 @media screen and (min-width: 375px) {
   .block {
     width: 335px;
   }
-.quote-icon_before {
-  width: 34px;
-  height: 32px;
+  .quote-icon_before {
+    width: 34px;
+    height: 32px;
+  }
+
+  .quote-icon_after {
+    width: 28px;
+    height: 28px;
+  }
 }
 
-.quote-icon_after {
-  width: 28px;
-  height: 28px;
-  margin-left: 61px;
-
-}
-  
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen  and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-mobile-2x.png);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -197,17 +181,80 @@
     width: 368px;
     height: 302px;
   }
+
   .quote-container {
     width: 736px;
     margin-bottom: 16px;
   }
-  .quote-img {
-    background-image: url(../img/fav-quote/fav-quote-tablet-image.png);
+
+  .quote-icon_after {
+    width: 48px;
+    height: 48px;
+    top: 32px;
+    right: 80px;
   }
+
+  .quote-icon_before {
+    margin-top: 64px;
+    margin-left: 80px;
+  }
+
+  .text-containet {
+    margin-left: 80px;
+    max-width: 526px;
+  }
+
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-tablet-1x.png);
+  }
+
+  .quote-title {
+    margin-top: 64px;
+  }
+
   .sport-container {
     display: flex;
     max-width: 736px;
     margin: 0 auto;
+  }
+
+  .quote-text {
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+  .quote-author {
+    margin-top: 25px;
+  }
+  .schedule {
+    display: flex;
+    align-items: center;
+  }
+  .schedule-container > h2 {
+    margin: 15px 0 6px 0;
+    font-weight: 500;
+    line-height: 1.33;
+  }
+
+  .schedule-container > p {
+    color: rgba(27, 27, 27, 0.6);
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .schedule-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-tablet-2x.png);
   }
 }
 
@@ -216,7 +263,14 @@
     display: flex;
     max-width: 1408px;
   }
-  /* .container {
+
+  .quote-title {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  /* 
+  .container {
     flex-direction: row;
   }
   .block {
@@ -225,13 +279,22 @@
   }
   .sport-container {
     min-width: 704px;
-  }
+  } */
 
-  .quote-img {
-    background-image: url(../img/desktop_quote_img.png);
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-desktop-1x.png);
   }
-
+  /* 
   .quote-container.block {
   min-width: 704px;
 } */
+}
+
+@media screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1440px) and (min-resolution: 192dpi),
+  screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-desktop-2x.png);
+  }
 }

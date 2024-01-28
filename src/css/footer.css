@@ -11,6 +11,9 @@ footer {
     width: 375px;
     height: 471px;
 }
+.footer--flex {
+    margin-bottom: 50px;
+}
 .footer--social.logo {
     margin-bottom: 9px;
 }
@@ -19,25 +22,24 @@ footer {
     margin-bottom: 40px;
 }
 .footer--social.item {
-    gap:12px
+    gap:12px;
 }
 .footer--social.item svg {
     width: 40px;
     height: 40px;
-    color:rgba(246, 246, 246, 0.2);
+    fill:#F6F6F6;
     border-radius: 10px;
     border: 1px solid rgba(246, 246, 246, 0.2);
     padding: 8px;
 }
 .footer--social.item svg:hover,
 .footer--social.item svg:focus {
-    color:rgba(95, 101, 96, 0.2);
-    border:1px solid rgba(95, 101, 96, 0.2);
+    fill:#5F6560;
+    border:1px solid #5F6560;
 }
 .footer--social.item {
     margin-right: 12px;
 }
-
 .footer--text {
     font-family: "DM Sans";
     font-weight: 400;
@@ -51,7 +53,6 @@ footer {
     font-style: italic;
     color:rgba(246, 246, 246, 0.3);
 }
-
 .footer--form p {
     font-weight: 400;
     font-size: 14px;
@@ -72,7 +73,6 @@ footer {
 .footer--form input::placeholder {
     color: rgba(246, 246, 246, 0.6);  
     font-size: 14px;
-
 }
 .footer--form button {
     width: 100%;
@@ -82,18 +82,21 @@ footer {
     border-color: transparent;
     background-color:#7E847F ;
     color: #F6F6F6;
-    margin-bottom: 60px;
 }
 .footer--form button:hover,
 .footer--form button:focus {
     background-color:#5F6560;
 }
-
 .footer--signature {
     font-size: 12px;
     line-height: 0.75em;
     color: #F6F6F6;
     opacity: 90%;
+}
+.footer--signature ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
@@ -117,6 +120,7 @@ footer {
         display: flex;
         flex-direction: row; 
         gap: 139px;
+        margin-bottom: 100px;
     }
     .footer--social.item svg{
         width: 44px;
@@ -134,18 +138,17 @@ footer {
         height: 48px;
         margin-bottom: 20px;
     }
-
     .footer--form input::placeholder {
         font-size: 16px;
     }
     .footer--form button {
         height: 48px;
-        /* margin-bottom: 120px; */
     }
     .footer--signature ul {
         display: flex;
         gap: 32px;
         justify-content: center;
+        flex-direction: row;
     }
 }
 
@@ -158,23 +161,29 @@ footer {
 }
 .footer--flex{
     display: flex;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
 }
 .footer--right-side {
     display: flex;
 }
-.footer--social {
-    /* margin-right: 156px; */
-}
+
 .footer--social.logo {
     margin-bottom: 30px;
+    width: 150px;
 }
 .footer--text {
-    /* margin-right: 160px; */
     font-size: 64px;
+    margin-right: 160px;
+    margin-left: 156px;
+    margin-bottom: 0;
+}
+.footer--form p {
+    font-size: 18px;
 }
 .footer--form input {
     margin-bottom: 20px;
+    width: 352px;
+    height: 48px;
 }
 .footer--form button {
     margin-bottom: 0;
@@ -183,5 +192,6 @@ footer {
     display: flex;
     gap: 32px;
     justify-content: center;
+    flex-direction: row;
 }
 }

@@ -1,29 +1,86 @@
-/* ==================PHONE================== */
+/* ================Mobile================ */
 
 .section-hero {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .background-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 335px;
-    height: 385px;
-    background-image: url(../img/hero/hero-mobile.png);
-    background-repeat: no-repeat;
-    padding: 20px 10px;
-    margin: 0 auto 20px auto;
-  }
-  
-  .container-hero {
-    width: 335px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.background-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 335px;
+  height: 387px;
+  background-image: url(../img/hero/hero-mobile.png);
+  background-repeat: no-repeat;
+  padding: 20px 10px;
+  margin: 0 auto 20px auto;
+}
+
+.container-hero {
+  width: 335px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+.hero-list-item {
+  border-radius: 30px;
+  border: 1px solid rgba(246, 246, 246, 0.3);
+  color: #f6f6f6;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 4px 10px;
+}
+
+.hero-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 145px;
+}
+
+.hero-container-text {
+  padding: 60px 20px;
+  border-radius: 30px;
+  background: #fff;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 0.89;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.title-span {
+  font-style: italic;
+  color: #7e847f;
+}
+.hero-text {
+  width: 295px;
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+}
+
+/* ================Tablet================ */
+
+@media screen and (min-width: 768px) {
+  .container-hero {
+    display: flex;
+    flex-direction: row;
+    width: 736px;
+  }
+
+  .background-container {
+    height: 900px;
+    width: 248px;
+    margin-right: 0;
+    margin-bottom: unset;
+    background-image: url(../img/hero/hero-tablet.png);
+    padding: 64px 20px;
   }
 
   .hero-list-item {
@@ -34,110 +91,99 @@
     line-height: 1.15;
     padding: 4px 10px;
   }
-  
+
   .hero-tag-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    width: 141px;
+    gap: 8px;
+    width: 196px;
   }
-  
+
+  .hero-list-item {
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
   .hero-container-text {
-    padding: 60px 20px;
-    border-radius: 30px;
-    background: #fff;
+    width: 488px;
+    padding: 231px 32px 192px;
+    border-radius: 0px 50px 50px 50px;
   }
-  
+
   .hero-title {
-    font-size: 56px;
+    font-size: 98px;
+    letter-spacing: -0.02em;
+    margin-bottom: 25px;
+    line-height: 0.96;
+  }
+
+  .hero-text {
+    width: 396px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 0.89;
+    line-height: 1.33;
     letter-spacing: -0.02em;
     margin-bottom: 20px;
   }
-  
-  .title-span {
-    font-style: italic;
-    color: #7e847f;
+}
+
+/* ================Desktop================ */
+
+@media screen and (min-width: 1440px) {
+  .container-hero {
+    width: 1408px;
   }
+  .background-container {
+    height: 884px;
+    width: 704px;
+    background-image: url(../img/hero/hero-desktop.png);
+    padding: 52px 58px;
+  }
+
+  
+  .hero-container-text {
+    max-height: 884px;
+    width: 704px;
+  }
+
   .hero-text {
-    width: 295px;
-    font-size: 14px;
+    width: 528px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.33;
     letter-spacing: -0.01em;
   }
 
-  /* ================TABLET==================== */
-
-@media screen and (min-width: 768px) {
-    .container-hero {
-      display: flex;
-      flex-direction: row;
-      width: 736px;
-    }
-  
-    .background-container {
-      height: 900px;
-      width: 248px;
-      margin-right: 0;
-      margin-bottom: unset;
-      background-image: url(../img/hero/hero-tablet.png);
-      padding: 64px 20px;
-    }
-  
-    .hero-tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      width: 196px;
-    }
-  
-    .hero-list-item {
-      line-height: 1.5;
-      font-size: 16px;
-    }
-  
-    .hero-container-text {
-      width: 488px;
-      padding: 231px 32px 192px;
-      border-radius: 0px 50px 50px 50px;
-    }
-  
-    .hero-title {
-      font-size: 98px;
-      letter-spacing: -0.02em;
-      margin-bottom: 25px;
-    }
-  
-    .hero-text {
-      width: 396px;
-      font-size: 18px;
-    }
+  .hero-text-list {
+    width: 196px;
   }
-/* ================DESKTOP================= */
+}
 
-@media screen and (min-width: 1158px) {
-    .container-hero {
-      width: 1408px;
-    }
-    .background-container {
-      width: 704px;
-      background-image: url(../img/hero/hero-desktop.png);
-      padding: 52px 58px;
-    }
-  
-    .hero-container-text {
-      max-height: 884px;
-      width: 704px;
-    }
-  
-    .hero-text {
-      width: 528px;
-      font-size: 18px;
-    }
-  
-    .hero-text-list {
-      width: 196px;
-    }
+
+/* ================Media for retina (@x2 images)================ */
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .background-container {
+    background-image: url(../img/hero/hero-mobile@2x.png);
+    background-size: contain;
   }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .background-container {
+      background-image: url(../img/hero/hero-tablet@2x.png);
+      background-size: contain;
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    .background-container {
+      background-image: url(/img/hero/hero-desktop@2x.png);
+      background-size: contain;
+    }
+}

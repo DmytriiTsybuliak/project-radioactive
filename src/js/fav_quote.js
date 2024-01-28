@@ -7,7 +7,6 @@ const date = new Date().toLocaleDateString();
 async function getQuote() {
   quoteBlock.innerHTML = `
         <span class="loader"></span>
-        <span>We're looking for a quote for you...</span>
     `;
   try {
     const response = await axios
@@ -55,8 +54,10 @@ function createMarkup(author, quote) {
               <span class='quote-icon_after'></span>
             </div>
 
-            <p class='quote-text'>${quote}</p>
-            <p class='quote-author'>${author}</p>
+           <div class='text-containet'>
+              <p class='quote-text'>${quote}</p>
+              <p class='quote-author'>${author}</p>
+           </div>
       `;
 }
 
