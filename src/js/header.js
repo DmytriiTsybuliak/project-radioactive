@@ -9,4 +9,3 @@ const shirmCloseButton = document.querySelector(".shirm-close-button");
 shirmCloseButton.addEventListener('click', (event) => {
     mobileMenu.classList.add("menu-is-hidden");
 });
-

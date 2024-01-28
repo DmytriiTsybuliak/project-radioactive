@@ -61,8 +61,8 @@
 /**============================*/
 
 .fav-quote-section {
+  padding-top: 96px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 .block {
   min-width: 280px;
@@ -124,9 +124,10 @@
   display: inline-block;
 }
 
-.quote-img {
+.sport-img {
   background-color: #e8e8e8;
-  background-image: url(../img/fav-quote/fav-quote-mobile-image.png);
+  background-image: url(../img/fav-quote/fav-quote-mobile-1x.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -166,6 +167,15 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen  and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-mobile-2x.png);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .block {
     width: 368px;
@@ -194,8 +204,8 @@
     max-width: 526px;
   }
 
-  .quote-img {
-    background-image: url(../img/fav-quote/fav-quote-tablet-image.png);
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-tablet-1x.png);
   }
 
   .quote-title {
@@ -239,6 +249,15 @@
   }
 }
 
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-tablet-2x.png);
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .fav-quote-section {
     display: flex;
@@ -262,11 +281,20 @@
     min-width: 704px;
   } */
 
-  .quote-img {
-    background-image: url(../img/fav-quote/fav-quote-desktop-image.png);
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-desktop-1x.png);
   }
   /* 
   .quote-container.block {
   min-width: 704px;
 } */
+}
+
+@media screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1440px) and (min-resolution: 192dpi),
+  screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+  .sport-img {
+    background-image: url(../img/fav-quote/fav-quote-desktop-2x.png);
+  }
 }
