@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var modalBurnedCalories = document.getElementById("modalBurnedCalories");
     var modalTime = document.getElementById("modalTime");
     var modalPopularity = document.getElementById("modalPopularity");
+    
 
     // Добавить обработчик события клика на каждую кнопку
     openModalBtns.forEach(function(btn) {
@@ -54,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
         modalBurnedCalories.textContent = data.burnedCalories;
         modalTime.textContent = data.time + " мин";
         modalPopularity.textContent = data.popularity;
+
+        document.getElementById("modalName").innerText = responseData.name;
+
 
         popUpExercise.style.display = "flex"; // Показать модальное окно
     }
