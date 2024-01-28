@@ -1,8 +1,6 @@
 /* ----------------Mobile-Header------------------ */
-.header,
-.shirm-header {
+.header {
     width: 335px;
-    /* width: inherit; */
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -12,9 +10,6 @@
     position: absolute;
 }
 
-/* a{                          //in common settings
-    text-decoration:none;
-} */
 .logo-link {
     color: #1B1B1B;
     /* font-family: "DM Sans"; */
@@ -23,6 +18,7 @@
     font-weight: 700;
     line-height: 18px; /* 112.5% */
     letter-spacing: -0.32px;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-link:hover,
 .logo-link:focus {    
@@ -33,6 +29,7 @@
 .burger-menu {
     border: 1px solid transparent;
     background-color: transparent;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .burger-menu:hover,
 .burger-menu:focus {
@@ -63,20 +60,17 @@
 .shirm-header-logo-link {
     color: #F6F6F6;
 }
-.shirm-header-logo-link:hover,
-.shirm-header-logo-link:focus {    
-    outline: none;
-    scale: 104%;
-}
+
 
 .shirm-close-button {
     border: 1px solid transparent;
     background-color: transparent;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .shirm-close-button:hover,
 .shirm-close-button:focus {
     outline: none;
-    scale: 110%;
+    scale: 120%;
 }
 
 .shirm {
@@ -110,43 +104,47 @@
     height: 41px;
     border-radius: 10px;
     border: 1px solid rgba(246, 246, 246, 0.20);
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-frame:hover,
 .soc-frame:focus {
     outline: none;
     scale: 104%;
 }
+
+.soc-frame svg {
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .soc-frame svg:hover,
 .soc-frame svg:focus {
     scale: 108%;
 }
 
-.menu-link-button {    /*---------element format-------*/
+.menu-link-button {    /*---------position+format-------*/
     width: 96px;
     height: 36px;
-    border-radius: 30px;   
-    /* border: 1px solid rgba(246, 246, 246, 0.20); */
+    border-radius: 30px;
     background-color: transparent;
-    display: flex;                 /*---text position---*/
+    display: flex;                 
     align-items: center;
     justify-content: center;
-    color: #F6F6F6;          /*---text format---*/
+    color: #F6F6F6;          
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
     padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link-button:hover,
 .menu-link-button:focus,
 .current {
     outline: none;
-    background: #FFF;
+    background-color: #FFF;
     color: #1B1B1B;
 }
-/* .current {
-    color: red
-} */
+
 
 /* ----------------Hidden------------------ */
 @media screen and (min-width: 768px) {
