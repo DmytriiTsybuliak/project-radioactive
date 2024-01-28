@@ -1,65 +1,47 @@
-.div-for-discipline {
+.discipline__text {
     flex-shrink: 0;
     border-radius: 30px;
     background: #1B1B1B;
    
 }
 
-.discipline-for-daily {
-    color: rgba(246, 246, 246, 0.60);
-    font-family: "DM Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    padding-left: 70px;
-    margin-bottom: 14px;
-}
-
-.recomendecation-for-discipline {
-    margin-right: 20px;
-    flex-shrink: 0;
-    color: rgba(246, 246, 246, 0.60);
-    font-family: "DM Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    margin-left: 70px;
-    padding-bottom: 40px;
-}
-
-.discipline-time {
-    color: #F6F6F6;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: "DM Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    padding-top: 40px;
-    padding-left: 70px;
-    margin-bottom: 2px;
-    
-}
-.img-disc {
+  .discipline_img { 
+    background-image: url('../img/discipline/dis_mob_1x.png');
+    width: 335px;
+    height: 272px;
     border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto;
 }
-.sect-for-min {
-margin-bottom: 20px;
+ /* only for retina displays */
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    .discipline_img {
+        
+        background-image: url('../img/discipline/dis_mob_2x.png');
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1439.98px){
+            .discipline_img {background-image: url('../img/discipline/dis_tab_1x.png');}
+        }
+    }
+
+
+    @media screen and (min-width: 768px) and (max-width: 1439.98px){
+        .discipline_img { 
+    background-image: url('../img/discipline/dis_tab_1x.png');
+    width: 704px;
+    }
 }
-
-
-
-
-
-@media screen and (min-width: 32і0px) and (max-width: 767.98px) {
-
+    @media screen and (min-width: 1440px) {
+          .discipline_img { 
+    background-image: url('../img/discipline/dis_desktop_1x.png');
+    width: 704px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-    
-}
-
-@media screen and (min-width: 1200px) {
-
-}
+    }
