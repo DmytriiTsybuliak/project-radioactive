@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 
 const quoteContainer = document.querySelector('.quote-container');
@@ -19,7 +20,7 @@ async function getQuote() {
     }
 
     catch (error) { 
-   // Notify.failure(`Something went wrong, try again`);
+   Notify.failure(`Something went wrong, try again`);
     }
 }
 

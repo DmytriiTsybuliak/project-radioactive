@@ -16,7 +16,8 @@
    }
 
    .font-image { 
-    background-image: url(../img/quote/mobile-background-image.png);
+    background-image: url('../img/quote/mobile-background-image.png');
+    background-color: #E8E8E8;
     width: 335px;
     height: 272px;
     border-radius: 30px;
@@ -94,10 +95,13 @@
     margin-left: 46px;
    }
 
+   @media screen and (min-width: 375px) and (max-width: 767.98px) {
+       
+   }
 
 /* Tablet */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
 
 .quote-section {
     margin-top: 16px;
@@ -114,7 +118,8 @@
     width: 736px;
     height: 302px;
     border-radius: 50px;
-    background-image: url(../img/quote/tablet-background-image.png);
+    background-image: url('../img/quote/tablet-background-image.png');
+    background-color: #E8E8E8;
 }
 
  .icon-before {
@@ -177,7 +182,8 @@
 .font-image {
     width: 704px;
     height: 302px;
-    background-image: url(../img/quote/laptop-background-image.png);
+    background-image: url('../img/quote/laptop-background-image.png');
+    background-color: #E8E8E8;
 }
 
 .icon-before {
