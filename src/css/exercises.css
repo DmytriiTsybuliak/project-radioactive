@@ -282,9 +282,11 @@
 }
 
 .exercises-bottom-buttons {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 0;
+  justify-content: center;
 }
 
 .exercises-page-button {
