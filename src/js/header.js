@@ -18,11 +18,12 @@ const homeIsCurrentPage = document.querySelector(".home")
 const favoritesIsCurrentPage = document.querySelector(".favorites")
 
 function markCurrentPage() {
-    console.log("ho")
+    
     if (window.location.href.endsWith('index.html')) {
-        console.log("hi")
+        
         homeIsCurrentPage.classList.add("current");
     }
+    
     else if (window.location.href.endsWith('favorites.html')) {
         favoritesIsCurrentPage.classList.add("current");
     }
