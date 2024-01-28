@@ -83,7 +83,7 @@
   .discipline-box {
     width: 736px;
     height: 302px;
-    padding: 65px 64px 96px 64px;
+    padding: 64px 64px 96px 64px;
   }
 
   .discipline-img {
@@ -115,6 +115,7 @@
   }
 }
 
+/* ================Desktop================ */
 @media screen and (min-width: 1440px) {
   .discipline-container {
     flex-direction: row;
@@ -123,7 +124,7 @@
   .discipline-box {
     width: 704px;
     height: 302px;
-    padding: 64px 65px 64px 64px;
+    padding: 64px 64px 64px 64px;
   }
 
   .discipline-img {
