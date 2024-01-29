@@ -1,3 +1,4 @@
+<script src="data.js"></script>
 <div class="pop-up-exercise">
   <div class="pop-up-exercise-content">
     <div class="close-btn" id="closeBtn">&#10006;</div>
@@ -6,25 +7,23 @@
       <img src="" alt="Exercise GIF" id="modalImage" />
       <div class="exercise-details">
         <h2 id="modalTitle"></h2>
-        <p><strong>Name:</strong> <span id="modalName"></span></p>
-        <p><strong>Rating:</strong> <span id="modalRating"></span></p>
+        <p class="name-modal">
+          <strong>Name</strong> <span id="modalName"></span>
+        </p>
+        <p><strong>Rating</strong> <span id="modalRating"></span></p>
         <div class="horizontal-info">
           <div class="exercise-info">
             <div class="info-item">
-              <p><strong>Target:</strong> <span id="modalRating"></span></p>
+              <p>Target <span id="modalRating"></span></p>
             </div>
             <div class="info-item">
-              <p><strong>Body Part:</strong> <span id="modalTarget"></span></p>
+              <p>Body Part <span id="modalTarget"></span></p>
             </div>
             <div class="info-item">
-              <p>
-                <strong>Equipment:</strong> <span id="modalEquipment"></span>
-              </p>
+              <p>Equipment <span id="modalEquipment"></span></p>
             </div>
             <div class="info-item">
-              <p>
-                <strong>Popularity:</strong> <span id="modalPopularity"></span>
-              </p>
+              <p>Popularity<span id="modalPopularity"></span></p>
             </div>
           </div>
         </div>
@@ -32,7 +31,7 @@
           <strong>Burned Calories:</strong>
           <span id="modalBurnedCalories"></span>
         </p>
-        <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+        <p>Description <span id="modalDescription"></span></p>
       </div>
     </div>
   </div>
