@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercises</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <section class="section">
-      <div class="container exercises-container">
-        <div class="exercises-top-container">
-          <h2 class="exercises-title">Exercises</h2>
-          <div class="exercises-top-buttons">
-            <button class="exercises-filter-button" type="submit">
-              Muscles
-            </button>
-            <button class="exercises-filter-button" type="submit">
-              Body parts
-            </button>
-            <button class="exercises-filter-button" type="submit">
-              Equipment
-            </button>
-          </div>
-          
-        </div>
-         <form id="exercises-search-form">
-                <input
-                  class="exercises-search-input"
-                  type="text"
-                  placeholder="Search"
-                />
-                <svg
-                  class="exercises-inputclear-icon exercises-is-hidden"
-                  width="18"
-                  height="18"
-                  aria-label="clear-icon"
-                >
-                  <use href="./img/exercises/exercises-sprite.svg#icon-x"></use>
-                </svg>
-                <svg
-                  class="exercises-search-icon"
-                  width="18"
-                  height="18"
-                  aria-label="search-icon"
-                >
-                  <use
-                    href="./img/exercises/exercises-sprite.svg#icon-search"
-                  ></use>
-                </svg>
-              </form>
-        <ul class="exercises-list">
 
-<!--          
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercises</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <section class="section">
+    <div class="container exercises-container">
+      <div class="exercises-top-container">
+        <h2 class="exercises-title">Exercises</h2>
+        <div class="exercises-top-buttons">
+          <button class="exercises-filter-button" type="submit">
+            Muscles
+          </button>
+          <button class="exercises-filter-button" type="submit">
+            Body parts
+          </button>
+          <button class="exercises-filter-button" type="submit">
+            Equipment
+          </button>
+        </div>
+
+      </div>
+      <form id="exercises-search-form">
+        <input class="exercises-search-input" type="text" placeholder="Search" />
+        <svg class="exercises-inputclear-icon exercises-is-hidden" width="18" height="18" aria-label="clear-icon">
+          <use href="./img/exercises/exercises-sprite.svg#icon-x"></use>
+        </svg>
+        <svg class="exercises-search-icon" width="18" height="18" aria-label="search-icon">
+          <use href="./img/exercises/exercises-sprite.svg#icon-search"></use>
+        </svg>
+      </form>
+      <ul class="exercises-list">
+
+        <!--          
          <li>
             <div class="exercises-item" style="background: linear-gradient(
       0deg,
@@ -65,17 +51,17 @@
               <p class="exercises-item-subname">Muscles</p>
             </div>
           </li> -->
-        </ul>
-        
-        <div class="exercises-bottom-buttons">
-          <!-- <button class="exercises-page-button" type="button">1</button>
-          <button class="exercises-page-button" type="button">2</button> -->
-        </div>
-      </div>
-    </section>
+      </ul>
 
-    <!-- Exercises page 2 -->
-    <!-- <div class="container exercises-container">
+      <div class="exercises-bottom-buttons">
+        <!-- <button class="exercises-page-button" type="button">1</button>
+          <button class="exercises-page-button" type="button">2</button> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Exercises page 2 -->
+  <!-- <div class="container exercises-container">
         <div class="exercises-top-container">
           <h2 class="exercises-title">
             Exercises / <span class="exercises-subtitle">Waist</span>
@@ -183,5 +169,6 @@
           <button class="exercises-page-button" type="submit">2</button>
         </div>
       </div>-->
-  </body>
+</body>
+
 </html>
