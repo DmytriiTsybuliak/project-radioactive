@@ -139,14 +139,6 @@
   justify-content: center;
   gap: 2;
   object-fit: cover;
-  background: linear-gradient(
-      0deg,
-      rgba(16, 16, 16, 0.7) 0%,
-      rgba(16, 16, 16, 0.7) 100%
-    ),
-    url(../img/exercises/16kg.jpeg),
-    lightgray -16.825px -9.156px / 128.765% 116.922% no-repeat;
-  background-size: cover;
   border-radius: 12px;
   border: 1px solid rgba(246, 246, 246, 0.3);
 }
@@ -312,7 +304,7 @@
   color: #1b1b1b;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+@media screen and (min-width: 768px){
   .exercises-container {
     width: 736px;
     padding: 64px 48px;
@@ -373,7 +365,7 @@
     width: 313px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
   .exercises-container {
     width: 1408px;
   }
