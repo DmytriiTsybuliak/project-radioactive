@@ -15,6 +15,7 @@ function markCurrentPage() {
     if (window.location.href.endsWith('index.html')) {
         homeIsCurrentPage.classList.add("current");
     }
+
     else if (window.location.href.endsWith('favorites.html')) {
         favoritesIsCurrentPage.classList.add("current");
     }
