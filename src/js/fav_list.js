@@ -1,3 +1,141 @@
+const fromAPI = [
+    {
+      "_id": "64f389465ae26083f39b17a2",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0001.gif",
+      "name": "3/4 sit-up",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3.18,
+      "burnedCalories": 220,
+      "time": 3,
+      "popularity": 7640
+  }
+  ,
+    {
+      "_id": "64f389465ae26083f39b17a5",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0006.gif",
+      "name": "alternate heel touchers",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 4,
+      "burnedCalories": 116,
+      "time": 3,
+      "popularity": 4452
+  }
+  ,
+    {
+      "_id": "64f389465ae26083f39b19a3",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0620.gif",
+      "name": "lying leg raise flat bench",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 279,
+      "time": 3,
+      "popularity": 0
+    },
+    {
+      "_id": "64f389465ae26083f39b188a",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0282.gif",
+      "name": "decline sit-up",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 150,
+      "time": 3,
+      "popularity": 1
+    },
+    {
+      "_id": "64f389465ae26083f39b193d",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0475.gif",
+      "name": "hanging straight leg raise",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 342,
+      "time": 3,
+      "popularity": 2
+    },
+    {
+      "_id": "64f389465ae26083f39b1937",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0467.gif",
+      "name": "gorilla chin",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 4,
+      "burnedCalories": 105,
+      "time": 3,
+      "popularity": 92
+    },
+    {
+      "_id": "64f389465ae26083f39b1a3c",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0870.gif",
+      "name": "butt-ups",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 226,
+      "time": 3,
+      "popularity": 0
+    },
+    {
+      "_id": "64f389465ae26083f39b193b",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0473.gif",
+      "name": "hanging pike",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 209,
+      "time": 3,
+      "popularity": 0
+    },
+    {
+      "_id": "64f389465ae26083f39b1943",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0491.gif",
+      "name": "incline leg hip raise (leg straight)",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 73,
+      "time": 3,
+      "popularity": 4
+    },
+    {
+      "_id": "64f389465ae26083f39b1925",
+      "bodyPart": "waist",
+      "equipment": "body weight",
+      "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0443.gif",
+      "name": "elbow-to-knee",
+      "target": "abs",
+      "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
+      "rating": 3,
+      "burnedCalories": 325,
+      "time": 3,
+      "popularity": 0
+    }
+];
+const KEY_FAVORITE = "favorite";
+const oldArr = JSON.stringify(fromAPI);
+const newArr = JSON.parse(oldArr);
+localStorage.setItem(KEY_FAVORITE, oldArr);
 
 
 
@@ -8,7 +146,7 @@ btnPages.addEventListener("click",controlPages)
 const emptyArr = document.querySelector(".empty-favorite");
 const pages = document.querySelector(".list-pages")
 
-const KEY_FAVORITE = "favorite";
+// const KEY_FAVORITE = "favorite";
 const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
 const firstPage = favoriteArr.slice(0, 8);
