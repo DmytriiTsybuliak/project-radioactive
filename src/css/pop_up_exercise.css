@@ -61,7 +61,7 @@
 /* ------------------ */
 
 .pop-up-exercise {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -111,4 +111,13 @@
 .horizontal-item {
     flex: 1;
     padding-right: 20px;
+}
+
+#modalImage {
+    width: 270px;
+    height: 259px;
+    margin: 40px auto;
+    /* Отступы сверху и снизу 40px, по бокам автоматический отступ */
+    display: block;
+    /* Чтобы изображение отображалось по центру */
 }
