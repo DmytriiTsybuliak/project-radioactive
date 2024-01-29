@@ -1,0 +1,164 @@
+/* ================Mobile================ */
+.discipline-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.discipline-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.discipline-box {
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  min-height: 269px;
+  border-radius: 30px;
+  background-color: #1b1b1b;
+  padding: 40px 20px 40px 20px;
+  margin: 0 auto;
+}
+
+.discipline-img {
+  width: 335px;
+    height: 269px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: url('../img/discipline/dis_mob_1x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%, 50%;
+}
+
+.discipline-svg-div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(246, 246, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discipline-title {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: center;
+}
+
+.discipline-time {
+  color: #f6f6f6;
+}
+
+.discipline-text {
+  padding-left: 50px;
+}
+
+.discipline-for-daily {
+  color: rgba(246, 246, 246, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  padding-bottom: 14px;
+}
+
+.recomendecation-for-discipline {
+  width: 245px;
+  color: rgba(246, 246, 246, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+/* ================Tablet================ */
+@media screen and (min-width: 768px) {
+  .discipline-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .discipline-box {
+    width: 736px;
+    height: 302px;
+    padding: 64px 64px 96px 64px;
+  }
+
+  .discipline-img {
+    width: 736px;
+    height: 302px;
+    background: url('../img/discipline/dis_tab_1x.png');
+    background-size: cover; 
+  }
+
+  .discipline-text {
+    padding-left: 50px;
+  }
+
+  .discipline-for-daily {
+    padding-bottom: 25px;
+    color: rgba(246, 246, 246, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+  }
+
+  .recomendecation-for-discipline {
+    width: 526px;
+    height: 97px;
+    color: rgba(246, 246, 246, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+/* ================Desktop================ */
+@media screen and (min-width: 1440px) {
+  .discipline-container {
+    flex-direction: row;
+  }
+
+  .discipline-box {
+    width: 704px;
+    height: 302px;
+    padding: 64px 64px 64px 64px;
+  }
+
+  .discipline-img {
+    width: 704px;
+    height: 302px;
+    background: url('../img/discipline/dis_desktop_1x.png');
+    background-size: cover; 
+  }
+}
+
+/* ================Media for retina (@x2 images)================ */
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .discipline-img {
+    background-image: url(../img/discipline/dis_mob_2x.png);
+    background-size: contain;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .discipline-img {
+      background-image: url(../img/discipline/dis_tab_2x.png);
+      background-size: contain;
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    .discipline-img {
+      background-image: url(../img/discipline/dis_desktop_2x.png);
+      background-size: contain;
+    }
+}
