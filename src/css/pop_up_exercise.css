@@ -71,18 +71,18 @@
     z-index: 9999;
 }
 
-.pop-up-exercise-content {
+/* .pop-up-exercise-content {
     position: relative;
     margin: 10% auto;
     width: 80%;
     max-width: 732px;
     /* Ширина модального окна для desktop */
-    background-color: #fff;
-    padding: 20px;
+    /* background-color: #fff; */
+    /* padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */ 
 
 .close-btn {
     position: absolute;
