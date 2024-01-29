@@ -1,28 +1,21 @@
 import axios from 'axios';
+const form = document.getElementById('subscriptionForm');
+const email = document.getElementById('email');
+const pattern = new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/);
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('subscriptionForm');
-
-    form.addEventListener('submit', async function (event) {
-        event.preventDefault();
-
-        if (!form.checkValidity()) {
-            alert('Please fill in a valid email address.');
+form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    try {
+        if (pattern.test(email.value)) {
+            // dsasd@gmail.com
+            await axios.post('https://energyflow.b.goit.study/api/subscription', { email: email.value })
+                .then(response => { console.log(response.data.message) })
+                .catch(error => { console.log(error.response.data.message) });
         } else {
-            const formData = new FormData(form);
-
-            try {
-                const response = await axios.post('https://energyflow.b.goit.study/api-docs/#/Subscriptions', formData);
-                
-                alert("We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.");
-                console.log('Server response:', response);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Something went wrong, try again');
-            }
+            alert('Please enter the correct email');
         }
-    });
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong, try again');
+    }
 });
-
-
-    
