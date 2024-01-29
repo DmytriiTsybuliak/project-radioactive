@@ -1,23 +1,55 @@
-const mobileMenu = document.querySelector(".mobile-menu");
-const shirmOpenButton = document.querySelector(".burger-menu");
-shirmOpenButton.addEventListener('click', (event) => {
-    mobileMenu.classList.remove("menu-is-hidden");
-});
+// Mark the current page:
 
-const shirmCloseButton = document.querySelector(".shirm-close-button");
-shirmCloseButton.addEventListener('click', (event) => {
-    mobileMenu.classList.add("menu-is-hidden");
-});
-
-const homeIsCurrentPage = document.querySelector(".home")
-const favoritesIsCurrentPage = document.querySelector(".favorites")
+const homeButtons = document.querySelectorAll(".home")
+const favoritesButtons = document.querySelectorAll(".favorites")
 function markCurrentPage() {
-    if (window.location.href.endsWith('index.html')) {
-        homeIsCurrentPage.classList.add("current");
+    if (window.location.href.endsWith('favorites.html')) {
+        favoritesButtons.forEach(favoritesButton => {
+            favoritesButton.classList.add("current");
+        })
     }
-
-    else if (window.location.href.endsWith('favorites.html')) {
-        favoritesIsCurrentPage.classList.add("current");
+    else {
+        homeButtons.forEach(homeButton => {
+            homeButton.classList.add("current");
+    })
     }
 }
 markCurrentPage();
+
+
+
+
+// Hide and show the mobile shirm (modal window):
+
+(() => {
+    const linkers = {
+        mobileMenu: document.querySelector(".mobile-menu"),
+        body: document.querySelector("body"),
+        shirmOpenButton: document.querySelector(".burger-menu"),
+        shirmCloseButton: document.querySelector(".shirm-close-button"),
+    };
+    linkers.shirmOpenButton.addEventListener("click", toggleVisibility);
+    linkers.shirmCloseButton.addEventListener("click", toggleVisibility);
+    function toggleVisibility() {
+        linkers.mobileMenu.classList.toggle("menu-is-hidden");
+        linkers.body.classList.toggle("no-scroll");
+    }
+}) ();
+
+
+// Pls don`t remove the follows:
+
+// const mobileMenu = document.querySelector(".mobile-menu");
+// const body = document.querySelector("body");
+
+// const shirmOpenButton = document.querySelector(".burger-menu");
+// shirmOpenButton.addEventListener('click', (event) => {
+//     mobileMenu.classList.remove("menu-is-hidden");
+//     body.classList.add("no-scroll");
+// });
+
+// const shirmCloseButton = document.querySelector(".shirm-close-button");
+// shirmCloseButton.addEventListener('click', (event) => {
+//     mobileMenu.classList.add("menu-is-hidden");
+//     body.classList.remove("no-scroll");
+// });
