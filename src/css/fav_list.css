@@ -325,19 +325,3 @@ li.favopite-item {
     height: 14px;
     fill: rgba(27, 27, 27, 0.4);
 }
-@media screen and (min-width: 375px) and (max-width: 767.98px) {
-    width: 375px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 768px;
-
-}
-
-@media screen and (min-width: 1440px) {
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 1440px;
-}
