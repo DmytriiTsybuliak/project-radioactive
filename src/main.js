@@ -4,3 +4,4 @@ import '../src/js/header';
 import '../src/js/search';
 import '../src/js/exercises';
 import '../src/js/capitalize_word';
+import '../src/js/scroll';
