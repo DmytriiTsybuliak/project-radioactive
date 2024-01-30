@@ -1,4 +1,4 @@
-<div class="pop-up-exercise">
+<!-- <div id="pop-up-exercise" class="pop-up-exercise">
   <div class="pop-up-exercise-content">
     <div class="close-btn" id="closeBtn">&#10006;</div>
 
@@ -24,6 +24,84 @@
               <div class="info-item">
                 <p>Target</p>
                 <p class="info-item-data" id="modalRating">${rating}</p>
+              </div>
+              <div class="info-item">
+                <p>Body Part</p>
+                <p class="info-item-data" id="modalTarget">Waist</p>
+              </div>
+              <div class="info-item">
+                <p>Equipment</p>
+                <p class="info-item-data" id="modalEquipment">Body weight</p>
+              </div>
+              <div class="info-item">
+                <p>Popularity</p>
+                <p class="info-item-data" id="modalPopularity">150</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="info-item">Burned Calories</p>
+          <p class="info-item-data" id="modalBurnedCalories">323/3 min</p>
+        </div>
+        <svg
+          class="svg-vector2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="342"
+          height="2"
+          viewBox="0 0 342 2"
+          fill="none"
+        >
+          <path d="M0 1H342" stroke="#1B1B1B" stroke-opacity="0.2" />
+        </svg>
+        <p class="modal-description">
+          This refers to your core muscles, which include the rectus abdominis,
+          obliques, and transverse abdominis. They're essential for maintaining
+          posture, stability, and generating force in many movements. Exercises
+          that target the abs include crunches, leg raises, and planks.
+          <span id="modalDescription"></span>
+        </p>
+        <div class="modal-buttons">
+          <button class="add-to-favorites-btn modal-button-act">
+            Add to favorites
+            <svg class="icon-heart" width="20" height="20">
+              <use href="../img/icon/symbol-defs.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <button class="give-rating-btn modal-button-act">
+            Give a rating
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div id="pop-up-exercise" class="pop-up-exercise">
+  <div class="pop-up-exercise-content">
+    <div class="close-btn" id="closeBtn">&#10006;</div>
+
+    <div class="exercise-info">
+      <img src="" alt="Exercise GIF" id="modalImage" />
+      <div class="exercise-details">
+        <h2 id="modalTitle"></h2>
+        <p class="name-modal" id="modalName"></p>
+        <p class="modal-rating" id="modalRating">4.0</p>
+        <svg
+          class="svg-vector1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="342"
+          height="2"
+          viewBox="0 0 342 2"
+          fill="none"
+        >
+          <path d="M0 1H342" stroke="#1B1B1B" stroke-opacity="0.2" />
+        </svg>
+        <div class="modal-properties-exercise">
+          <div class="horizontal-info">
+            <div class="exercise-info">
+              <div class="info-item">
+                <p>Target</p>
+                <p class="info-item-data" id="modalRating"></p>
               </div>
               <div class="info-item">
                 <p>Body Part</p>
