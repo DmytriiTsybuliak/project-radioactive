@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    var startButton = document.querySelector(".exercises-start-button");
     var openModalBtns = document.querySelectorAll(".openModalBtn");
     var popUpExercise = document.querySelector(".pop-up-exercise");
     var modalTitle = document.getElementById("modalTitle");
@@ -22,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
     giveRatingBtn.addEventListener("click", function() {
         // Добавить обработчик для действия "Give a rating"
         // Вставьте здесь соответствующий код
+    });
+
+        startButton.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            var id = btn.getAttribute("data-id");
+            fetchDataFromServer(id);
+        });
     });
 
 
