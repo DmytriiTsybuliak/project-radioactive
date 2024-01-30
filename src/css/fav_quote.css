@@ -65,8 +65,8 @@
   margin: 0 auto;
 }
 .block {
-  min-width: 280px;
-  min-height: 272px;
+  width: 335px;
+  height: 302px;
   border-radius: 30px;
   margin: 0 auto;
 }
@@ -74,9 +74,6 @@
 .quote-container {
   background-color: #7e847f;
   color: #f6f6f6;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
   position: relative;
 }
 .quote-title {
@@ -85,7 +82,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
-  margin-top: 42px;
+  padding-top: 42px;
   margin-left: 12px;
 }
 
@@ -95,26 +92,42 @@
 }
 
 .quote-text {
-  width: auto;
-  height: auto;
   color: rgba(246, 246, 246, 0.6);
   font-size: 14px;
-  line-height: 1.3;
-  margin-left: 46px;
   margin-top: 14px;
+  line-height: 1.28;
 }
 
 .quote-author {
   color: #f6f6f6;
   font-size: 16px;
   line-height: 1.5;
-  margin-top: 14px;
-  margin-left: 46px;
+  margin-top: 25px;
 }
 
 .schedule {
   background-color: #fff;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.schedule-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.schedule-container > h2 {
+  /* margin: 15px 0 6px 0; */
+  font-weight: 500;
+  line-height: 1.33;
+}
+
+.schedule-container > p {
+  color: rgba(27, 27, 27, 0.6);
+  font-size: 14px;
+  line-height: 1.28;
 }
 
 .sport-tool {
@@ -134,42 +147,35 @@
 
 .quote-icon_before {
   display: inline-block;
-  width: 25px;
-  height: 23px;
+  width: 34px;
+  height: 32px;
   background-image: url('../img/quote/icon-before-text.svg');
   background-size: cover;
   margin-top: 40px;
+  margin-left: 20px;
 }
 
 .quote-icon_after {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   background-image: url('../img/quote/icon-after-text.svg');
   background-size: cover;
   position: absolute;
   top: 40px;
   right: 40px;
 }
-
-@media screen and (min-width: 375px) {
-  .block {
-    width: 335px;
-  }
-  .quote-icon_before {
-    width: 34px;
-    height: 32px;
-  }
-
-  .quote-icon_after {
-    width: 28px;
-    height: 28px;
-  }
+.text-container {
+  padding-left: 66px;
+  padding-right: 20px;
+}
+.sport-container {
+  margin: 0 auto;
 }
 
 @media screen and (min-device-pixel-ratio: 2),
   screen and (-webkit-min-device-pixel-ratio: 2),
-  screen  and (min-resolution: 192dpi),
+  screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .sport-img {
     background-image: url(../img/fav-quote/fav-quote-mobile-2x.png);
@@ -180,6 +186,7 @@
   .block {
     width: 368px;
     height: 302px;
+    border-radius: 50px;
   }
 
   .quote-container {
@@ -199,9 +206,9 @@
     margin-left: 80px;
   }
 
-  .text-containet {
-    margin-left: 80px;
-    max-width: 526px;
+  .text-container {
+    padding-left: 130px;
+    padding-right: 80px;
   }
 
   .sport-img {
@@ -209,12 +216,13 @@
   }
 
   .quote-title {
-    margin-top: 64px;
+    padding-top: 64px;
+    font-size: 24px;
   }
 
   .sport-container {
     display: flex;
-    max-width: 736px;
+    width: 736px;
     margin: 0 auto;
   }
 
@@ -226,12 +234,9 @@
   .quote-author {
     margin-top: 25px;
   }
-  .schedule {
-    display: flex;
-    align-items: center;
-  }
+
   .schedule-container > h2 {
-    margin: 15px 0 6px 0;
+    /* margin: 15px 0 6px 0; */
     font-weight: 500;
     line-height: 1.33;
   }
@@ -240,12 +245,6 @@
     color: rgba(27, 27, 27, 0.6);
     font-size: 14px;
     line-height: 1.28;
-  }
-
-  .schedule-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
@@ -269,25 +268,21 @@
     line-height: 1.33;
   }
 
-  /* 
-  .container {
-    flex-direction: row;
-  }
-  .block {
-    width: 352px;
-    height: 302px;
-  }
-  .sport-container {
-    min-width: 704px;
-  } */
-
   .sport-img {
     background-image: url(../img/fav-quote/fav-quote-desktop-1x.png);
   }
-  /* 
-  .quote-container.block {
-  min-width: 704px;
-} */
+
+  .quote-icon_before {
+    margin-left: 64px;
+  }
+
+  .text-container {
+    padding-left: 114px;
+    padding-right: 64px;
+  }
+  .quote-icon_after {
+    right: 64px;
+  }
 }
 
 @media screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
