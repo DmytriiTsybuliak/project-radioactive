@@ -1,77 +1,120 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var startButton = document.querySelector(".exercises-start-button");
-    var openModalBtns = document.querySelectorAll(".openModalBtn");
-    var popUpExercise = document.querySelector(".pop-up-exercise");
-    var modalTitle = document.getElementById("modalTitle");
-    var modalImage = document.getElementById("modalImage");
-    var modalBodyPart = document.getElementById("modalBodyPart");
-    var modalEquipment = document.getElementById("modalEquipment");
-    var modalTarget = document.getElementById("modalTarget");
-    var modalDescription = document.getElementById("modalDescription");
-    var modalRating = document.getElementById("modalRating");
-    var modalBurnedCalories = document.getElementById("modalBurnedCalories");
-    var modalTime = document.getElementById("modalTime");
-    var modalPopularity = document.getElementById("modalPopularity");
-    var addToFavoritesBtn = document.querySelector(".add-to-favorites-btn");
-    var giveRatingBtn = document.querySelector(".give-rating-btn");
+document.addEventListener("DOMContentLoaded", function() {
+  // Находим кнопку "Старт" по id
+  var startButton = document.getElementById(".exercises-start-button");
 
-    addToFavoritesBtn.addEventListener("click", function() {
-        // Добавить обработчик для действия "Add to favorites"
-        // Вставьте здесь соответствующий код
-    });
+  // Назначаем обработчик события на кнопку "Старт"
+  startButton.addEventListener("click", function() {
+    // Отправляем запрос на сервер
+    fetch('https://energyflow.b.goit.study/api/data?id=64f389465ae26083f39b17a4')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Заполняем модальное окно данными
+        document.getElementById("modalTitle").textContent = data.name;
+        document.getElementById("modalImage").src = data.gifUrl;
+        document.getElementById("modalName").textContent = data.name;
+        document.getElementById("modalRating").textContent = data.rating;
+        document.getElementById("modalTarget").textContent = data.bodyPart;
+        document.getElementById("modalEquipment").textContent = data.equipment;
+        document.getElementById("modalPopularity").textContent = data.popularity;
+        document.getElementById("modalBurnedCalories").textContent = data.burnedCalories + " cal / " + data.time + " min";
+        document.getElementById("modalDescription").textContent = data.description;
 
-    giveRatingBtn.addEventListener("click", function() {
-        // Добавить обработчик для действия "Give a rating"
-        // Вставьте здесь соответствующий код
-    });
+        // Открываем модальное окно
+        var modal = document.querySelector(".pop-up-exercise");
+        modal.style.display = "block";
 
-        startButton.forEach(function(btn) {
-        btn.addEventListener("click", function() {
-            var id = btn.getAttribute("data-id");
-            fetchDataFromServer(id);
-        });
-    });
-
-
-
-    openModalBtns.forEach(function(btn) {
-        btn.addEventListener("click", function() {
-            var id = btn.getAttribute("data-id");
-            fetchDataFromServer(id);
-        });
-    });
-
-    function fetchDataFromServer(id) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://energyflow.b.goit.study/api/data?id=" + id, true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    var responseData = JSON.parse(xhr.responseText);
-                    displayDataInModal(responseData);
-                } else {
-                    console.error("Ошибка запроса на сервер: " + xhr.status);
-                }
-            }
-        };
-        xhr.send();
-    }
-
-    function displayDataInModal(data) {
-        modalTitle.textContent = data.name;
-        modalImage.src = data.gifUrl;
-        modalBodyPart.textContent = data.bodyPart;
-        modalEquipment.textContent = data.equipment;
-        modalTarget.textContent = data.target;
-        modalDescription.textContent = data.description;
-        modalRating.textContent = data.rating;
-        modalBurnedCalories.textContent = data.burnedCalories;
-        modalTime.textContent = data.time + " мин";
-        modalPopularity.textContent = data.popularity;
-
-        popUpExercise.style.display = "flex";
-    }
+        // Назначаем обработчик события на кнопку закрытия модального окна
+        var closeButton = document.getElementById("closeBtn");
+        closeButton.onclick = function() {
+          modal.style.display = "none";
+        }
+      })
+      .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+      });
+  });
 });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     var startButton = document.querySelector(".exercises-start-button");
+//     var openModalBtns = document.querySelectorAll(".openModalBtn");
+//     var popUpExercise = document.querySelector(".pop-up-exercise");
+//     var modalTitle = document.getElementById("modalTitle");
+//     var modalImage = document.getElementById("modalImage");
+//     var modalBodyPart = document.getElementById("modalBodyPart");
+//     var modalEquipment = document.getElementById("modalEquipment");
+//     var modalTarget = document.getElementById("modalTarget");
+//     var modalDescription = document.getElementById("modalDescription");
+//     var modalRating = document.getElementById("modalRating");
+//     var modalBurnedCalories = document.getElementById("modalBurnedCalories");
+//     var modalTime = document.getElementById("modalTime");
+//     var modalPopularity = document.getElementById("modalPopularity");
+//     var addToFavoritesBtn = document.querySelector(".add-to-favorites-btn");
+//     var giveRatingBtn = document.querySelector(".give-rating-btn");
+
+//     addToFavoritesBtn.addEventListener("click", function() {
+//         // Добавить обработчик для действия "Add to favorites"
+//         // Вставьте здесь соответствующий код
+//     });
+
+//     giveRatingBtn.addEventListener("click", function() {
+//         // Добавить обработчик для действия "Give a rating"
+//         // Вставьте здесь соответствующий код
+//     });
+
+//         startButton.forEach(function(btn) {
+//         btn.addEventListener("click", function() {
+//             var id = btn.getAttribute("data-id");
+//             fetchDataFromServer(id);
+//         });
+//     });
+
+
+
+//     openModalBtns.forEach(function(btn) {
+//         btn.addEventListener("click", function() {
+//             var id = btn.getAttribute("data-id");
+//             fetchDataFromServer(id);
+//         });
+//     });
+
+//     function fetchDataFromServer(id) {
+//         var xhr = new XMLHttpRequest();
+//         xhr.open("GET", "https://energyflow.b.goit.study/api/data?id=" + id, true);
+//         xhr.onreadystatechange = function() {
+//             if (xhr.readyState === XMLHttpRequest.DONE) {
+//                 if (xhr.status === 200) {
+//                     var responseData = JSON.parse(xhr.responseText);
+//                     displayDataInModal(responseData);
+//                 } else {
+//                     console.error("Ошибка запроса на сервер: " + xhr.status);
+//                 }
+//             }
+//         };
+//         xhr.send();
+//     }
+
+//     function displayDataInModal(data) {
+//         modalTitle.textContent = data.name;
+//         modalImage.src = data.gifUrl;
+//         modalBodyPart.textContent = data.bodyPart;
+//         modalEquipment.textContent = data.equipment;
+//         modalTarget.textContent = data.target;
+//         modalDescription.textContent = data.description;
+//         modalRating.textContent = data.rating;
+//         modalBurnedCalories.textContent = data.burnedCalories;
+//         modalTime.textContent = data.time + " мин";
+//         modalPopularity.textContent = data.popularity;
+
+//         popUpExercise.style.display = "flex";
+//     }
+// });
 
 
 //  document.addEventListener("DOMContentLoaded", function() {
