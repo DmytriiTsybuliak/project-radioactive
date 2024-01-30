@@ -82,7 +82,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
-  margin-top: 42px;
+  padding-top: 42px;
   margin-left: 12px;
 }
 
@@ -118,17 +118,17 @@
   transform: translateX(-50%);
 }
 
-  .schedule-container > h2 {
-    margin: 15px 0 6px 0;
-    font-weight: 500;
-    line-height: 1.33;
-  }
+.schedule-container > h2 {
+  /* margin: 15px 0 6px 0; */
+  font-weight: 500;
+  line-height: 1.33;
+}
 
-  .schedule-container > p {
-    color: rgba(27, 27, 27, 0.6);
-    font-size: 14px;
-    line-height: 1.28;
-  }
+.schedule-container > p {
+  color: rgba(27, 27, 27, 0.6);
+  font-size: 14px;
+  line-height: 1.28;
+}
 
 .sport-tool {
   background-image: url(../img/fav-quote/fluent_food-24-filled.svg);
@@ -166,7 +166,7 @@
   right: 40px;
 }
 .text-container {
-  margin-left: 66px;
+  padding-left: 66px;
   padding-right: 20px;
 }
 .sport-container {
@@ -207,9 +207,8 @@
   }
 
   .text-container {
-    margin-left: 130px;
-    margin-right: 80px;
-    max-width: 526px;
+    padding-left: 130px;
+    padding-right: 80px;
   }
 
   .sport-img {
@@ -217,7 +216,7 @@
   }
 
   .quote-title {
-    margin-top: 64px;
+    padding-top: 64px;
     font-size: 24px;
   }
 
@@ -237,7 +236,7 @@
   }
 
   .schedule-container > h2 {
-    margin: 15px 0 6px 0;
+    /* margin: 15px 0 6px 0; */
     font-weight: 500;
     line-height: 1.33;
   }
@@ -278,9 +277,8 @@
   }
 
   .text-container {
-    margin-left: 114px;
-    margin-right: 64px;
-    max-width: 500px;
+    padding-left: 114px;
+    padding-right: 64px;
   }
   .quote-icon_after {
     right: 64px;
