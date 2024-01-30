@@ -8,7 +8,7 @@ footer {
     background-size: cover; 
     background-color:rgba(27, 27, 27, 0.7);
     border-radius: 30px;
-    width: 375px;
+    width: 335px;
     height: 471px;
 }
 .footer--flex {
@@ -105,7 +105,7 @@ footer {
     }
     .footer--inside {
         background-image: url(../img/footer/footer-tablet.jpg);
-        width: 768px;
+        width: 736px;
         height: 576px;
         padding: 64px 41px 32px 48px;
     }

@@ -1,65 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercises</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
+
     <section class="section">
       <div class="container exercises-container">
         <div class="exercises-top-container">
           <h2 class="exercises-title">Exercises</h2>
           <div class="exercises-top-buttons">
-            <button class="exercises-filter-button" type="submit">
+            <button class="exercises-filter-button" data-name="Muscles" type="submit">
               Muscles
             </button>
-            <button class="exercises-filter-button" type="submit">
+            <button class="exercises-filter-button" data-name="Body parts" type="submit">
               Body parts
             </button>
-            <button class="exercises-filter-button" type="submit">
+            <button class="exercises-filter-button" data-name="Equipment" type="submit">
               Equipment
             </button>
-          </div>
-          
-        </div>
-        <ul class="exercises-list">
-          <!-- <li>
-            <div class="exercises-item">
-              <p class="exercises-item-name">Abductors</p>
-              <p class="exercises-item-subname">Muscles</p>
-            </div>
-          </li>
-        </ul>
-        <div class="exercises-bottom-buttons">
-          <button class="exercises-page-button" type="submit">1</button>
-          <button class="exercises-page-button" type="submit">2</button>
-        </div>-->
-      </div>
-    </section>
-
-    <!-- Exercises page 2 -->
-    <!-- <div class="container exercises-container">
-        <div class="exercises-top-container">
-          <h2 class="exercises-title">
-            Exercises / <span class="exercises-subtitle">Waist</span>
-          </h2>
-          <div class="exercises-filter-container">
-            <div class="exercises-top-buttons">
-              <button class="exercises-filter-button" type="submit">
-                Muscles
-              </button>
-              <button class="exercises-filter-button" type="submit">
-                Body parts
-              </button>
-              <button class="exercises-filter-button" type="submit">
-                Equipment
-              </button>
-            </div>
-            <div class="exercises-input-wrapper">
-              <form id="exercises-search-form">
+            <form id="exercises-search-form">
                 <input
                   class="exercises-search-input"
                   type="text"
@@ -84,10 +38,36 @@
                   ></use>
                 </svg>
               </form>
-            </div>
           </div>
+          
         </div>
-        <ul class="exercises-list-page2">
+         
+        <ul class="exercises-list">
+
+<!--          
+         <li>
+            <div class="exercises-item" style="background: linear-gradient(
+      0deg,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(16, 16, 16, 0.7) 100%
+    ),
+    url(/img/exercises/16kg.jpeg),
+    lightgray -16.825px -9.156px / 128.765% 116.922% no-repeat; background-size: cover;">
+              <p class="exercises-item-name">Abductors</p>
+              <p class="exercises-item-subname">Muscles</p>
+            </div>
+          </li> -->
+        </ul>
+        
+        <div class="exercises-bottom-buttons">
+          <!-- <button class="exercises-page-button" type="button">1</button>
+          <button class="exercises-page-button" type="button">2</button> -->
+        </div>
+        <div id="tui-pagination-container" class="tui-pagination"></div>
+      </div>
+    </section>
+
+    <!-- <ul class="">
           <li class="exercises-item-page2">
             <div class="exercises-card">
               <div class="exercises-card-top">
@@ -143,11 +123,51 @@
               </ul>
             </div>
           </li> 
-        </ul>
-        <div class="exercises-bottom-buttons">
-          <button class="exercises-page-button" type="submit">1</button>
-          <button class="exercises-page-button" type="submit">2</button>
-        </div>
-      </div>-->
-  </body>
-</html>
+        </ul> -->
+    <!-- Exercises page 2 -->
+    <!-- <div class="container exercises-container">
+        <div class="exercises-top-container">
+          <h2 class="exercises-title">
+            Exercises / <span class="exercises-subtitle">Waist</span>
+          </h2>
+          <div class="exercises-filter-container">
+            <div class="exercises-top-buttons">
+              <button class="exercises-filter-button" type="submit">
+                Muscles
+              </button>
+              <button class="exercises-filter-button" type="submit">
+                Body parts
+              </button>
+              <button class="exercises-filter-button" type="submit">
+                Equipment
+              </button>
+            </div>
+            <div class="exercises-input-wrapper">
+              <form id="exercises-search-form">
+                <input
+                  class="exercises-search-input"
+                  type="text"
+                  placeholder="Search"
+                />
+                <svg
+                  class="exercises-inputclear-icon exercises-is-hidden"
+                  width="18"
+                  height="18"
+                  aria-label="clear-icon"
+                >
+                  <use href="./img/exercises/exercises-sprite.svg#icon-x"></use>
+                </svg>
+                <svg
+                  class="exercises-search-icon"
+                  width="18"
+                  height="18"
+                  aria-label="search-icon"
+                >
+                  <use
+                    href="./img/exercises/exercises-sprite.svg#icon-search"
+                  ></use>
+                </svg>
+              </form>
+            </div>
+          </div>
+        </div> -->

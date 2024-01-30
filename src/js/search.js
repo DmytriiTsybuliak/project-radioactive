@@ -1,8 +1,11 @@
 import axios from "axios";
 
+
 const form = document.getElementById("exercises-search-form");
 const searchInput = form.querySelector(".exercises-search-input");
 const exercisesList = document.querySelector(".exercises-list-page2");
+const clearButton = document.querySelector('.exercises-inputclear-icon');
+
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -15,16 +18,47 @@ form.addEventListener("submit", async (event) => {
     console.error(error);
   }
 });
+//  Додаємо обробник події для введення тексту у полі пошуку
+searchInput.addEventListener('input', handleInputChange);
+
+
+// / Функція для відображення або приховування іконки очищення
+function handleInputChange() {
+  const inputValue = searchInput.value.trim();
+  if (inputValue !== '') {
+    clearButton.classList.remove('exercises-is-hidden');
+  } else {
+    clearButton.classList.add('exercises-is-hidden');
+  }
+}
+// / Функція для очищення input 
+  function clearInput() {
+  const searchInput = document.getElementById('exercises-search-input');
+  if (searchInput) {
+    searchInput.value = '';
+  }
+  };
+
+  clearButton.addEventListener('click', clearInput);
+
+async function getExercises(query) {
+  try {
+    const response = await axios.get(`https://energyflow.b.goit.study/api/exercises?bodypart=back&muscles=lats&equipment=barbell&keyword=${query}&page=1&limit=10`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching exercises:', error);
+    throw error;
+  }
+}
 
 async function renderExercises(query) {
   try {
-    const response = await axios.get(`https://energyflow.b.goit.study/api/exercises?bodypart=back&muscles=lats&equipment=barbell&keyword=${query}&page=1&limit=10`);
-    const exercises = response.data;
+    const exercises = await getExercises(query);
 
     exercisesList.innerHTML = '';
 
-    if (exercises.length > 0) {
-      const exercisesHTML = exercises.map((exercise) => `
+    if (exercises.results.length > 0) {
+      const exercisesHTML = exercises.results.map((exercise) => `
         <li class="exercises-item-page2">
           <div class="exercises-card">
             <div class="exercises-card-top">
@@ -58,7 +92,7 @@ async function renderExercises(query) {
                 <span class="exercises-data-name">Body part: </span>${exercise.bodyPart}
               </li>
               <li class="exercises-info-data">
-                <span class="exercises-data-name">Target: </span>${exercise.targetMuscle}
+                <span class="exercises-data-name">Target: </span>${exercise.target}
               </li>
             </ul>
           </div>
@@ -72,4 +106,6 @@ async function renderExercises(query) {
   } catch (error) {
     console.error(error);
   }
+
+  
 }

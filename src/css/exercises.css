@@ -11,12 +11,17 @@
   justify-content: center;
 }
 
+#exercises-search-form{
+  margin-left: auto;
+  position: relative;
+}
 .exercises-top-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: start;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .exercises-title {
@@ -44,9 +49,10 @@
 .exercises-top-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 6px;
+  width: 100%;
 }
 
 .exercises-filter-button {
@@ -109,9 +115,8 @@
   stroke: #1b1b1b;
   fill: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 16px;
+  top: 12px;
+  left: 265px;
 }
 
 .exercises-list {
@@ -139,14 +144,6 @@
   justify-content: center;
   gap: 2;
   object-fit: cover;
-  background: linear-gradient(
-      0deg,
-      rgba(16, 16, 16, 0.7) 0%,
-      rgba(16, 16, 16, 0.7) 100%
-    ),
-    url(../img/exercises/16kg.jpeg),
-    lightgray -16.825px -9.156px / 128.765% 116.922% no-repeat;
-  background-size: cover;
   border-radius: 12px;
   border: 1px solid rgba(246, 246, 246, 0.3);
 }
@@ -173,6 +170,7 @@
   height: 165px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 16px;
   object-fit: cover;
   border-radius: 12px;
@@ -256,7 +254,7 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding-bottom: 18px;
+  /* padding-bottom: 18px; */
 }
 
 .exercises-card-exname {
@@ -312,7 +310,13 @@
   color: #1b1b1b;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+@media screen and (min-width: 768px){
+
+
+  .exercises-search-icon {
+  top: 14px;
+  left: 214px;
+}
   .exercises-container {
     width: 736px;
     padding: 64px 48px;
@@ -373,7 +377,11 @@
     width: 313px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
+    .exercises-search-icon {
+  top: 14px;
+  left: 240px;
+}
   .exercises-container {
     width: 1408px;
   }
@@ -399,6 +407,7 @@
   .exercises-card {
     width: 424px;
     height: 141px;
+    justify-content: space-between;
   }
 }
 .error-message {
