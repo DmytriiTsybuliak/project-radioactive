@@ -12,6 +12,7 @@
 }
 
 #exercises-search-form{
+  margin-top: 20px;
   margin-left: auto;
   position: relative;
 }
@@ -49,9 +50,11 @@
 .exercises-top-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  justify-content: space-between;
   align-items: center;
-  gap: 6px;
+  /* gap: 6px; */
   width: 100%;
 }
 
@@ -311,7 +314,10 @@
 }
 
 @media screen and (min-width: 768px){
-
+  #exercises-search-form{
+  margin-top: 0px;
+  margin-left: auto;
+}
 
   .exercises-search-icon {
   top: 14px;
