@@ -1,185 +1,184 @@
 /* MOBILE */
-   .quote__of-the-day{
-    width: 335px;
-    height: 272px;
-    border-radius: 30px;
-    background: #7E847F;
-    margin: 0 auto;
-   }
-
-   .font-image { 
-    background-image: url('../img/quote/mobile-background-image.png');
-    background-color: #E8E8E8;
-    width: 335px;
-    height: 272px;
-    border-radius: 30px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    margin: 0 auto;
-   }
-   
-   .quote__container {
-    display: flex;
-    margin: 0 auto;
-   }
-
-   .quote__icon-before {
-       display: inline-block;
-       width: 34px;
-       height: 32px;
-       background-image: url('../img/quote/icon-before-text.svg');
-       background-size: cover;
-       margin-top: 42px;
-       margin-left: 20px;
-   }
-
-   .quote__icon-after { 
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    background-image: url('../img/quote/icon-after-text.svg');
-    background-size: cover;
-    margin-top: 42px;
-    margin-left: 61px;
-   }
-
-   .quote__title { 
-    color: #F6F6F6;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4;
-    margin-top: 42px;
-    margin-left: 12px;
-   }
-
-   .quote__backend{
-   padding-left: 20px;
-   padding-right: 20px;
-   padding-bottom: 20px;
-
-   }
-   .quote__backend-text {
-    color: rgba(246, 246, 246, 0.60);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.3;
-    margin-left: 46px;
-    margin-top: 14px;
-   }
-
-   .quote__backend-author{
-    color: #F6F6F6;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 14px;
-    margin-left: 46px;
-   }
-
-   /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
-.quote__of-the-day { 
-    width: 736px;
-    height: 302px;
-    border-radius: 50px;
+.quote__of-the-day {
+  width: 335px;
+  height: 272px;
+  border-radius: 30px;
+  background: #7e847f;
+  margin: 0 auto;
+  position: relative;
 }
 
 .font-image {
+  background-image: url('../img/quote/mobile-background-image.png');
+  background-color: #e8e8e8;
+  width: 335px;
+  height: 272px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.quote__container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.quote__icon-before {
+  display: inline-block;
+  width: 34px;
+  height: 32px;
+  background-image: url('../img/quote/icon-before-text.svg');
+  background-size: cover;
+  margin-top: 42px;
+  margin-left: 20px;
+}
+
+.quote__icon-after {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url('../img/quote/icon-after-text.svg');
+  background-size: cover;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.quote__title {
+  color: #f6f6f6;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 42px;
+  margin-left: 12px;
+}
+
+.quote__backend {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.quote__backend-text {
+  color: rgba(246, 246, 246, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-left: 46px;
+  margin-top: 14px;
+}
+
+.quote__backend-author {
+  color: #f6f6f6;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 14px;
+  margin-left: 46px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .quote__of-the-day {
+    width: 736px;
+    height: 302px;
+    border-radius: 50px;
+  }
+
+  .font-image {
     width: 736px;
     height: 302px;
     border-radius: 50px;
     background-image: url('../img/quote/tablet-background-image.png');
-    background-color: #E8E8E8;
-}
+    background-color: #e8e8e8;
+  }
 
- .quote__icon-before {
-     margin-top: 64px;
-     margin-left: 80px;
- }
+  .quote__icon-before {
+    margin-top: 64px;
+    margin-left: 80px;
+  }
 
- .quote__icon-after {
-     width: 48px;
-     height: 48px;
-     margin-top: 32px;
-     margin-left: 254px;
- }
+  .quote__icon-after {
+    width: 48px;
+    height: 48px;
+    top: 32px;
+    right: 80px;
+  }
 
- .quote__backend {
+  .quote__backend {
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 32px;
-}
+  }
 
- .quote__title {
+  .quote__title {
     font-size: 24px;
     line-height: 1.33;
     margin-top: 64px;
     margin-left: 16px;
- }
+  }
 
- .quote__backend-text {
+  .quote__backend-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     margin-left: 98px;
     margin-right: 80px;
     margin-top: 16px;
-}
+  }
 
-.quote__backend-author {
+  .quote__backend-author {
     margin-top: 25px;
     margin-left: 98px;
-}
+  }
 }
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-.quote__title{
+  .quote__title {
     margin-top: 64px;
     margin-left: 16px;
-}
-.quote {
+  }
+  .quote {
     display: flex;
     margin-top: 0px;
-    }
+  }
 
-.quote__of-the-day {
+  .quote__of-the-day {
     width: 704px;
-    height: 302px
-    }
+    height: 302px;
+  }
 
-.font-image {
+  .font-image {
     width: 704px;
     height: 302px;
     background-image: url('../img/quote/laptop-background-image.png');
-    background-color: #E8E8E8;
-}
+    background-color: #e8e8e8;
+  }
 
-.quote__icon-before {
+  .quote__icon-before {
     margin-top: 64px;
     margin-left: 64px;
-}
-.quote__icon-after {
+  }
+  .quote__icon-after {
     width: 48px;
     height: 48px;
-    margin-top: 32px;
-    margin-left: auto;
-    margin-right: 64px;
-}
+    top: 32px;
+    right: 64px;
+  }
 
-.quote__backend-text {
+  .quote__backend-text {
     margin-left: 94px;
     margin-right: 32px;
-}
+  }
 
-.quote__backend-author {
+  .quote__backend-author {
     margin-top: 25px;
     margin-left: 94px;
+  }
 }
-}
-
