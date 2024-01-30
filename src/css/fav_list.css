@@ -58,7 +58,7 @@ ul {
     margin-inline-start: 0px;
     gap: 20px;
     @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-            max-height: 1312px;
+            max-height: 720px;
             width: 650px;
             overflow-y: auto;
             flex-direction: row;
@@ -191,6 +191,8 @@ li.favopite-item {
 }
 
 .start-button {
+    display: flex;
+    justify-content: space-between;
     padding: 0px;
     border: 0px;
     border-color: transparent;
@@ -301,24 +303,26 @@ li.favopite-item {
         }
 }
 
-.page {
-    padding: 0px;
-    border: 0px;
+div>.current-page{
+    color:rgba(27, 27, 27, 1) ;
+    border: solid rgba(27, 27, 27, 1) 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    }
+.btn-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-color: transparent;
-    background-color: transparent;
-    font-size: 20px;
     height: 32px;
     width: 12px;
-
-}
-
-.first-page {
-    fill: rgba(27, 27, 27, 1);
-}
-
-.second-page {}
-
-.third-page {}
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: rgba(27, 27, 27, 0.4);
+    background-color: transparent;
+    padding: 15px 15px;
+    cursor: pointer;}
 
 .page-favorite {
     width: 14px;
