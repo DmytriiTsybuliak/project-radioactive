@@ -93,6 +93,18 @@
   background-color: #f6f6f6;
 }
 
+.exercises-inputclear-icon {
+  stroke: #1b1b1b;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 37px;
+}
+
+.exercises-is-hidden {
+  display: none;
+}
+
 .exercises-search-icon {
   stroke: #1b1b1b;
   fill: none;
@@ -127,14 +139,6 @@
   justify-content: center;
   gap: 2;
   object-fit: cover;
-  background: linear-gradient(
-      0deg,
-      rgba(16, 16, 16, 0.7) 0%,
-      rgba(16, 16, 16, 0.7) 100%
-    ),
-    url(../img/exercises/16kg.jpeg),
-    lightgray -16.825px -9.156px / 128.765% 116.922% no-repeat;
-  background-size: cover;
   border-radius: 12px;
   border: 1px solid rgba(246, 246, 246, 0.3);
 }
@@ -161,6 +165,7 @@
   height: 165px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 16px;
   object-fit: cover;
   border-radius: 12px;
@@ -213,6 +218,13 @@
   line-height: 1.5;
 }
 
+.exercises-star-icon {
+  display: inline-flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+}
+
 .exercises-start-button {
   display: flex;
   flex-direction: row;
@@ -237,7 +249,7 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding-bottom: 18px;
+  /* padding-bottom: 18px; */
 }
 
 .exercises-card-exname {
@@ -263,9 +275,11 @@
 }
 
 .exercises-bottom-buttons {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 0;
+  justify-content: center;
 }
 
 .exercises-page-button {
@@ -291,7 +305,7 @@
   color: #1b1b1b;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+@media screen and (min-width: 768px){
   .exercises-container {
     width: 736px;
     padding: 64px 48px;
@@ -332,6 +346,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 14px;
+    justify-content: left;
   }
 
   .exercises-list-page2 {
@@ -339,6 +354,7 @@
     flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 14px;
+    justify-content: left;
   }
 
   .exercises-item {
@@ -350,7 +366,7 @@
     width: 313px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
   .exercises-container {
     width: 1408px;
   }
@@ -376,26 +392,25 @@
   .exercises-card {
     width: 424px;
     height: 141px;
+    justify-content: space-between;
   }
 }
-.error-message{
-color: #7E847F;
-  font-family: "DM Sans";
+.error-message {
+  color: #7e847f;
+  font-family: 'DM Sans';
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.18px;
-
 }
 .no-results-message {
-  color: #1B1B1B;
+  color: #1b1b1b;
   text-align: center;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.18px;
 }
-

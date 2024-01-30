@@ -1,31 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('subscriptionForm');
+import axios from 'axios';
+const form = document.getElementById('subscriptionForm');
+const email = document.getElementById('email');
+const pattern = new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/);
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); 
-
-        if (!form.checkValidity()) {
-            alert('Please fill in a valid email address.');
+form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    try {
+        if (pattern.test(email.value)) {
+            // dsasd@gmail.com
+            await axios.post('https://energyflow.b.goit.study/api/subscription', { email: email.value })
+                .then(response => { console.log(response.data.message) })
+                .catch(error => { console.log(error.response.data.message) });
         } else {
-            const formData = new FormData(form);
-
-            fetch('https://energyflow.b.goit.study/api-docs/#/Subscriptions', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                alert("We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being."); // Повідомлення про успішну розсилку
-                console.log('Server response:', data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+            alert('Please enter the correct email');
         }
-    });
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong, try again');
+    }
 });
