@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Находим контейнер с классом "container exercises-container"
+  // Находим контейнер с классом "exercises-list"
   var container = document.querySelector(".exercises-list");
 
   // Навешиваем обработчик клика на родительский элемент, делегируем событие детям
@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Получаем значение ID из атрибута data-id кнопки
       var exerciseId = target.getAttribute("data-id");
 
+      
+
       // Отправляем запрос на сервер с учетом полученного exerciseId
-      fetch('https://energyflow.b.goit.study/api/exercises/?id=')
+      fetch('https://energyflow.b.goit.study/api/exercises/?id=' + exerciseId)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -20,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
           return response.json();
         })
         .then(data => {
+          // Выводим данные на консоль
+          console.log(data);
+
           // Заполняем модальное окно данными
           document.getElementById("modalTitle").textContent = data.name;
           document.getElementById("modalImage").src = data.gifUrl;
