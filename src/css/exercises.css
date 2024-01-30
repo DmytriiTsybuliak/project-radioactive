@@ -11,10 +11,10 @@
   justify-content: center;
 }
 
-#exercises-search-form{
+/* #exercises-search-form {
   margin-left: auto;
   position: relative;
-}
+} */
 .exercises-top-container {
   display: flex;
   flex-direction: column;
@@ -310,13 +310,11 @@
   color: #1b1b1b;
 }
 
-@media screen and (min-width: 768px){
-
-
+@media screen and (min-width: 768px) {
   .exercises-search-icon {
-  top: 14px;
-  left: 214px;
-}
+    top: 14px;
+    left: 214px;
+  }
   .exercises-container {
     width: 736px;
     padding: 64px 48px;
@@ -378,10 +376,10 @@
   }
 }
 @media screen and (min-width: 1440px) {
-    .exercises-search-icon {
-  top: 14px;
-  left: 240px;
-}
+  .exercises-search-icon {
+    top: 14px;
+    left: 240px;
+  }
   .exercises-container {
     width: 1408px;
   }
