@@ -127,7 +127,7 @@ function getExercises({ filter, name }) {
       console.log(musclesResult);
       // console.log(totalPages, response.data);
       const markup = musclesResult.map(({ bodyPart, burnedCalories, name, _id, target, rating }) => {
-        return `<li class="exercises-item-page2" id=${_id}>
+        return `<li class="exercises-item-page2">
             <div class="exercises-card">
               <div class="exercises-card-top">
                 <div class="exercises-kind-wrapper">
@@ -146,7 +146,7 @@ function getExercises({ filter, name }) {
                     </svg>
                   </div>
                 </div>
-                <button class="exercises-start-button">
+                <button class="exercises-start-button" id=${_id}>
                   Start
                   <svg class="exercises-start-icon" width="14" height="14">
                     <use

@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const form = document.getElementById("exercises-search-form");
 const searchInput = form.querySelector(".exercises-search-input");
 const exercisesList = document.querySelector(".exercises-list-page2");
@@ -106,6 +107,5 @@ async function renderExercises(query) {
     console.error(error);
   }
 
-  
   
 }
