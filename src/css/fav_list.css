@@ -11,46 +11,6 @@
     height: 132px;
     border-radius: 8px;
 }
-/* Reset styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-}
-
-p:last-child {
-    margin-bottom: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-}
-
-a {
-    color: currentColor;
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-ul {
-    list-style: none;
-}
 
 .favorite-list {
     display: flex;
@@ -58,7 +18,7 @@ ul {
     margin-inline-start: 0px;
     gap: 20px;
     @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-            max-height: 1312px;
+            max-height: 720px;
             width: 650px;
             overflow-y: auto;
             flex-direction: row;
@@ -116,8 +76,6 @@ li.favopite-item {
     border-radius: 30px;
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
         width: 313px;
-        
-
     }
 
     @media screen and (min-width: 1440px) {
@@ -131,8 +89,7 @@ li.favopite-item {
     height: 1312px;
     display: block;
     overflow: hidden;
-}
-}
+}}
 
 .btn-delete-favorite {
     padding: 0px;
@@ -191,6 +148,8 @@ li.favopite-item {
 }
 
 .start-button {
+    display: flex;
+    justify-content: space-between;
     padding: 0px;
     border: 0px;
     border-color: transparent;
@@ -261,7 +220,6 @@ li.favopite-item {
             width: 554px;
             margin-top: 208px;
         }
-    
         @media screen and (min-width: 1440px) {
             height: 171px;
             max-width: 554px;
@@ -276,10 +234,7 @@ li.favopite-item {
     @media screen and (min-width: 768px) and (max-width: 1439.98px) {
         line-height: 24px;
         }
-    
-        @media screen and (min-width: 1440px) {
-    
-            
+        @media screen and (min-width: 1440px) {            
         }
 }
 
@@ -301,15 +256,26 @@ li.favopite-item {
         }
 }
 
-.page {
-    padding: 0px;
-    border: 0px;
+div>.current-page{
+    color:rgba(27, 27, 27, 1) ;
+    border: solid rgba(27, 27, 27, 1) 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    }
+.btn-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-color: transparent;
-    background-color: transparent;
-    font-size: 20px;
     height: 32px;
     width: 12px;
-
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: rgba(27, 27, 27, 0.4);
+    background-color: transparent;
+    padding: 15px 15px;
+    cursor: pointer;}
 }
 
 .first-page {
@@ -333,9 +299,7 @@ li.favopite-item {
         }
     
 .first-page:hover {
-    
             transition: 1000ms;
-            
             background-color: transparent;
             color: rgba(27, 27, 27, 1);
             border: solid 1px rgba(27, 27, 27, 1);
@@ -349,9 +313,7 @@ li.favopite-item {
 .third-page {
     color: rgba(27, 27, 27, 0.4);
 }
-.page{
 
-}
 .page-favorite {
     width: 14px;
     height: 14px;

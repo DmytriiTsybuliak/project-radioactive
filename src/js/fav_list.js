@@ -145,22 +145,34 @@ const btnPages = document.querySelector(".list-pages");
 btnPages.addEventListener("click",controlPages)
 const emptyArr = document.querySelector(".empty-favorite");
 const pages = document.querySelector(".list-pages")
+window.addEventListener('resize', onMobileScrin)
+const btnFirst = document.querySelector(".first-page");
+const btnSecond = document.querySelector(".second-page");
+const btnThird = document.querySelector(".third-page");
 
 // const KEY_FAVORITE = "favorite";
 const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
 const firstPage = favoriteArr.slice(0, 8);
-const secondPage = favoriteArr.slice(8, 17);
-const thirdPage = favoriteArr.slice(17, 26);
+const secondPage = favoriteArr.slice(8, 16);
+const thirdPage = favoriteArr.slice(16, 26);
 
-createMarkup(favoriteArr)
+    function onMobileScrin() {
+        const width = window.innerWidth;
+        
+        if (width < 768 && favoriteArr.length >= 8) {
+                createMarkup(firstPage)
+                controlPageValue()
+                btnFirst.classList.add("current-page");
+                return
+            } else {
+            createMarkup(favoriteArr)
+            pages.style.display = 'none'
+            return
+        }
+};
 
-
-
-
-
-
-
+onMobileScrin();
 
 
 function createMarkup(arr) {
@@ -201,10 +213,6 @@ function createMarkup(arr) {
 };
 
 
-
-
-
-
 function onClick(evt) {
 evt.preventDefault();
 
@@ -213,17 +221,21 @@ evt.preventDefault();
         const elements = findElements(String(id));
         const deleteArr = deleteElements(elements)
         localStorage.setItem(KEY_FAVORITE, JSON.stringify(deleteArr));
-    
-        console.log(deleteArr);
-        createMarkup(deleteArr)
-    
+        createMarkup(favoriteArr)
+        controlPageValue()
+        btnFirst.classList.add("current-page");
+        btnSecond.classList.remove("current-page");
+        btnThird.classList.remove("current-page");
+        
     }
 };
+
 
 function deleteElements(elements) {
     const newFavoritArr = favoriteArr.splice(elements, 1)
     return favoriteArr
 };
+
 
 function findElements(idElements) {
     return favoriteArr.findIndex(({_id})=>_id===idElements)
@@ -232,15 +244,51 @@ function findElements(idElements) {
 
 function controlPages(evt) {
     evt.preventDefault();
-    // if (evt.target.classList.contains("svg-page")) {
-    // const clickPage = evt.target.closest('.page').dataset.id;
-    // console.log(clickPage);
-    // if (clickPage === "1") {
-    //     createMarkup(firstPage);
-    // } else if(clickPage === "2") {
-    //     createMarkup(secondPage);
-    // } else if(clickPage === "3") {
-    //     createMarkup(thirdPage);
-    // }
-    // }
+    if (evt.target.classList.contains("btn-page")) {
+    const clickPage = evt.target.dataset.id;
+        if (clickPage === "1") {
+            createMarkup(firstPage);
+            btnFirst.classList.add("current-page");
+            btnSecond.classList.remove("current-page");
+            btnThird.classList.remove("current-page");
+            controlPageValue()
+        return
+    } else if (clickPage === "2") {
+            if (favoriteArr.length >= 8) {
+                createMarkup(secondPage)
+                controlPageValue()
+                btnSecond.classList.add("current-page");
+                btnFirst.classList.remove("current-page");
+                btnThird.classList.remove("current-page");
+                return
+            } else { createMarkup(firstPage) }
+        return
+    } else if (clickPage === "3") {
+            if (favoriteArr.length > 16) {
+            createMarkup(thirdPage);
+                controlPageValue()
+                btnSecond.classList.remove("current-page");
+                btnFirst.classList.remove("current-page");
+                btnThird.classList.add("current-page");
+            
+            } else {
+                createMarkup(secondPage)
+        } 
+    }
+    }
+};
+
+
+function controlPageValue() {
+    if (favoriteArr.length <= 8) {
+        btnFirst.style.display = 'none'
+        btnSecond.style.display = 'none'
+        btnThird.style.display = 'none'
+    }else if (favoriteArr.length>8 && favoriteArr.length<=16) {
+        btnThird.style.display = 'none'
+        btnSecond.style.display = 'flex'
+    } else if (favoriteArr.length>16){
+        btnSecond.style.display = 'flex'
+        btnThird.style.display = 'flex'
+    }
 }
