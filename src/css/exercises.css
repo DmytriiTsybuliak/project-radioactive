@@ -11,6 +11,9 @@
   justify-content: center;
 }
 
+#exercises-search-form{
+  position: relative;
+}
 .exercises-top-container {
   display: flex;
   flex-direction: column;
@@ -109,9 +112,8 @@
   stroke: #1b1b1b;
   fill: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 16px;
+  top: 12px;
+  left: 265px;
 }
 
 .exercises-list {
@@ -306,6 +308,12 @@
 }
 
 @media screen and (min-width: 768px){
+
+
+  .exercises-search-icon {
+  top: 14px;
+  left: 214px;
+}
   .exercises-container {
     width: 736px;
     padding: 64px 48px;
@@ -367,6 +375,10 @@
   }
 }
 @media screen and (min-width: 1440px) {
+    .exercises-search-icon {
+  top: 14px;
+  left: 240px;
+}
   .exercises-container {
     width: 1408px;
   }
