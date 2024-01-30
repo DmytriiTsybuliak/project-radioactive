@@ -195,3 +195,31 @@ footer {
     flex-direction: row;
 }
 }
+
+/* ================Media for retina (@x2 images)================ */
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .footer--inside {
+    background-image: url(../img/footer/footer-mobile@2x.png);
+    background-size: contain;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .footer--inside {
+      background-image: url(../img/footer/footer-tablet@2x.png);
+      background-size: contain;
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    .footer--inside {
+      background-image: url(../img/footer/footer-desktop@2x.png);
+      background-size: contain;
+    }
+}
