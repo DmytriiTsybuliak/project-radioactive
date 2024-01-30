@@ -12,6 +12,7 @@
 }
 
 #exercises-search-form{
+  margin-left: auto;
   position: relative;
 }
 .exercises-top-container {
@@ -20,6 +21,7 @@
   gap: 20px;
   align-items: start;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .exercises-title {
@@ -47,9 +49,10 @@
 .exercises-top-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 6px;
+  width: 100%;
 }
 
 .exercises-filter-button {

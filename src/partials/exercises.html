@@ -4,19 +4,16 @@
         <div class="exercises-top-container">
           <h2 class="exercises-title">Exercises</h2>
           <div class="exercises-top-buttons">
-            <button class="exercises-filter-button" type="submit">
+            <button class="exercises-filter-button" data-name="Muscles" type="submit">
               Muscles
             </button>
-            <button class="exercises-filter-button" type="submit">
+            <button class="exercises-filter-button" data-name="Body parts" type="submit">
               Body parts
             </button>
-            <button class="exercises-filter-button" type="submit">
+            <button class="exercises-filter-button" data-name="Equipment" type="submit">
               Equipment
             </button>
-          </div>
-          
-        </div>
-         <form id="exercises-search-form">
+            <form id="exercises-search-form">
                 <input
                   class="exercises-search-input"
                   type="text"
@@ -41,6 +38,10 @@
                   ></use>
                 </svg>
               </form>
+          </div>
+          
+        </div>
+         
         <ul class="exercises-list">
 
 <!--          
@@ -62,6 +63,7 @@
           <!-- <button class="exercises-page-button" type="button">1</button>
           <button class="exercises-page-button" type="button">2</button> -->
         </div>
+        <div id="tui-pagination-container" class="tui-pagination"></div>
       </div>
     </section>
 
