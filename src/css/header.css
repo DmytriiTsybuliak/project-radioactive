@@ -18,12 +18,12 @@
     font-weight: 700;
     line-height: 18px; /* 112.5% */
     letter-spacing: -0.32px;
-    transition: scale 250ms ease-out (0.4, 0, 0.2, 1);
+    transition: scale 250ms cubic-bezier (0.4, 0, 0.2, 1);
 }
 .logo-link:hover,
 .logo-link:focus {    
     outline: none;
-    scale: 102%;
+    scale: 103%;
 }
 
 .burger-menu {
@@ -63,6 +63,7 @@
 
 .shirm-header-logo-link {
     color: #F6F6F6;
+    background: #7E847F;
 }
 
 
@@ -76,12 +77,8 @@
     outline: none;
     scale: 120%;
 }
-/* html {
-    position: sticky;
-    
-  } */
+
 .shirm {
-    /* overflow: hidden; */
     width: 335px;
     height: 100vh;
     background-color: #7E847F; 
@@ -91,21 +88,21 @@
     align-items: end;
 }
 
-.menu-links {       /*---------element position-------*/
+.menu-links {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;    
 }
 
-.shirm-social-networks {    /*---------element position-------*/
+.shirm-social-networks {
     display: flex;
     justify-content: center;
     gap: 12px;
 }
 
 .soc-frame {
-    display: flex;          /*---svg position---*/
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 41px;
@@ -116,7 +113,7 @@
 }
 .soc-frame:hover,
 .soc-frame:focus {
-    border: 1px solid rgba(95, 101, 96, 1);
+    border: 1px solid rgba(246, 246, 246, 0.80);
     outline: none;
     scale: 104%;
 }
@@ -153,7 +150,10 @@
     background-color: #FFF;
     color: #1B1B1B;
 }
-
+.current:hover,
+.current:focus {
+    border: 1px solid #7E847F;
+}
 
 /* ----------------Hidden------------------ */
 @media screen and (min-width: 768px) {
@@ -212,13 +212,9 @@
 /* ----------------Lap-Tab-Header-Settings------------------ */
 @media screen and (min-width: 768px) {
     .logo-link {
-        color: #1B1B1B;
         font-size: 28px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 28px; /* 100% */
+        line-height: 28px;  /* 100% */
         letter-spacing: -0.56px;
-        transition: scale 250ms ease-out (0.4, 0, 0.2, 1);
     }
 }
 
@@ -249,6 +245,7 @@
     height: 44px;
     border-radius: 10px;
     border: 1px solid rgba(126, 132, 127, 0.20);
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .lap-tab-soc-frame:hover,
 .lap-tab-soc-frame:focus {
@@ -256,3 +253,4 @@
     scale: 104%;
     border: 1px solid rgba(17, 17, 17, 0.2);
 }
+
