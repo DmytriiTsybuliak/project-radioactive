@@ -1,5 +1,6 @@
 import Pagination from 'tui-pagination';
 import axios from 'axios';
+import { assignModal } from './pop_up_exercise';
 import { makePagination, makePaginationByItems } from './makePagination';
 import { capitalize } from './capitalize_word';
 const exercisesList = document.querySelector('.exercises-list');
@@ -115,7 +116,6 @@ function getExercises({ filter, name }) {
     'Equipment': 'equipment'
   };
   const filterParam = filterParamMap[filter];
-  // console.log(filterParam);
   let searchParams = new URLSearchParams({
     muscles: name,
     page: 1,
@@ -185,6 +185,8 @@ function getExercises({ filter, name }) {
         .join("");
       exercisesList.innerHTML = "";
       exercisesList.insertAdjacentHTML("beforeend", markup);
+      assignModal();
+
     })
     .catch(error => { console.log(error.response.data.message) });
 }
