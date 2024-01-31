@@ -429,3 +429,8 @@
   line-height: 24px;
   letter-spacing: -0.18px;
 }
+
+.exercises-inputclear-icon, .exercises-search-icon {
+
+  cursor: pointer;
+}
