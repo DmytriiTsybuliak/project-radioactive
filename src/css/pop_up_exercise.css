@@ -218,3 +218,25 @@
 .give-rating-btn:focus {
     border: 1px solid #7E847F;
 }
+
+
+.rating {
+    display: inline-block;
+    font-size: 0;
+    /* Избегаем дополнительного пространства между элементами */
+}
+
+.star {
+    width: 1.2em;
+    height: 1.2em;
+    fill: gray;
+    /* Серый цвет звезды */
+    transition: fill 0.2s ease;
+    /* Плавный переход для изменения цвета */
+}
+
+.star:hover,
+.star:hover~.star {
+    fill: yellow;
+    /* Изменяем цвет звезды и всех предыдущих при наведении */
+}

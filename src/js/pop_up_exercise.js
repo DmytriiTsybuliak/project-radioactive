@@ -53,6 +53,17 @@ export function assignModal() {
     const modal = document.getElementById("pop-up-exercise");
     modal.style.display = "none";
   });
+  // Получение рейтинга с сервера (предположим, что он хранится в переменной rating)
+const rating = 3;
+
+// Находим все элементы звезд
+const stars = document.querySelectorAll('.star');
+
+// Отображаем звезды в соответствии с рейтингом
+for (let i = 0; i < rating; i++) {
+    stars[i].style.fill = 'yellow'; // Желтая звезда для оценки, меньшей, чем рейтинг
+}
+
 }
 
 
