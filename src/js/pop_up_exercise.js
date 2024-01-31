@@ -34,7 +34,42 @@ export function assignModal() {
               document.getElementById("modalDescription").textContent = data.description;
               // Открываем модальное окно
               var modal = document.getElementById("pop-up-exercise");
-              modal.style.display = "flex";
+                modal.style.display = "flex";
+                
+                // Находим кнопку "Add to favorites" в модальном окне
+const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
+
+// Назначаем обработчик клика на кнопку "Add to favorites"
+addToFavoritesBtn.addEventListener("click", function () {
+  // Получаем ID упражнения из атрибута id кнопки
+  const exerciseId = this.getAttribute("id");
+
+  // Находим объект упражнения в массиве fromAPI по ID
+  const exercise = fromAPI.find(item => item._id === exerciseId);
+
+  if (exercise) {
+    // Получаем текущий список избранных упражнений из локального хранилища или создаем новый, если его нет
+    let favorites = JSON.parse(localStorage.getItem(KEY_FAVORITE)) || [];
+
+    // Проверяем, не добавлено ли упражнение уже в избранное
+    if (!favorites.some(item => item._id === exerciseId)) {
+      // Добавляем упражнение в список избранных
+      favorites.push(exercise);
+
+      // Сохраняем обновленный список избранных упражнений в локальное хранилище
+      localStorage.setItem(KEY_FAVORITE, JSON.stringify(favorites));
+
+      // Выводим сообщение об успешном добавлении в избранное
+      console.log(`Упражнение с ID ${exerciseId} добавлено в избранное.`);
+    } else {
+      // Если упражнение уже добавлено в избранное, выводим сообщение
+      console.log(`Упражнение с ID ${exerciseId} уже находится в избранном.`);
+    }
+  } else {
+    console.log(`Упражнение с ID ${exerciseId} не найдено.`);
+  }
+});
+
             })
         }
         catch (error) {
@@ -53,7 +88,7 @@ export function assignModal() {
     const modal = document.getElementById("pop-up-exercise");
     modal.style.display = "none";
   });
-  // Получение рейтинга с сервера (предположим, что он хранится в переменной rating)
+  // Получение рейтинга с сервера 
 const rating = 3;
 
 // Находим все элементы звезд
@@ -65,7 +100,6 @@ for (let i = 0; i < rating; i++) {
 }
 
 }
-
 
 export function deleteListener(params) {
 
