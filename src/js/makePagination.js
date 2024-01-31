@@ -4,7 +4,7 @@ import 'tui-pagination/dist/tui-pagination.css';
 function makePagination(perPage, totalPages) {
 
     const paginationEl = document.getElementById('tui-pagination-container');
-    const visiblePages = totalPages < 5 ? totalPages : 5;
+    const visiblePages = totalPages < 3 ? totalPages : 3;
     const options = {
         totalItems: perPage * totalPages,
         itemsPerPage: perPage,

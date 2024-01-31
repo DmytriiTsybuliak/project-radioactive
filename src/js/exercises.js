@@ -1,4 +1,3 @@
-import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import axios from 'axios';
 import { assignModal } from './pop_up_exercise';
@@ -10,8 +9,10 @@ let activePage = 1;
 const itemsPerPage = 12;
 let totalPages;
 let totalPagesforCards;
-// const form = document.getElementById("exercises-search-form");
-// const searchInput = form.querySelector(".exercises-search-input");
+const form = document.getElementById("exercises-search-form");
+const exircisesCategory = document.querySelector(".exircises-category");
+const exercisesTitle = document.querySelector(".exercises-title");
+const searchInput = form.querySelector(".exercises-search-input");
 // const clearButton = document.querySelector('.exercises-inputclear-icon');
 
 async function getMusclePage(filter, page) {
@@ -65,6 +66,7 @@ function assignClicktoCards() {
       const name = event.currentTarget.dataset.name
       const filter = event.currentTarget.dataset.filter
       // setDisplayCards(false)
+      form.classList.remove("input-hidden");
       await getExercises({ filter, name, page });
 
       makePagination(10, totalPagesforCards).on('afterMove', async ({ page }) => {
@@ -75,18 +77,25 @@ function assignClicktoCards() {
   }
 }
 
-
+//Adding eventListener for buttons Muscles / Body Parts / Equipment
 const actionButtons = document.querySelectorAll(".exercises-filter-button");
 for (const card of actionButtons) {
-  card.classList.remove("foo");
   card.addEventListener("click", async function (event) {
-    const name = event.currentTarget.dataset.name;
-    event.currentTarget.classList.add("foo");
-    console.dir(event.currentTarget.classList);
+    form.classList.add("input-hidden");
 
+    const name = event.currentTarget.dataset.name;
+    for (const card of actionButtons) {
+      card.classList.remove("active-btn");
+    }
+    event.target.classList.add("active-btn");
     activeFilter = name;
     console.log('Clicked the button: ', name);
     exercisesList.innerHTML = "";
+    //Getting exercises cards
+    exircisesCategory.dataset.name = "";
+    exircisesCategory.textContent = "";
+    exercisesTitle.textContent = "Exercises";
+
     await getMusclePage(name, activePage);
     makePagination(12, totalPages).on('afterMove', ({ page }) => {
       console.log('Moved', page);
@@ -95,25 +104,11 @@ for (const card of actionButtons) {
       getMusclePage(activeFilter, page);
     });
     console.log(name, activePage);
+    // card.classList.remove("active-btn");
   });
 }
 
-
-
-
-// form.addEventListener("submit", async (event) => {
-//   event.preventDefault();
-
-//   const query = searchInput.value.trim().toLowerCase();
-
-//   try {
-//     // await getExercises({ "bodypart"});
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-
-async function getExercises({ filter, name, page }) {
+async function getExercises({ filter, name, page, keyword = "" }) {
   const filterParamMap = {
     'Body parts': 'bodypart',
     'Muscles': 'muscles',
@@ -121,12 +116,16 @@ async function getExercises({ filter, name, page }) {
   };
   const filterParam = filterParamMap[filter];
 
-  await axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&page=${page}&limit${itemsPerPage}`)
+  await axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&keyword=${keyword}&page=${page}&limit${itemsPerPage}`)
     .then(response => {
       let musclesResult = response.data.results;
       totalPagesforCards = response.data.totalPages;
       console.log("totalPagesforCards", totalPagesforCards, "musclesResult:", response.data);
       // console.log(totalPages, response.data);
+      exircisesCategory.dataset.name = name;
+      exircisesCategory.dataset.filter = filter;
+      exircisesCategory.textContent = capitalize(name);
+      exercisesTitle.textContent = "Exercises /"
       const markup = musclesResult.map(({ bodyPart, burnedCalories, name, _id, target, rating }) => {
         return `<li class="exercises-item-page2">
             <div class="exercises-card">
@@ -134,7 +133,7 @@ async function getExercises({ filter, name, page }) {
                 <div class="exercises-kind-wrapper">
                   <p class="exercises-card-kind">WORKOUT</p>
                   <div class="exercises-card-rating">
-                    <p class="exercises-rating-value">${rating}</p>
+                    <p class="exercises-rating-value">${rating.toFixed(1)}</p>
                     <svg
                       class="exercises-star-icon"
                       width="18"
@@ -142,7 +141,7 @@ async function getExercises({ filter, name, page }) {
                       aria-label="star icon"
                     >
                       <use
-                        href="./img/exercises/exercises-sprite.svg#icon-star"
+                        href="../img/exercises/exercises-sprite.svg#icon-star"
                       ></use>
                     </svg>
                   </div>
@@ -151,7 +150,7 @@ async function getExercises({ filter, name, page }) {
                   Start
                   <svg class="exercises-start-icon" width="14" height="14">
                     <use
-                      href="./img/exercises/exercises-sprite.svg#icon-arrow"
+                      href="../img/exercises/exercises-sprite.svg#icon-arrow"
                     ></use>
                   </svg>
                 </button>
@@ -164,7 +163,7 @@ async function getExercises({ filter, name, page }) {
                   aria-label="star icon"
                 >
                   <use
-                    href="./img/exercises/exercises-sprite.svg#icon-icon"
+                    href="../img/exercises/exercises-sprite.svg#icon-icon"
                   ></use>
                 </svg>
                 <p class="exercises-card-exname">${capitalize(name)}</p>
@@ -192,37 +191,16 @@ async function getExercises({ filter, name, page }) {
     .catch(error => { console.log(error.response.data.message) });
 }
 
-
-//Эту функцию я не использую
-function getExercisesPage({ filter, name, page }) {
-  const filterParamMap = {
-    'Body parts': 'bodypart',
-    'Muscles': 'muscles',
-    'Equipment': 'equipment'
-  };
-  const filterParam = filterParamMap[filter];
-
-  axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&page=${page}&limit${itemsPerPage}`)
-    .then(response => {
-      let musclesResult = response.data.results;
-      let { totalPages } = response.data;
-      const markup = musclesResult.map(({ name, filter, imgUrl }) => {
-        return `<li class="exercises-list-item" data-name="${name}" data-filter="${filter}">
-            <div class="exercises-item"
-            style="background:
-            linear-gradient(0deg,rgba(16, 16, 16, 0.7) 0%, rgba(16, 16, 16, 0.7) 100%),
-            url(${imgUrl}),lightgray -16.825px -9.156px / 128.765% 116.922% no-repeat; 
-            background-size: cover;">
-            <p class="exercises-item-name">${capitalize(name)}</p>
-            <p class="exercises-item-subname">${filter}</p>
-            </div>
-          </li>`;
-      })
-        .join("");
-      exercisesList.innerHTML = "";
-      exercisesList.insertAdjacentHTML("beforeend", markup);
-    })
-    .catch(error => {
-      console.error('Error while fetching exercises:', error);
-    });
-}
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  let page = activePage;
+  let filter = exircisesCategory.dataset.filter;
+  let name = exircisesCategory.dataset.name;
+  let keyword = searchInput.value.trim().toLowerCase();
+  console.log('Text Content', searchInput.value.trim().toLowerCase());
+  await getExercises({ filter, name, page, keyword });
+  makePagination(10, totalPagesforCards).on('afterMove', async ({ page }) => {
+    exercisesList.innerHTML = "";
+    await getExercises({ filter, name, page, keyword });
+  });
+});
