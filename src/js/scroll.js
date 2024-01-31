@@ -7,8 +7,10 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     scrollBtn.style.display = 'block';
+    scrollBtn.addEventListener('click', scrollTop);
   } else {
     scrollBtn.style.display = 'none';
+    scrollBtn.removeEventListener('click', scrollTop);
   }
 }
 
@@ -19,10 +21,4 @@ function scrollTop() {
     top: 0,
     behavior: 'smooth',
   });
-
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollBtn.addEventListener('click', scrollTop);
-  } else {
-    scrollBtn.removeEventListener('click', scrollTop);
-  }
 }
