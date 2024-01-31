@@ -1,10 +1,28 @@
 /* @media screen and (min-width: 375px) and (max-width: 767.98px) { */
-.active-btn{
-  color: #f6f6f6;
-  background-color: #5f6560;
+.tui-pagination{
+  width: 100%;
 }
 
-  .exercises-container {
+.input-hidden{
+  visibility: hidden;
+}
+
+.exercises__desc{
+  display: flex;
+  align-items: baseline;
+}
+.tui-pagination .tui-is-selected, .tui-pagination strong {
+  background-color:  #7E847F !important;
+  border-color: transparent !important;
+}
+
+.tui-page-btn:hover{
+  color: #f6f6f6 !important;
+  background-color:  #5f6560 !important;
+  border-color: transparent !important;
+}
+
+.exercises-container {
   border-radius: 30px;
   background-color: #e8e8e8;
   padding: 40px 20px;
@@ -33,12 +51,18 @@
 .exercises-title {
   color: #1b1b1b;
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.64px;
+  letter-spacing: -0.02em;
+  margin-right: 8px;
 }
-
+.exircises-category{
+color: #1B1B1B80;
+font-size: 20px;
+font-weight: 400;
+line-height: 1;
+letter-spacing: -0.02em;
+}
 .exercises-subtitle {
   color: rgba(27, 27, 27, 0.5);
   font-size: 20px;
@@ -219,7 +243,7 @@
 .exercises-card-rating {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   gap: 2px;
 }
 
@@ -318,35 +342,45 @@
   color: #1b1b1b;
 }
 
+
 @media screen and (min-width: 768px){
   #exercises-search-form{
   margin-top: 0px;
   margin-left: auto;
 }
+.exercises-title {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.exircises-category{
+font-size: 24px;
+line-height: 1.33;
+letter-spacing: -0.02em;
+}
 
-  .exercises-search-icon {
+.exercises-search-icon {
   top: 14px;
   left: 214px;
 }
-  .exercises-container {
+.exercises-container {
     width: 736px;
     padding: 64px 48px;
     gap: 32px;
     justify-content: center;
   }
-  .exercises-top-container {
+.exercises-top-container {
     padding-bottom: 0;
   }
-
-  .exercises-filter-container {
+.exercises-filter-container {
     display: flex;
     flex-direction: row;
     gap: 35px;
   }
-  .exercises-top-buttons {
+.exercises-top-buttons {
     gap: 8px;
   }
-  .exercises-filter-button {
+.exercises-filter-button {
     height: 44px;
     font-size: 16px;
     font-style: normal;
@@ -355,7 +389,7 @@
     padding: 10px 20px;
   }
 
-  .exercises-search-input {
+.exercises-search-input {
     width: 246px;
     height: 48px;
     font-size: 16px;
@@ -364,14 +398,14 @@
     line-height: 1.5;
   }
 
-  .exercises-list {
+.exercises-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 14px;
     justify-content: left;
   }
 
-  .exercises-list-page2 {
+.exercises-list-page2 {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 20px;
@@ -379,7 +413,7 @@
     justify-content: left;
   }
 
-  .exercises-item {
+ .exercises-item {
     width: 313px;
     height: 250px;
   }
@@ -389,7 +423,17 @@
   }
 }
 @media screen and (min-width: 1440px) {
-    .exercises-search-icon {
+  .exercises-title {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+  .exircises-category{
+font-size: 24px;
+line-height: 1.33;
+letter-spacing: -0.02em;
+}
+  .exercises-search-icon {
   top: 14px;
   left: 240px;
 }
@@ -440,3 +484,11 @@
   line-height: 24px;
   letter-spacing: -0.18px;
 }
+
+
+.active-btn{
+  color: #f6f6f6;
+  background-color: #7E847F;
+}
+
+
