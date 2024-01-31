@@ -1,5 +1,10 @@
 /* @media screen and (min-width: 375px) and (max-width: 767.98px) { */
-.exercises-container {
+.active-btn{
+  color: #f6f6f6;
+  background-color: #5f6560;
+}
+
+  .exercises-container {
   border-radius: 30px;
   background-color: #e8e8e8;
   padding: 40px 20px;
