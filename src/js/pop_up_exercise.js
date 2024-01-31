@@ -7,7 +7,7 @@ export function assignModal() {
   // Навешиваем обработчик клика на родительский элемент, делегируем событие детям
   container.addEventListener("click", async function (event) {
     let target = event.target;
-    // Проверяем, что кликнули по кнопке ".exercises-start-button" или на иконку
+    // Проверяем, что кликнули по кнопке ".exercises-start-button"
     if (target.classList.contains("exercises-start-button") || target.parentElement.classList.contains("exercises-start-button")) {
       // Получаем значение ID из атрибута data-id кнопки
       let exerciseId;
