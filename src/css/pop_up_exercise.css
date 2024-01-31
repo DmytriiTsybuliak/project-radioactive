@@ -37,9 +37,7 @@
 }
 .pop-up-exercise-content {
     position: relative;
-    margin: 10% auto;
     width: 335px;
-    /* Ширина модального окна для desktop */
     background-color: #fff;
     padding: 20px;
     display: flex;
@@ -77,8 +75,6 @@
     gap: 16px;
     justify-content: flex-start;
     width: 716px;
-
-
 }
 
 #modalImage {
@@ -94,6 +90,21 @@
     width: 270px;
     height: 259px;
     display: block;
+}
+
+.pop-up-exercise-content {
+    position: relative;
+    
+    width: 716px;
+ 
+}
+
+.add-to-favorites-btn {
+    margin-top: 40px;
+}
+
+.give-rating-btn {
+    margin-top: 40px;
 }
 
 }
@@ -115,6 +126,18 @@
     padding-left: 20px;
 }
 
+.pop-up-exercise-content {
+    width: 732px;
+}
+
+.add-to-favorites-btn {
+    margin-top: 40px;
+}
+
+.give-rating-btn {
+    margin-top: 40px;
+}
+
 }
 
 .pop-up-exercise {
@@ -129,9 +152,15 @@
     align-items: center;
 }
 
+
 .pop-up-exercise-content {
-    background-color: #F6F6F6;
-    /* padding: 20px; */
+    position: relative;
+
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 20px;
 }
 
@@ -298,7 +327,6 @@
 .rating {
     display: inline-block;
     font-size: 0;
-    /* Избегаем дополнительного пространства между элементами */
 }
 
 .star {
