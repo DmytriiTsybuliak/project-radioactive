@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { capitalize } from './capitalize_word';
 
+const newArr = [];
 export function assignModal() {
   // Находим контейнер с классом "exercises-list"
   let container = document.querySelector(".exercises-list");
@@ -41,11 +42,24 @@ const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
 
 // Назначаем обработчик клика на кнопку "Add to favorites"
 addToFavoritesBtn.addEventListener("click", function () {
-  // Получаем ID упражнения из атрибута id кнопки
-  const exerciseId = this.getAttribute("id");
+//   // Получаем ID упражнения из атрибута id кнопки
+//     let exerciseId = this.getAttribute("id");
+    localStorage.setItem(KEY_FAVORITE, exerciseId);
+     // Выводим ID упражнения в консоль
+  console.log(`Clicked on Add to favorites button for exercise with ID: ${exerciseId}`);
 
-  // Находим объект упражнения в массиве fromAPI по ID
-  const exercise = fromAPI.find(item => item._id === exerciseId);
+
+  // массив в глобальной области видимости
+// const newArr = [];
+// функция при клике
+// function click(event) {
+    //   находим тот обьект из массива который пришел из API
+    const card = arr.find(() =>)
+    // пушим
+    newArr.push(card)
+    // отправляем в локал сторадж
+    localStorage.setItem(KEY_FAVORITE,JSON.stringify(newArr))
+// }
 
   if (exercise) {
     // Получаем текущий список избранных упражнений из локального хранилища или создаем новый, если его нет
