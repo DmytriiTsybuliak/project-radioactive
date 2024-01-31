@@ -1,26 +1,18 @@
 import Pagination from 'tui-pagination';
+import 'tui-pagination/dist/tui-pagination.css';
 import axios from 'axios';
-import { makePagination, makePaginationByItems } from './makePagination';
+import { assignModal } from './pop_up_exercise';
+import { makePagination } from './makePagination';
 import { capitalize } from './capitalize_word';
 const exercisesList = document.querySelector('.exercises-list');
-const pagination = document.querySelector('.exercises-bottom-buttons');
-const filterParamMap = {
-  'Body parts': 'bodypart',
-  'Muscles': 'muscles',
-  'Equipment': 'equipment'
-};
 let activeFilter = 'Muscles';
-let activeCategory = 'Muscles';
 let activePage = 1;
 const itemsPerPage = 12;
-const filterParams = {
-  filter: activeFilter,
-  category: activeCategory,
-  keyword: '',
-};
-let paginationMark;
 let totalPages;
-
+let totalPagesforCards;
+// const form = document.getElementById("exercises-search-form");
+// const searchInput = form.querySelector(".exercises-search-input");
+// const clearButton = document.querySelector('.exercises-inputclear-icon');
 
 async function getMusclePage(filter, page) {
   let searchParams = new URLSearchParams({
@@ -33,7 +25,7 @@ async function getMusclePage(filter, page) {
       .then(response => {
         let musclesResult = response.data.results;
         totalPages = response.data.totalPages;
-        console.log('Total Pages: ', totalPages);
+        // console.log('Total Pages: ', totalPages);
 
         const markup = musclesResult.map(({ name, filter, imgUrl }) => {
           return `<li class="exercises-list-item" data-name="${name}" data-filter="${filter}">
@@ -60,27 +52,25 @@ async function getMusclePage(filter, page) {
 await getMusclePage(activeFilter, activePage);
 
 makePagination(12, totalPages).on('afterMove', ({ page }) => {
-  console.log('Moved', page);
+  // console.log('Moved', page);
   exercisesList.innerHTML = "";
   getMusclePage(activeFilter, page);
 });
-// paginationMark.on('afterMove', async ({ page }) => {
-//   console.log('Moved', page);
-//   exercisesList.innerHTML = "";
-//   await getMusclePage(page);
-// });
-
 
 function assignClicktoCards() {
+  let page = activePage;
   const cards = document.querySelectorAll(".exercises-list-item");
   for (const card of cards) {
-    card.addEventListener("click", function (event) {
+    card.addEventListener("click", async function (event) {
       const name = event.currentTarget.dataset.name
       const filter = event.currentTarget.dataset.filter
       // setDisplayCards(false)
-      getExercises({ filter, name });
-      // currentExerciseContainer.innerHTML = `<p class="current-exercises"><span class= "slash">/</span>${capitalize(name)}</p>`
-      console.log("Clicked: ", capitalize(name), filter);
+      await getExercises({ filter, name, page });
+
+      makePagination(10, totalPagesforCards).on('afterMove', async ({ page }) => {
+        exercisesList.innerHTML = "";
+        await getExercises({ filter, name, page });
+      });
     });
   }
 }
@@ -88,8 +78,12 @@ function assignClicktoCards() {
 
 const actionButtons = document.querySelectorAll(".exercises-filter-button");
 for (const card of actionButtons) {
+  card.classList.remove("foo");
   card.addEventListener("click", async function (event) {
     const name = event.currentTarget.dataset.name;
+    event.currentTarget.classList.add("foo");
+    console.dir(event.currentTarget.classList);
+
     activeFilter = name;
     console.log('Clicked the button: ', name);
     exercisesList.innerHTML = "";
@@ -97,34 +91,41 @@ for (const card of actionButtons) {
     makePagination(12, totalPages).on('afterMove', ({ page }) => {
       console.log('Moved', page);
       console.log('Total Pages Pressed', totalPages);
-
       exercisesList.innerHTML = "";
       getMusclePage(activeFilter, page);
     });
-
     console.log(name, activePage);
-
   });
 }
 
 
-function getExercises({ filter, name }) {
+
+
+// form.addEventListener("submit", async (event) => {
+//   event.preventDefault();
+
+//   const query = searchInput.value.trim().toLowerCase();
+
+//   try {
+//     // await getExercises({ "bodypart"});
+//   } catch (error) {
+//     console.error(error);
+//   }
+// });
+
+async function getExercises({ filter, name, page }) {
   const filterParamMap = {
     'Body parts': 'bodypart',
     'Muscles': 'muscles',
     'Equipment': 'equipment'
   };
   const filterParam = filterParamMap[filter];
-  // console.log(filterParam);
-  let searchParams = new URLSearchParams({
-    muscles: name,
-    page: 1,
-    limit: 9,
-  });
-  axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&page=${activePage}&limit${itemsPerPage}`)
+
+  await axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&page=${page}&limit${itemsPerPage}`)
     .then(response => {
       let musclesResult = response.data.results;
-      console.log(musclesResult);
+      totalPagesforCards = response.data.totalPages;
+      console.log("totalPagesforCards", totalPagesforCards, "musclesResult:", response.data);
       // console.log(totalPages, response.data);
       const markup = musclesResult.map(({ bodyPart, burnedCalories, name, _id, target, rating }) => {
         return `<li class="exercises-item-page2">
@@ -185,10 +186,14 @@ function getExercises({ filter, name }) {
         .join("");
       exercisesList.innerHTML = "";
       exercisesList.insertAdjacentHTML("beforeend", markup);
+      assignModal();
+
     })
     .catch(error => { console.log(error.response.data.message) });
 }
 
+
+//Эту функцию я не использую
 function getExercisesPage({ filter, name, page }) {
   const filterParamMap = {
     'Body parts': 'bodypart',

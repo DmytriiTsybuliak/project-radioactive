@@ -1,13 +1,13 @@
 /* ----------------Mobile-Header------------------ */
 .header {
-    width: 335px;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-radius: 30px;
-    position: absolute;
+  width: 335px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 30px;
+  position: absolute;
 }
 
 .logo-link {
@@ -27,38 +27,38 @@
 }
 
 .burger-menu {
-    border: 1px solid transparent;
-    background-color: transparent;
-    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .burger-menu:hover,
 .burger-menu:focus {
-    outline: none;
-    scale: 108%; 
+  outline: none;
+  scale: 108%;
 }
 
 /* ----------------Mobile-Menu-Hidden------------------ */
 .menu-is-hidden {
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        -webkit-clip-path: inset(50%);
-                clip-path: inset(50%);
-        margin: -1px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* ----------------Mobile-Menu-Shirm------------------ */
 
 .no-scroll {
-    overflow:hidden;
+  overflow: hidden;
 }
 
 .shirm-header-logo-link {
@@ -66,16 +66,15 @@
     background: #7E847F;
 }
 
-
 .shirm-close-button {
-    border: 1px solid transparent;
-    background-color: transparent;
-    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .shirm-close-button:hover,
 .shirm-close-button:focus {
-    outline: none;
-    scale: 120%;
+  outline: none;
+  scale: 120%;
 }
 
 .shirm {
@@ -146,9 +145,9 @@
 .menu-link-button:hover,
 .menu-link-button:focus,
 .current {
-    outline: none;
-    background-color: #FFF;
-    color: #1B1B1B;
+  outline: none;
+  background-color: #fff;
+  color: #1b1b1b;
 }
 .current:hover,
 .current:focus {
@@ -157,57 +156,56 @@
 
 /* ----------------Hidden------------------ */
 @media screen and (min-width: 768px) {
-    .burger-menu,
-    .mobile-menu {
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        -webkit-clip-path: inset(50%);
-                clip-path: inset(50%);
-        margin: -1px;
-    }
+  .burger-menu,
+  .mobile-menu {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
-    .lap-tab-menu,
-    .lap-tab-social-networks {
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        -webkit-clip-path: inset(50%);
-                clip-path: inset(50%);
-        margin: -1px;
-    }
+  .lap-tab-menu,
+  .lap-tab-social-networks {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
-
 
 /* ----------------Tablet-Header------------------ */
 @media screen and (min-width: 768px) {
-    .header {
-        width: 728px;
-    }
+  .header {
+    width: 728px;
+  }
 }
 /* ----------------Laptop-Header------------------ */
 @media screen and (min-width: 1440px) {
-    .header {
-        width: 1400px;
-    }
+  .header {
+    width: 1400px;
+  }
 }
 /* ----------------Lap-Tab-Header-Settings------------------ */
 @media screen and (min-width: 768px) {
@@ -216,25 +214,28 @@
         line-height: 28px;  /* 100% */
         letter-spacing: -0.56px;
     }
+
 }
 
 .lap-tab-menu,
 .lap-tab-social-networks {
-    display: flex;
+  display: flex;
 }
 
-.lap-tab-menu{
-    width: 211px;
-    height: 52px;
-    padding: 8px 16px;
-    border-radius: 60px;
-    background: #7E847F;
+.lap-tab-menu {
+  display: flex;
+  justify-content: center;
+  width: 211px;
+  height: 52px;
+  padding: 8px 16px;
+  border-radius: 60px;
+  background: #7e847f;
 }
 
 .lap-tab-social-networks {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .lap-tab-soc-frame {
@@ -253,4 +254,5 @@
     scale: 104%;
     border: 1px solid rgba(17, 17, 17, 0.2);
 }
+
 
