@@ -1,197 +1,224 @@
 footer {
-    margin-bottom:20px;
+  margin-bottom: 20px;
 }
 .footer--inside {
-    padding: 40px 20px 20px 20px;
-    background-image: url(../img/footer/footer-mobile.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-color:rgba(27, 27, 27, 0.7);
-    border-radius: 30px;
-    width: 335px;
-    height: 471px;
+  padding: 40px 20px 20px 20px;
+  background-image: url(../img/footer/footer-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(27, 27, 27, 0.7);
+  border-radius: 30px;
+  width: 335px;
+  height: 471px;
 }
 .footer--flex {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 .footer--social.logo {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 }
 .footer--social.list {
-    display: flex;
-    margin-bottom: 40px;
+  display: flex;
+  margin-bottom: 40px;
 }
 .footer--social.item {
-    gap:12px;
+  gap: 12px;
 }
 .footer--social.item svg {
-    width: 40px;
-    height: 40px;
-    fill:#F6F6F6;
-    border-radius: 10px;
-    border: 1px solid rgba(246, 246, 246, 0.2);
-    padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(246, 246, 246, 0.2);
+  padding: 8px;
 }
-.footer--social.item svg:hover,
-.footer--social.item svg:focus {
-    fill:#5F6560;
-    border:1px solid #5F6560;
+.footer--social.item :hover path,
+.footer--social.item :focus path {
+  fill: #5f6560;
+  border: 1px solid #5f6560;
 }
 .footer--social.item {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 .footer--text {
-    font-family: "DM Sans";
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1;
-    color:rgba(246, 246, 246, 1);
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  color: rgba(246, 246, 246, 1);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 .footer--text span {
-    font-style: italic;
-    color:rgba(246, 246, 246, 0.3);
+  font-style: italic;
+  color: rgba(246, 246, 246, 0.3);
 }
 .footer--form p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 0.8em;
-    color: #F6F6F6;
-    margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.8em;
+  color: #f6f6f6;
+  margin-bottom: 20px;
 }
 .footer--form input {
-    background: transparent;
-    width: 100%;
-    height: 42px;
-    border: 1px solid #F6F6F6;
-    border-radius: 30px;
-    padding: 12px 14px 12px 14px; 
-    margin-bottom: 12px ;
-    color:rgba(246, 246, 246, 0.6);
+  background: transparent;
+  width: 100%;
+  height: 42px;
+  border: 1px solid #f6f6f6;
+  border-radius: 30px;
+  padding: 12px 14px 12px 14px;
+  margin-bottom: 12px;
+  color: rgba(246, 246, 246, 0.6);
 }
 .footer--form input::placeholder {
-    color: rgba(246, 246, 246, 0.6);  
-    font-size: 14px;
+  color: rgba(246, 246, 246, 0.6);
+  font-size: 14px;
 }
 .footer--form button {
-    width: 100%;
-    height: 42px;
-    border-radius: 30px;
-    border: solid;
-    border-color: transparent;
-    background-color:#7E847F ;
-    color: #F6F6F6;
+  width: 100%;
+  height: 42px;
+  border-radius: 30px;
+  border: solid;
+  border-color: transparent;
+  background-color: #7e847f;
+  color: #f6f6f6;
 }
 .footer--form button:hover,
 .footer--form button:focus {
-    background-color:#5F6560;
+  background-color: #5f6560;
 }
 .footer--signature {
-    font-size: 12px;
-    line-height: 0.75em;
-    color: #F6F6F6;
-    opacity: 90%;
+  font-size: 12px;
+  line-height: 0.75em;
+  color: #f6f6f6;
+  opacity: 90%;
 }
 .footer--signature ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-    footer {
-        margin-bottom: 16px;
-    }
-    .footer--inside {
-        background-image: url(../img/footer/footer-tablet.jpg);
-        width: 736px;
-        height: 576px;
-        padding: 64px 41px 32px 48px;
-    }
-    .footer--social.logo {
-        margin-bottom: 30px;
-    }
-    .footer--social.item svg {
-        width: 44px;
-        height: 44px;
-    }
-    .footer--flex {
-        display: flex;
-        flex-direction: row; 
-        gap: 139px;
-        margin-bottom: 100px;
-    }
-    .footer--social.item svg{
-        width: 44px;
-        height: 44px;
-    }
-    .footer--text {
-        font-size: 54px;
-        margin-bottom: 32px;
-    }
-    .footer--form p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    .footer--form input {
-        height: 48px;
-        margin-bottom: 20px;
-    }
-    .footer--form input::placeholder {
-        font-size: 16px;
-    }
-    .footer--form button {
-        height: 48px;
-    }
-    .footer--signature ul {
-        display: flex;
-        gap: 32px;
-        justify-content: center;
-        flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-.footer--inside {
-    background-image: url(../img/footer/footer-desktop.jpg);
-    width: 1408px;
-    height: 454px;
-    padding: 64px 48px 26px 48px;
-}
-.footer--flex{
-    display: flex;
-    margin-bottom: 120px;
-}
-.footer--right-side {
-    display: flex;
-}
-
-.footer--social.logo {
+  footer {
+    margin-bottom: 16px;
+  }
+  .footer--inside {
+    background-image: url(../img/footer/footer-tablet.jpg);
+    width: 736px;
+    height: 576px;
+    padding: 64px 41px 32px 48px;
+  }
+  .footer--social.logo {
     margin-bottom: 30px;
-    width: 150px;
-}
-.footer--text {
-    font-size: 64px;
-    margin-right: 160px;
-    margin-left: 156px;
-    margin-bottom: 0;
-}
-.footer--form p {
+  }
+  .footer--social.item svg {
+    width: 44px;
+    height: 44px;
+  }
+  .footer--flex {
+    display: flex;
+    flex-direction: row;
+    gap: 139px;
+    margin-bottom: 100px;
+  }
+  .footer--social.item svg {
+    width: 44px;
+    height: 44px;
+  }
+  .footer--text {
+    font-size: 54px;
+    margin-bottom: 32px;
+  }
+  .footer--form p {
     font-size: 18px;
-}
-.footer--form input {
     margin-bottom: 20px;
-    width: 352px;
+  }
+  .footer--form input {
     height: 48px;
-}
-.footer--form button {
-    margin-bottom: 0;
-}
-.footer--signature ul {
+    margin-bottom: 20px;
+  }
+  .footer--form input::placeholder {
+    font-size: 16px;
+  }
+  .footer--form button {
+    height: 48px;
+  }
+  .footer--signature ul {
     display: flex;
     gap: 32px;
     justify-content: center;
     flex-direction: row;
+  }
 }
+
+@media screen and (min-width: 1440px) {
+  .footer--inside {
+    background-image: url(../img/footer/footer-desktop.jpg);
+    width: 1408px;
+    height: 454px;
+    padding: 64px 48px 26px 48px;
+  }
+  .footer--flex {
+    display: flex;
+    margin-bottom: 120px;
+  }
+  .footer--right-side {
+    display: flex;
+  }
+
+  .footer--social.logo {
+    margin-bottom: 30px;
+    width: 150px;
+  }
+  .footer--text {
+    font-size: 64px;
+    margin-right: 160px;
+    margin-left: 156px;
+    margin-bottom: 0;
+  }
+  .footer--form p {
+    font-size: 18px;
+  }
+  .footer--form input {
+    margin-bottom: 20px;
+    width: 352px;
+    height: 48px;
+  }
+  .footer--form button {
+    margin-bottom: 0;
+  }
+  .footer--signature ul {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+/* ================Media for retina (@x2 images)================ */
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .footer--inside {
+    background-image: url(../img/footer/footer-mobile@2x.png);
+    background-size: contain;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .footer--inside {
+    background-image: url(../img/footer/footer-tablet@2x.png);
+    background-size: contain;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+  .footer--inside {
+    background-image: url(../img/footer/footer-desktop@2x.png);
+    background-size: contain;
+  }
 }
