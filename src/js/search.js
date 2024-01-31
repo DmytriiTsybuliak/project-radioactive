@@ -1,11 +1,20 @@
 import axios from "axios";
 
-
 const form = document.getElementById("exercises-search-form");
 const searchInput = form.querySelector(".exercises-search-input");
 const exercisesList = document.querySelector(".exercises-list");
 const clearButton = document.querySelector('.exercises-inputclear-icon');
+const searchIcon = document.querySelector('.exercises-search-icon');
 
+// Функція для перевірки, чи ми на сторінці тренувань
+function isTrainingPage() {
+  return window.location.pathname.includes('/training-page');
+}
+
+// Перевірка та встановлення стилю інпута при завантаженні сторінки
+if (isTrainingPage()) {
+  form.style.display = 'block';
+}
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -18,28 +27,15 @@ form.addEventListener("submit", async (event) => {
     console.error(error);
   }
 });
-//  Додаємо обробник події для введення тексту у полі пошуку
+
+// Додаємо обробник події для введення тексту у полі пошуку
 searchInput.addEventListener('input', handleInputChange);
 
-
-// / Функція для відображення або приховування іконки очищення
-function handleInputChange() {
-  const inputValue = searchInput.value.trim();
-  if (inputValue !== '') {
-    clearButton.classList.remove('exercises-is-hidden');
-  } else {
-    clearButton.classList.add('exercises-is-hidden');
-  }
-}
-// / Функція для очищення input 
-function clearInput() {
-  const searchInput = document.getElementById('exercises-search-input');
-  if (searchInput) {
-    searchInput.value = '';
-  }
-};
-
+// Додаємо обробник події для іконки очищення тексту при кліку
 clearButton.addEventListener('click', clearInput);
+
+// Додаємо обробник події для іконки пошуку
+searchIcon.addEventListener('click', handleSearchIconClick);
 
 async function getExercises(query) {
   try {
@@ -106,6 +102,36 @@ async function renderExercises(query) {
   } catch (error) {
     console.error(error);
   }
+}
 
+// Функція для відображення або приховування іконки очищення
+function handleInputChange() {
+  const inputValue = searchInput.value.trim();
+  if (inputValue !== '') {
+    clearButton.classList.remove('exercises-is-hidden');
+  } else {
+    clearButton.classList.add('exercises-is-hidden');
+  }
+}
 
+// Функція для очищення input
+function clearInput() {
+  const currentValue = searchInput.value.trim();
+  if (currentValue.length > 1) {
+    searchInput.value = currentValue.slice(0, -1);
+  } else {
+    searchInput.value = '';
+    clearButton.classList.add('exercises-is-hidden');
+  }
+}
+
+// Функція для обробки кліку на іконку пошуку
+function handleSearchIconClick() {
+  const query = searchInput.value.trim().toLowerCase();
+
+  try {
+    renderExercises(query);
+  } catch (error) {
+    console.error(error);
+  }
 }
