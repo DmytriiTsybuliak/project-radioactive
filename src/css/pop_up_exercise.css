@@ -1,22 +1,143 @@
 /* Для мобильных устройств */
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
 .pop-up-exercise {
-    width: 100%;
-    max-width: 716px;
+    width: 335px;
+    /* max-width: 716px; */
+    overflow-y: auto;
 }
+
+#modalImage {
+    width: 295px;
+    height: 258px;
+    display: block;
+}
+
+.modal-properties-exercise {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 295px;
+    overflow-y: auto;
+
+}
+.exercise-info {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 295px;
+}
+.pop-up-exercise-content {
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    max-width: 295px;
+    
+}
+.pop-up-exercise-content {
+    position: relative;
+    width: 335px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exercise-details {
+    width: 255px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+.add-to-favorites-btn {
+    margin-top: 40px;
+}
+.give-rating-btn {
+    margin-top: 9px;
+}
+
 }
 /* Для планшетов */
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
     .pop-up-exercise {
         width: 716px;
+        height: 100%;
     }
+.exercise-info {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    width: 716px;
+}
+
+#modalImage {
+    width: 270px;
+    height: 259px;
+    margin: 40px auto;
+    display: block;
+        margin-left: 40px;
+            margin-right: 24px;
+}
+
+#modalImage {
+    width: 270px;
+    height: 259px;
+    display: block;
+}
+
+.pop-up-exercise-content {
+    position: relative;
+    
+    width: 716px;
+ 
+}
+
+.add-to-favorites-btn {
+    margin-top: 40px;
+}
+
+.give-rating-btn {
+    margin-top: 40px;
+}
+
 }
 
 /* Для десктопов */
 @media screen and (min-width: 1440px) {
     .pop-up-exercise {
         width: 732px;
+        height: 100%;
     }
+
+.exercise-info {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+
+}
+.exercise-details {
+    padding-left: 20px;
+}
+
+.pop-up-exercise-content {
+    width: 732px;
+}
+
+.add-to-favorites-btn {
+    margin-top: 40px;
+}
+
+.give-rating-btn {
+    margin-top: 40px;
+}
+
 }
 
 .pop-up-exercise {
@@ -25,16 +146,21 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: rgba(27, 27, 27, 0.60);;
     z-index: 9999;
     justify-content: center;
     align-items: center;
 }
 
+
 .pop-up-exercise-content {
-    background-color: #F6F6F6;
-    /* padding: 20px; */
+    position: relative;
+
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 20px;
 }
 
@@ -70,18 +196,7 @@
         /* 128.571% */
 }
 /* ------------------ */
-.pop-up-exercise-content {
-    position: relative;
-    margin: 10% auto;
-    width: 80%;
-    max-width: 732px; 
-    /* Ширина модального окна для desktop */
-    background-color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} 
+
 
 .close-btn {
     position: absolute;
@@ -94,27 +209,16 @@
     color: #333;
 }
 
-.exercise-info {
-    display: flex;
-    gap: 16px;
-    justify-content: flex-start;
-}
 
-.exercise-details {
-    padding-left: 20px;
-}
+
+
 
 .horizontal-info {
     display: flex;
     justify-content: flex-start;
 }
 
-#modalImage {
-    width: 270px;
-    height: 259px;
-    margin: 40px auto;
-    display: block;
-}
+
 
 .modal-properties-exercise {
     position: relative;
@@ -142,13 +246,15 @@
     font-style: normal;
     font-weight: 500;
     line-height: 32px;
+    margin-top: 40px;
 }
 
 .modal-rating {
+    margin-top: 2px;
     color: #1B1B1B;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: "DM Sans";
-    font-size: 12px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
@@ -168,6 +274,7 @@
 .modal-buttons {
     display: flex;
     gap: 8px;
+    margin-bottom: 40px;
 }
 
     .add-to-favorites-btn {
@@ -178,7 +285,6 @@
         border-radius: 30px;
         background: #7E847F;
         border-color: transparent;
-        margin-top: 32px;
         font-family: "DM Sans";
             font-size: 16px;
             font-style: normal;
@@ -197,24 +303,45 @@
 }
 
 .give-rating-btn {
-        border: 1px solid #1B1B1B;
-    color: #1B1B1B;
-        
-        display: flex;
-            padding: 12px 24px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px;
-            margin-top: 32px;
-            font-family: "DM Sans";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            /* 150% */
+    border: 1px solid #1B1B1B;
+    color: #1B1B1B;   
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
 }
 
 .give-rating-btn:hover,
 .give-rating-btn:focus {
     border: 1px solid #7E847F;
+}
+
+
+.rating {
+    display: inline-block;
+    font-size: 0;
+}
+
+.star {
+    width: 18px;
+    height: 18px;
+    fill: gray;
+    margin-left: 2px;
+    /* Серый цвет звезды */
+    transition: fill 0.2s ease;
+    /* Плавный переход для изменения цвета */
+}
+
+
+.rating-star {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
 }

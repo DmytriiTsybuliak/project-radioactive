@@ -84,7 +84,26 @@
       <img src="" alt="Exercise GIF" id="modalImage" />
       <div class="exercise-details">
         <h2 class="name-modal" id="modalName"></h2>
-        <p class="modal-rating" id="modalRating"></p>
+        <div class="rating-star">
+          <p class="modal-rating" id="modalRating"></p>
+          <div class="rating">
+            <svg class="star" width="24" height="24" fill="currentColor">
+              <use href="../img/icon/symbol-defs.svg#icon-star"></use>
+            </svg>
+            <svg class="star" width="24" height="24" fill="currentColor">
+              <use xlink:href="../img/icon/symbol-defs.svg#icon-star"></use>
+            </svg>
+            <svg class="star" width="24" height="24" fill="currentColor">
+              <use xlink:href="../img/icon/symbol-defs.svg#icon-star"></use>
+            </svg>
+            <svg class="star" width="24" height="24" fill="currentColor">
+              <use xlink:href="../img/icon/symbol-defs.svg#icon-star"></use>
+            </svg>
+            <svg class="star" width="24" height="24" fill="currentColor">
+              <use xlink:href="../img/icon/symbol-defs.svg#icon-star"></use>
+            </svg>
+          </div>
+        </div>
         <svg
           class="svg-vector1"
           xmlns="http://www.w3.org/2000/svg"
@@ -130,13 +149,7 @@
         >
           <path d="M0 1H342" stroke="#1B1B1B" stroke-opacity="0.2" />
         </svg>
-        <p class="modal-description">
-          This refers to your core muscles, which include the rectus abdominis,
-          obliques, and transverse abdominis. They're essential for maintaining
-          posture, stability, and generating force in many movements. Exercises
-          that target the abs include crunches, leg raises, and planks.
-          <span id="modalDescription"></span>
-        </p>
+        <p class="modal-description" id="modalDescription"></p>
         <div class="modal-buttons">
           <button class="add-to-favorites-btn modal-button-act">
             Add to favorites
