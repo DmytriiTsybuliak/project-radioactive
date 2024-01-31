@@ -1,17 +1,15 @@
-// Mark the current page:
-
-const homeButtons = document.querySelectorAll(".home")
-const favoritesButtons = document.querySelectorAll(".favorites")
+const homeButtons = document.querySelectorAll(".home");
+const favoritesButtons = document.querySelectorAll(".favorites");
 function markCurrentPage() {
     if (window.location.href.endsWith('favorites.html')) {
         favoritesButtons.forEach(favoritesButton => {
             favoritesButton.classList.add("current");
-        })
+        });
     }
     else {
         homeButtons.forEach(homeButton => {
             homeButton.classList.add("current");
-    })
+    });
     }
 }
 markCurrentPage();
@@ -19,7 +17,6 @@ markCurrentPage();
 
 
 
-// Hide and show the mobile shirm (modal window):
 
 (() => {
     const linkers = {
