@@ -3,7 +3,7 @@ import axios from "axios";
 
 const form = document.getElementById("exercises-search-form");
 const searchInput = form.querySelector(".exercises-search-input");
-const exercisesList = document.querySelector(".exercises-list-page2");
+const exercisesList = document.querySelector(".exercises-list");
 const clearButton = document.querySelector('.exercises-inputclear-icon');
 
 
@@ -32,18 +32,18 @@ function handleInputChange() {
   }
 }
 // / Функція для очищення input 
-  function clearInput() {
+function clearInput() {
   const searchInput = document.getElementById('exercises-search-input');
   if (searchInput) {
     searchInput.value = '';
   }
-  };
+};
 
-  clearButton.addEventListener('click', clearInput);
+clearButton.addEventListener('click', clearInput);
 
 async function getExercises(query) {
   try {
-    const response = await axios.get(`https://energyflow.b.goit.study/api/exercises?bodypart=back&muscles=lats&equipment=barbell&keyword=${query}&page=1&limit=10`);
+    const response = await axios.get(`https://energyflow.b.goit.study/api/exercises?bodypart=&muscles=abs&equipment=&keyword=${query}&page=1&limit=10`);
     return response.data;
   } catch (error) {
     console.error('Error fetching exercises:', error);
@@ -107,5 +107,5 @@ async function renderExercises(query) {
     console.error(error);
   }
 
-  
+
 }
