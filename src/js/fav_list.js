@@ -1,5 +1,4 @@
 
-
 const favoritList = document.querySelector(".favorite-list");
 favoritList.addEventListener("click", onClick);
 const btnPages = document.querySelector(".list-pages");
@@ -60,7 +59,7 @@ function createMarkup(arr) {
             <ul class="card-elements-botton">
                 <li class="elements-botton-item"><h3 class="elements-botton-style">Burned calories:</h3>
                 <p class="botton-style-fromAPI">${burnedCalories}</p>
-                <span class="botton-style-fromAPI">/</span>
+                <span class="botton-style-fromAPI">&nbsp/&nbsp</span>
                 <p class="botton-style-fromAPI">${time} min</p></li>
                 <li class="elements-botton-item"><h3 class="elements-botton-style">Body part:</h3>
                 <p class="botton-style-fromAPI">${bodyPart}</p></li>
