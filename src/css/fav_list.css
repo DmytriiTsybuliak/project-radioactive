@@ -53,18 +53,15 @@
             min-height: 450px;
         }
         @media screen and (min-width: 768px) and (max-width: 1439.98px) {
-            padding-left: 48px;
-            padding-right: 48px;
             max-width: 736px;
-            min-height: 928px;
-            
+            height: 928px;
+            padding: 64px 48px 64px 48px;
     
         }
         @media screen and (min-width: 1440px) {
             max-width: 1408px;
-            min-height: 687px;
-            padding-left: 48px;
-            padding-right: 48px;
+            height: 687px;
+            padding: 64px 48px 64px 48px;
         }
 }
 
