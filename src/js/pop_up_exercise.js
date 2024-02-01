@@ -2,12 +2,14 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import { capitalize } from './capitalize_word';
 
+
 export function assignModal(actionName) {
   const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
   addToFavoritesBtn.dataset.action = actionName;
   if (actionName == "Delete") {
     addToFavoritesBtn.textContent = "Remove from favorites";
   }
+
   // Находим контейнер с классом "exercises-list"
   let container = document.querySelector('.exercises-list');
   // Навешиваем обработчик клика на родительский элемент, делегируем событие детям
@@ -59,6 +61,8 @@ export function assignModal(actionName) {
                 data._id;
 
               // Открываем модальное окно
+
+
               var modal = document.getElementById('pop-up-exercise');
               modal.style.display = 'flex';
               pushData = data;
@@ -68,6 +72,7 @@ export function assignModal(actionName) {
             title: 'Error',
             message: 'Something went wrong, try again',
           });
+
         }
       }
       // Отправляем запрос на сервер с учетом полученного exerciseId
