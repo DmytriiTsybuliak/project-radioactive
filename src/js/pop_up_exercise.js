@@ -86,40 +86,37 @@ export function assignModal(actionName) {
 
       function onClick() {
         // Получаем ID упражнения из атрибута id кнопки
-        const exerciseId = document.querySelector('.add-to-favorites-btn')
-          .dataset.id;
+        const exerciseId = document.querySelector('.add-to-favorites-btn').dataset.id;
 
         if (exerciseId) {
+          let itemName;
           // Получаем текущий список избранных упражнений из локального хранилища или создаем новый, если его нет
           let favorites = JSON.parse(localStorage.getItem('favorite')) || [];
-          console.log(favorites);
+          // console.log(favorites);
           // Проверяем, не добавлено ли упражнение уже в избранное
           if (!favorites.some(item => item._id === exerciseId)) {
             // Добавляем упражнение в список избранных
-            // console.log('Push DATA:');
-            // console.log(pushData);
-
             favorites.push(pushData);
             // Сохраняем обновленный список избранных упражнений в локальное хранилище
             localStorage.setItem('favorite', JSON.stringify(favorites));
             // Выводим сообщение об успешном добавлении в избранное
             iziToast.success({
               title: 'Success',
-              message: `Упражнение с ID ${exerciseId} добавлено в избранное.`,
+              message: `The exercise ${capitalize(pushData.name)} succesfuly added to favorites`,
             });
           } else {
             // Если упражнение уже добавлено в избранное, выводим сообщение
 
-            iziToast.error({
-              title: 'Error',
-              message: `Упражнение с ID ${exerciseId} уже находится в избранном.`,
+            iziToast.warning({
+              title: 'Denied',
+              message: `The exercise ${capitalize(pushData.name)} already exists in favorites`,
             });
           }
 
         } else {
           iziToast.error({
             title: 'Error',
-            message: `Упражнение с ID ${exerciseId} не найдено.`,
+            message: `The exercise cannot be added for some reason`,
           });
         }
         addToFavoritesBtn.removeEventListener('click', onClick);
@@ -136,15 +133,15 @@ export function assignModal(actionName) {
     modal.style.display = 'none';
   });
   // Получение рейтинга с сервера
-  const rating = 3;
+  // const rating = 3;
 
   // Находим все элементы звезд
-  const stars = document.querySelectorAll('.star');
+  // const stars = document.querySelectorAll('.star');
 
-  // Отображаем звезды в соответствии с рейтингом
-  for (let i = 0; i < rating; i++) {
-    stars[i].style.fill = 'yellow'; // Желтая звезда для оценки, меньшей, чем рейтинг
-  }
+  // // Отображаем звезды в соответствии с рейтингом
+  // for (let i = 0; i < rating; i++) {
+  //   stars[i].style.fill = 'yellow'; // Желтая звезда для оценки, меньшей, чем рейтинг
+  // }
 }
 
-export function deleteListener(params) {}
+export function deleteListener(params) { }
