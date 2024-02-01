@@ -1,24 +1,25 @@
 /* @media screen and (min-width: 375px) and (max-width: 767.98px) { */
-.tui-pagination{
+.tui-pagination {
   width: 100%;
 }
 
-.input-hidden{
+.input-hidden {
   visibility: hidden;
 }
 
-.exercises__desc{
+.exercises__desc {
   display: flex;
   align-items: baseline;
 }
-.tui-pagination .tui-is-selected, .tui-pagination strong {
-  background-color:  #7E847F !important;
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  background-color: #7e847f !important;
   border-color: transparent !important;
 }
 
-.tui-page-btn:hover{
+.tui-page-btn:hover {
   color: #f6f6f6 !important;
-  background-color:  #5f6560 !important;
+  background-color: #5f6560 !important;
   border-color: transparent !important;
 }
 
@@ -34,7 +35,7 @@
   justify-content: center;
 }
 
-#exercises-search-form{
+#exercises-search-form {
   margin-top: 20px;
   margin-left: auto;
   position: relative;
@@ -56,12 +57,12 @@
   letter-spacing: -0.02em;
   margin-right: 8px;
 }
-.exircises-category{
-color: #1B1B1B80;
-font-size: 20px;
-font-weight: 400;
-line-height: 1;
-letter-spacing: -0.02em;
+.exircises-category {
+  color: #1b1b1b80;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 .exercises-subtitle {
   color: rgba(27, 27, 27, 0.5);
@@ -297,6 +298,9 @@ letter-spacing: -0.02em;
   font-weight: 400;
   line-height: 1;
   padding: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .exercises-info-data {
@@ -343,45 +347,44 @@ letter-spacing: -0.02em;
   color: #1b1b1b;
 }
 
+@media screen and (min-width: 768px) {
+  #exercises-search-form {
+    margin-top: 0px;
+    margin-left: auto;
+  }
+  .exercises-title {
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .exircises-category {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+  }
 
-@media screen and (min-width: 768px){
-  #exercises-search-form{
-  margin-top: 0px;
-  margin-left: auto;
-}
-.exercises-title {
-  font-size: 44px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-.exircises-category{
-font-size: 24px;
-line-height: 1.33;
-letter-spacing: -0.02em;
-}
-
-.exercises-search-icon {
-  top: 14px;
-  left: 214px;
-}
-.exercises-container {
+  .exercises-search-icon {
+    top: 14px;
+    left: 214px;
+  }
+  .exercises-container {
     width: 736px;
     padding: 64px 48px;
     gap: 32px;
     justify-content: center;
   }
-.exercises-top-container {
+  .exercises-top-container {
     padding-bottom: 0;
   }
-.exercises-filter-container {
+  .exercises-filter-container {
     display: flex;
     flex-direction: row;
     gap: 35px;
   }
-.exercises-top-buttons {
+  .exercises-top-buttons {
     gap: 8px;
   }
-.exercises-filter-button {
+  .exercises-filter-button {
     height: 44px;
     font-size: 16px;
     font-style: normal;
@@ -390,7 +393,7 @@ letter-spacing: -0.02em;
     padding: 10px 20px;
   }
 
-.exercises-search-input {
+  .exercises-search-input {
     width: 246px;
     height: 48px;
     font-size: 16px;
@@ -399,14 +402,14 @@ letter-spacing: -0.02em;
     line-height: 1.5;
   }
 
-.exercises-list {
+  .exercises-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 14px;
     justify-content: left;
   }
 
-.exercises-list-page2 {
+  .exercises-list-page2 {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 20px;
@@ -414,7 +417,7 @@ letter-spacing: -0.02em;
     justify-content: left;
   }
 
- .exercises-item {
+  .exercises-item {
     width: 313px;
     height: 250px;
   }
@@ -425,19 +428,19 @@ letter-spacing: -0.02em;
 }
 @media screen and (min-width: 1440px) {
   .exercises-title {
-  font-size: 44px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-  .exircises-category{
-font-size: 24px;
-line-height: 1.33;
-letter-spacing: -0.02em;
-}
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .exircises-category {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+  }
   .exercises-search-icon {
-  top: 14px;
-  left: 240px;
-}
+    top: 14px;
+    left: 240px;
+  }
   .exercises-container {
     width: 1408px;
   }
@@ -486,10 +489,7 @@ letter-spacing: -0.02em;
   letter-spacing: -0.18px;
 }
 
-
-.active-btn{
+.active-btn {
   color: #f6f6f6;
-  background-color: #7E847F;
+  background-color: #7e847f;
 }
-
-
