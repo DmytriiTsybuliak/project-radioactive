@@ -197,19 +197,23 @@ async function getExercises({ filter, name, page, keyword = '' }) {
                   <span class="exercises-data-name">Burned calories: </span>${burnedCalories}
                 </li>
                 <li class="exercises-info-data">
-                  <span class="exercises-data-name">Body part: </span>${capitalize(bodyPart)}
+                  <span class="exercises-data-name">Body part: </span>${capitalize(
+                    bodyPart
+                  )}
                 </li>
                 <li class="exercises-info-data">
-                  <span class="exercises-data-name">Target: </span>${capitalize(target)}
+                  <span class="exercises-data-name">Target: </span>${capitalize(
+                    target
+                  )}
                 </li>
               </ul>
             </div>
           </li> `;
         })
-        .join("");
-      exercisesList.innerHTML = "";
-      exercisesList.insertAdjacentHTML("beforeend", markup);
-      assignModal("Add");
+        .join('');
+      exercisesList.innerHTML = '';
+      exercisesList.insertAdjacentHTML('beforeend', markup);
+      assignModal('Add');
     })
     .catch(error => {
       iziToast.error({
