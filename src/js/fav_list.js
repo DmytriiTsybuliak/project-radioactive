@@ -44,12 +44,12 @@ function createMarkup(arr) {
         const markup = arr.map(({ _id, bodyPart, name, target, burnedCalories, time }) => `<li data-id="${_id}" class="favopite-item">
             <div class="card-elements-top">
             <svg class="workaut-img" width="76" height="26">
-                <use href="../img/fav_list/symbol-defs.svg#icon-Badge"></use></svg>
+                <use href="${icons}#icon-Badge"></use></svg>
                 <button class="btn-delete-favorite"><svg  width="14" height="14">
-                <use class="delete-favorite" href="../img/fav_list/symbol-defs.svg#icon-delete"></use></svg></button>
+                <use class="delete-favorite" href="${icons}#icon-delete"></use></svg></button>
                 <button class ="start-button">Start
                 <svg class="svg-start" width="14" height="14">
-                <use href="../img/fav_list/symbol-defs.svg#icon-start"></use></svg>
+                <use href="${icons}#icon-start"></use></svg>
                 </button>
             </div>
             <div class="card-elements">

@@ -1,4 +1,5 @@
 import 'tui-pagination/dist/tui-pagination.css';
+import iconsExercises from '../img/exercises/exercises-sprite.svg'
 import axios from 'axios';
 import { assignModal } from './pop_up_exercise';
 import { makePagination } from './makePagination';
@@ -145,7 +146,7 @@ async function getExercises({ filter, name, page, keyword = "" }) {
                       aria-label="star icon"
                     >
                       <use
-                        href="../img/exercises/exercises-sprite.svg#icon-star"
+                        href="${iconsExercises}#icon-star"
                       ></use>
                     </svg>
                   </div>
@@ -154,7 +155,7 @@ async function getExercises({ filter, name, page, keyword = "" }) {
                   Start
                   <svg class="exercises-start-icon" width="14" height="14">
                     <use
-                      href="../img/exercises/exercises-sprite.svg#icon-arrow"
+                      href="${iconsExercises}#icon-arrow"
                     ></use>
                   </svg>
                 </button>
@@ -167,7 +168,7 @@ async function getExercises({ filter, name, page, keyword = "" }) {
                   aria-label="star icon"
                 >
                   <use
-                    href="../img/exercises/exercises-sprite.svg#icon-icon"
+                    href="${iconsExercises}#icon-icon"
                   ></use>
                 </svg>
                 <p class="exercises-card-exname">${capitalize(name)}</p>
