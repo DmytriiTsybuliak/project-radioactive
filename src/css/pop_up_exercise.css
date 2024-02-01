@@ -87,6 +87,7 @@
     width: 716px;
 }
 
+
 .info-item {
     width: 85px;
 }
@@ -133,7 +134,11 @@
 
 #modalImage {
     margin-left: 20px;
-}    
+} 
+
+.name-modal {
+    max-width: 342px;
+}
 
 .modal-properties-exercise {
     max-width: 342px;
@@ -208,6 +213,12 @@
 .exercise-item {
     display: flex;
     flex-direction: row;
+    gap: 16px;
+}
+
+.exercise-info-modul {
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
