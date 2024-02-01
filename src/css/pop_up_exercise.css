@@ -10,6 +10,7 @@
     width: 295px;
     height: 258px;
     display: block;
+    margin-left: -5px;
 }
 
 .modal-properties-exercise {
@@ -34,19 +35,24 @@
     max-width: 295px;
 }
 .pop-up-exercise-content {
-    background-color: #F6F6F6;
+   
     border-radius: 20px;
     max-width: 295px;
     
 }
 .pop-up-exercise-content {
     position: relative;
-    width: 335px;
-    background-color: #fff;
+    border-radius: 20px;
+    max-width: 295px;
+    background-color: #F6F6F6;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.info-item {
+    width: 85px;
 }
 
 .exercise-details {
@@ -81,6 +87,10 @@
     width: 716px;
 }
 
+.info-item {
+    width: 85px;
+}
+
 .svg-vector2 {
     width: 342px;
 }
@@ -94,6 +104,7 @@
 #modalImage {
     width: 260px;
     height: 259px;
+    margin-left: 20px;
 }
 
 .pop-up-exercise-content {
@@ -120,6 +131,10 @@
         height: 100%;
     }
 
+#modalImage {
+    margin-left: 20px;
+}    
+
 .modal-properties-exercise {
     max-width: 342px;
 }
@@ -129,6 +144,10 @@
     gap: 16px;
     justify-content: flex-start;
 
+}
+
+.info-item {
+    width: 65px;
 }
 
 .svg-vector2 {
@@ -181,7 +200,6 @@
 
 #modalImage {
     margin: 40px auto;
-    margin-left: 20px;
     margin-right: 20px;
     max-width: 270px;
     max-height: 259px;
@@ -195,13 +213,12 @@
 
 .info-item {
     color: rgba(27, 27, 27, 0.40);
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-family: "DM Sans";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 18px;
-        /* 150% */
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
 }
 
 .info-item-data {
