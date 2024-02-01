@@ -107,7 +107,7 @@ for (const card of actionButtons) {
     }
     event.target.classList.add('active-btn');
     activeFilter = name;
-    console.log('Clicked the button: ', name);
+    // console.log('Clicked the button: ', name);
     exercisesList.innerHTML = '';
     //Getting exercises cards
     exircisesCategory.dataset.name = '';
@@ -121,7 +121,7 @@ for (const card of actionButtons) {
       exercisesList.innerHTML = '';
       getMusclePage(activeFilter, page);
     });
-    console.log(name, activePage);
+    // console.log(name, activePage);
     // card.classList.remove("active-btn");
   });
 }
@@ -141,12 +141,12 @@ async function getExercises({ filter, name, page, keyword = '' }) {
     .then(response => {
       let musclesResult = response.data.results;
       totalPagesforCards = response.data.totalPages;
-      console.log(
-        'totalPagesforCards',
-        totalPagesforCards,
-        'musclesResult:',
-        response.data
-      );
+      // console.log(
+      //   'totalPagesforCards',
+      //   totalPagesforCards,
+      //   'musclesResult:',
+      //   response.data
+      // );
       // console.log(totalPages, response.data);
       exircisesCategory.dataset.name = name;
       exircisesCategory.dataset.filter = filter;
@@ -201,13 +201,13 @@ async function getExercises({ filter, name, page, keyword = '' }) {
                 </li>
                 <li class="exercises-info-data">
                   <span class="exercises-data-name">Body part: </span>${capitalize(
-                    bodyPart
-                  )}
+            bodyPart
+          )}
                 </li>
                 <li class="exercises-info-data">
                   <span class="exercises-data-name">Target: </span>${capitalize(
-                    target
-                  )}
+            target
+          )}
                 </li>
               </ul>
             </div>
@@ -219,9 +219,11 @@ async function getExercises({ filter, name, page, keyword = '' }) {
       assignModal('Add');
     })
     .catch(error => {
+      console.log(error);
+
       iziToast.error({
         title: 'Error',
-        message: error.response.data.message,
+        message: "Something went wrong",
       });
     });
 }
@@ -232,7 +234,7 @@ form.addEventListener('submit', async event => {
   let filter = exircisesCategory.dataset.filter;
   let name = exircisesCategory.dataset.name;
   let keyword = searchInput.value.trim().toLowerCase();
-  console.log('Text Content', searchInput.value.trim().toLowerCase());
+  // console.log('Text Content', searchInput.value.trim().toLowerCase());
   await getExercises({ filter, name, page, keyword });
   makePagination(9, totalPagesforCards).on('afterMove', async ({ page }) => {
     exercisesList.innerHTML = '';
