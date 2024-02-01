@@ -185,6 +185,9 @@ width: 325px;
     line-height: 1;
   }
 
+  .form--button{
+    color: #f6f6f6;
+  }
 .footer--social.list {
   margin-top: 30px;
 }
