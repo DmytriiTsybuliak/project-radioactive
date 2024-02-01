@@ -208,11 +208,10 @@ async function getExercises({ filter, name, page, keyword = '' }) {
               </ul>
             </div>
           </li> `;
-        })
-        .join('');
-      exercisesList.innerHTML = '';
-      exercisesList.insertAdjacentHTML('beforeend', markup);
-      assignModal();
+        .join("");
+      exercisesList.innerHTML = "";
+      exercisesList.insertAdjacentHTML("beforeend", markup);
+      assignModal("Add");
     })
     .catch(error => {
       iziToast.error({
