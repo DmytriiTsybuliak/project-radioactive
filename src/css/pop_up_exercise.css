@@ -16,11 +16,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     max-width: 295px;
     overflow-y: auto;
 
 }
+
+.svg-vector2 {
+    width: 255px;
+}
+
 .exercise-info {
     display: flex;
     gap: 16px;
@@ -77,19 +81,19 @@
     width: 716px;
 }
 
-#modalImage {
-    width: 270px;
-    height: 259px;
-    margin: 40px auto;
-    display: block;
-        margin-left: 40px;
-            margin-right: 24px;
+.svg-vector2 {
+    width: 342px;
 }
 
+.modal-properties-exercise {
+    max-width: 295px;
+}
+
+
+
 #modalImage {
-    width: 270px;
+    width: 260px;
     height: 259px;
-    display: block;
 }
 
 .pop-up-exercise-content {
@@ -116,6 +120,10 @@
         height: 100%;
     }
 
+.modal-properties-exercise {
+    max-width: 342px;
+}
+
 .exercise-info {
     display: flex;
     gap: 16px;
@@ -124,6 +132,10 @@
 }
 .exercise-details {
     padding-left: 20px;
+}
+
+.svg-vector2 {
+    width: 342px;
 }
 
 .pop-up-exercise-content {
@@ -169,9 +181,17 @@
     flex-direction: column;
 }
 
-.pop-up-exercise img {
-    max-width: 270px;
-    max-height: 259px;
+
+#modalImage {
+    margin: 40px auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.exercise-item {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
 .info-item {
@@ -224,9 +244,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-width: 342px;
+    margin-bottom: -10px;
     
+}
+
+.info-item-calories {
+    margin-top: 16px;
 }
 
 .svg-vector1 {
