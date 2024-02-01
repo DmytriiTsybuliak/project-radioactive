@@ -287,6 +287,9 @@ letter-spacing: -0.02em;
 }
 
 .exercises-card-exname {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #1b1b1b;
   font-size: 20px;
   font-style: normal;
