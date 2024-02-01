@@ -63,7 +63,8 @@ function assignClicktoCards() {
   let page = activePage;
   const cards = document.querySelectorAll(".exercises-list-item");
   for (const card of cards) {
-    card.addEventListener("click", async function (event) {
+    card.addEventListener("click", getExerices);
+    async function getExerices(event) {
       const name = event.currentTarget.dataset.name
       const filter = event.currentTarget.dataset.filter
       // setDisplayCards(false)
@@ -74,7 +75,9 @@ function assignClicktoCards() {
         exercisesList.innerHTML = "";
         await getExercises({ filter, name, page });
       });
-    });
+      card.removeEventListener("click", getExerices);
+    };
+
   }
 }
 
