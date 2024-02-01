@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import iziToast from 'izitoast';
 
 const quoteBlock = document.querySelector('.quote-container');
 const date = new Date().toLocaleDateString();
@@ -14,7 +14,10 @@ async function getQuote() {
       .then(response => response.data);
     return response;
   } catch (error) {
-    Notify.failure(`Something went wrong, try again`);
+    iziToast.error({
+      title: 'Error',
+      message: 'Something went wrong, try again',
+    });
   }
 }
 
@@ -42,7 +45,12 @@ function getAndRenderQuote() {
 
         quoteBlock.innerHTML = createMarkup(author, quote);
       })
-      .catch(error => Notify.failure(error.message));
+      .catch(error =>
+        iziToast.error({
+          title: 'Error',
+          message: error.message,
+        })
+      );
   }
 }
 

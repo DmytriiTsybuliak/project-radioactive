@@ -1,5 +1,6 @@
 /* base styles */
 
+@import 'node_modules/izitoast/dist/css/iziToast.min.css';
 @import 'node_modules/modern-normalize/modern-normalize.css';
 @font-face {
 	font-family: 'DM Sans'; 
