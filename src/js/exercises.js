@@ -1,5 +1,5 @@
 import 'tui-pagination/dist/tui-pagination.css';
-import iconsExercises from '../img/exercises/exercises-sprite.svg'
+import iconsExercises from '../img/exercises/exercises-sprite.svg';
 import axios from 'axios';
 import { assignModal } from './pop_up_exercise';
 import { makePagination } from './makePagination';
