@@ -212,7 +212,11 @@ async function getExercises({ filter, name, page, keyword = '' }) {
         .join('');
       exercisesList.innerHTML = '';
       exercisesList.insertAdjacentHTML('beforeend', markup);
+<<<<<<< Updated upstream
       assignModal();
+=======
+      assignModal('Add');
+>>>>>>> Stashed changes
     })
     .catch(error => {
       iziToast.error({
