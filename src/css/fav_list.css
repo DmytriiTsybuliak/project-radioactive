@@ -1,19 +1,19 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
-.favorite-list::-webkit-scrollbar{
+.exercises-list::-webkit-scrollbar{
     width: 8px;
     margin-right: 24px;
 }
-.favorite-list::-webkit-scrollbar-track {
+.exercises-list::-webkit-scrollbar-track {
     background-color: rgba(27, 27, 27, 0.1);
 }
-.favorite-list::-webkit-scrollbar-thumb{
+.exercises-list::-webkit-scrollbar-thumb{
     background: rgba(126, 132, 127, 1);
     height: 132px;
     border-radius: 8px;
 }
 
-.favorite-list {
+.exercises-list {
     display: flex;
     flex-direction: column;
     margin-inline-start: 0px;
@@ -66,7 +66,9 @@
 }
 
 li.favopite-item {
-    display: list-item;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width:100%;
     height: 165px;
     padding: 16px;
@@ -123,18 +125,18 @@ li.favopite-item {
 .card-elements {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .card-elements-botton {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-between;
     flex-direction: row;
-    width: 263px;
+    width: 100%;
     height: 42px;
     @media screen and (min-width: 1440px) {
-        width: 354px;
+        width: 100%;
         height: 18px;
         }
 }
@@ -145,9 +147,10 @@ li.favopite-item {
     font-size: 32px;
 }
 
-.start-button {
+.exercises-start-button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px;
     border: 0px;
     border-color: transparent;
@@ -162,7 +165,7 @@ li.favopite-item {
     margin-right: 8px;
 }
 
-.svg-start {
+.exercises-start-icon {
     stroke: rgba(27, 27, 27, 1);
     width: 14px;
     height: 14px;
@@ -188,8 +191,6 @@ li.favopite-item {
 .elements-botton-item {
     display: flex;
     flex-direction: row;
-    margin-right: 16px;
-    margin-bottom: 8px;
 }
 
 .dumbbell-img {
@@ -238,9 +239,8 @@ li.favopite-item {
 
 .name-from-api {
     text-overflow: ellipsis;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     overflow: hidden;
-    width: 223px;
     font-size: 20px;
 }
 
