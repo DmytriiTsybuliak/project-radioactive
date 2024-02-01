@@ -1,4 +1,4 @@
-
+import icons from '../img/fav_list/symbol-defs.svg'
 const favoritList = document.querySelector(".favorite-list");
 favoritList.addEventListener("click", onClick);
 const btnPages = document.querySelector(".list-pages");
@@ -53,7 +53,7 @@ function createMarkup(arr) {
                 </button>
             </div>
             <div class="card-elements">
-            <svg class="svg-name" width="24" height="24"><use href="../img/fav_list/symbol-defs.svg#icon-runMan"></use></svg>
+            <svg class="svg-name" width="24" height="24"><use href="${icons}#icon-runMan"></use></svg>
             <H2 class="name-from-api">${name}</H2>
             </div>
             <ul class="card-elements-botton">
