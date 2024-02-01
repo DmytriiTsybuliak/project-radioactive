@@ -10,6 +10,7 @@ let activePage = 1;
 const categoriesPerPage = 12;
 const exericesPerPage = 9;
 let totalPages;
+
 let totalPagesforCards;
 const form = document.getElementById("exercises-search-form");
 const exircisesCategory = document.querySelector(".exircises-category");
