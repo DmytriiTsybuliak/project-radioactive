@@ -1,0 +1,31 @@
+
+
+.tui-next, .tui-last, .tui-prev, .tui-first{
+    display: none;
+    visibility: hidden;
+}
+
+.tui-page-btn {
+  background-color: transparent;
+  /* border-color: transparent; */
+  color: #1B1B1B66 !important;
+  border-radius: 50% !important;
+  border: solid;
+  border-color: black;
+  width: 30px !important;
+}
+
+.tui-is-selected{
+    color: black;
+    background-color: transparent;
+    border-color: #1B1B1B;
+}
+
+.tui-pagination .tui-is-selected, .tui-pagination strong{
+    color: black !important;
+    border: 2px solid !important;
+    border-color: #1B1B1B !important;
+    background-color: transparent !important;
+    border-radius: 50% !important;
+}
+
