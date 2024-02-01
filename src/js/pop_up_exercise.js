@@ -1,7 +1,12 @@
 import axios from 'axios';
 import { capitalize } from './capitalize_word';
 
-export function assignModal() {
+export function assignModal(actionName) {
+  const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
+  addToFavoritesBtn.dataset.action = actionName;
+  if (actionName == "Delete") {
+    addToFavoritesBtn.textContent = "Remove from favorites";
+  }
   // Находим контейнер с классом "exercises-list"
   let container = document.querySelector(".exercises-list");
   // Навешиваем обработчик клика на родительский элемент, делегируем событие детям
@@ -51,6 +56,8 @@ export function assignModal() {
       await getInfoByID();
       // Находим кнопку "Add to favorites" в модальном окне
       const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
+
+
       // Назначаем обработчик клика на кнопку "Add to favorites"
       addToFavoritesBtn.addEventListener("click", onClick);
 
@@ -63,21 +70,27 @@ export function assignModal() {
           let favorites = JSON.parse(localStorage.getItem("favorite")) || [];
           console.log(favorites);
 
-          // Проверяем, не добавлено ли упражнение уже в избранное
-          if (!favorites.some(item => item._id === exerciseId)) {
-            // Добавляем упражнение в список избранных
-            // console.log('Push DATA:');
-            // console.log(pushData);
+          if (addToFavoritesBtn.dataset.action == "Delete") {
+            console.log('Delete in progress');
 
-            favorites.push(pushData);
-            // Сохраняем обновленный список избранных упражнений в локальное хранилище
-            localStorage.setItem("favorite", JSON.stringify(favorites));
-            // Выводим сообщение об успешном добавлении в избранное
-            console.log(`Упражнение с ID ${exerciseId} добавлено в избранное.`);
           } else {
-            // Если упражнение уже добавлено в избранное, выводим сообщение
-            console.log(`Упражнение с ID ${exerciseId} уже находится в избранном.`);
+            // Проверяем, не добавлено ли упражнение уже в избранное
+            if (!favorites.some(item => item._id === exerciseId)) {
+              // Добавляем упражнение в список избранных
+              // console.log('Push DATA:');
+              // console.log(pushData);
+
+              favorites.push(pushData);
+              // Сохраняем обновленный список избранных упражнений в локальное хранилище
+              localStorage.setItem("favorite", JSON.stringify(favorites));
+              // Выводим сообщение об успешном добавлении в избранное
+              console.log(`Упражнение с ID ${exerciseId} добавлено в избранное.`);
+            } else {
+              // Если упражнение уже добавлено в избранное, выводим сообщение
+              console.log(`Упражнение с ID ${exerciseId} уже находится в избранном.`);
+            }
           }
+
         } else {
           console.log(`Упражнение с ID ${exerciseId} не найдено.`);
         }

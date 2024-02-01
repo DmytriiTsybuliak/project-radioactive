@@ -1,5 +1,7 @@
 import icons from '../img/fav_list/symbol-defs.svg'
-const favoritList = document.querySelector(".favorite-list");
+import { capitalize } from './capitalize_word';
+import { assignModal } from './pop_up_exercise';
+const favoritList = document.querySelector(".exercises-list");
 favoritList.addEventListener("click", onClick);
 const btnPages = document.querySelector(".list-pages");
 btnPages.addEventListener("click", controlPages)
@@ -47,14 +49,14 @@ function createMarkup(arr) {
                 <use href="${icons}#icon-Badge"></use></svg>
                 <button class="btn-delete-favorite"><svg  width="14" height="14">
                 <use class="delete-favorite" href="${icons}#icon-delete"></use></svg></button>
-                <button class ="start-button">Start
-                <svg class="svg-start" width="14" height="14">
+                <button class ="exercises-start-button" id=${_id}>Start
+                <svg class="exercises-start-icon" width="14" height="14">
                 <use href="${icons}#icon-start"></use></svg>
                 </button>
             </div>
             <div class="card-elements">
             <svg class="svg-name" width="24" height="24"><use href="${icons}#icon-runMan"></use></svg>
-            <H2 class="name-from-api">${name}</H2>
+            <H2 class="name-from-api">${capitalize(name)}</H2>
             </div>
             <ul class="card-elements-botton">
                 <li class="elements-botton-item"><h3 class="elements-botton-style">Burned calories:</h3>
@@ -62,13 +64,14 @@ function createMarkup(arr) {
                 <span class="botton-style-fromAPI">&nbsp/&nbsp</span>
                 <p class="botton-style-fromAPI">${time} min</p></li>
                 <li class="elements-botton-item"><h3 class="elements-botton-style">Body part:</h3>
-                <p class="botton-style-fromAPI">${bodyPart}</p></li>
+                <p class="botton-style-fromAPI">${capitalize(bodyPart)}</p></li>
                 <li class="elements-botton-item"><h3 class="elements-botton-style">Target:</h3>
-                <p class="botton-style-fromAPI">${target}</p></li>
+                <p class="botton-style-fromAPI">${capitalize(target)}</p></li>
             </ul>    
         </li>
         `).join("");
         favoritList.innerHTML = markup;
+        assignModal("Delete");
     }
 };
 

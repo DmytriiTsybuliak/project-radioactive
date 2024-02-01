@@ -190,7 +190,7 @@ async function getExercises({ filter, name, page, keyword = "" }) {
         .join("");
       exercisesList.innerHTML = "";
       exercisesList.insertAdjacentHTML("beforeend", markup);
-      assignModal();
+      assignModal("Add");
 
     })
     .catch(error => { console.log(error.response.data.message) });
