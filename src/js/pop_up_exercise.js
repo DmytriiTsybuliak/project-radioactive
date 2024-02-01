@@ -85,7 +85,7 @@ export function assignModal() {
       };
 
     }
-    container.removeEventListener("click", onClickCategory);
+    // container.removeEventListener("click", onClickCategory);
   };
 
   // Навешиваем обработчик события на кнопку закрытия модального окна
