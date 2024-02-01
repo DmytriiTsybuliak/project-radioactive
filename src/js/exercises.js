@@ -6,7 +6,8 @@ import { capitalize } from './capitalize_word';
 const exercisesList = document.querySelector('.exercises-list');
 let activeFilter = 'Muscles';
 let activePage = 1;
-const itemsPerPage = 12;
+const categoriesPerPage = 12;
+const exericesPerPage = 9;
 let totalPages;
 let totalPagesforCards;
 const form = document.getElementById("exercises-search-form");
@@ -19,7 +20,7 @@ async function getMusclePage(filter, page) {
   let searchParams = new URLSearchParams({
     filter: filter,
     page: page,
-    limit: itemsPerPage,
+    limit: categoriesPerPage,
   });
   try {
     await axios.get(`https://energyflow.b.goit.study/api/filters?${searchParams}`)
@@ -69,7 +70,7 @@ function assignClicktoCards() {
       form.classList.remove("input-hidden");
       await getExercises({ filter, name, page });
 
-      makePagination(10, totalPagesforCards).on('afterMove', async ({ page }) => {
+      makePagination(9, totalPagesforCards).on('afterMove', async ({ page }) => {
         exercisesList.innerHTML = "";
         await getExercises({ filter, name, page });
       });
@@ -116,7 +117,7 @@ async function getExercises({ filter, name, page, keyword = "" }) {
   };
   const filterParam = filterParamMap[filter];
 
-  await axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&keyword=${keyword}&page=${page}&limit${itemsPerPage}`)
+  await axios.get(`https://energyflow.b.goit.study/api/exercises?${filterParam}=${name.toLowerCase()}&keyword=${keyword}&page=${page}&limit=${exericesPerPage}`)
     .then(response => {
       let musclesResult = response.data.results;
       totalPagesforCards = response.data.totalPages;
@@ -199,7 +200,7 @@ form.addEventListener('submit', async (event) => {
   let keyword = searchInput.value.trim().toLowerCase();
   console.log('Text Content', searchInput.value.trim().toLowerCase());
   await getExercises({ filter, name, page, keyword });
-  makePagination(10, totalPagesforCards).on('afterMove', async ({ page }) => {
+  makePagination(9, totalPagesforCards).on('afterMove', async ({ page }) => {
     exercisesList.innerHTML = "";
     await getExercises({ filter, name, page, keyword });
   });

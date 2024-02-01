@@ -202,7 +202,7 @@ letter-spacing: -0.02em;
   height: 165px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 16px;
   object-fit: cover;
   border-radius: 12px;
@@ -214,7 +214,7 @@ letter-spacing: -0.02em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 25px;
+  align-items: center;
 }
 
 .exercises-kind-wrapper {
@@ -265,6 +265,7 @@ letter-spacing: -0.02em;
 .exercises-start-button {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 8px;
   border: none;
   width: 54px;

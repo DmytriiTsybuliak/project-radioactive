@@ -25,7 +25,7 @@ export function assignModal() {
               // Заполняем модальное окно данными
               document.getElementById("modalImage").src = data.gifUrl;
               document.getElementById("modalName").textContent = capitalize(data.name);
-              document.getElementById("modalRating").textContent = data.rating;
+              document.getElementById("modalRating").textContent = data.rating.toFixed(1);
               document.getElementById("modalTarget").textContent = capitalize(data.target);
               document.getElementById("bodyPart").textContent = capitalize(data.bodyPart);
               document.getElementById("modalEquipment").textContent = capitalize(data.equipment);
@@ -34,41 +34,41 @@ export function assignModal() {
               document.getElementById("modalDescription").textContent = data.description;
               // Открываем модальное окно
               var modal = document.getElementById("pop-up-exercise");
-                modal.style.display = "flex";
-                
-                // Находим кнопку "Add to favorites" в модальном окне
-const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
+              modal.style.display = "flex";
 
-// Назначаем обработчик клика на кнопку "Add to favorites"
-addToFavoritesBtn.addEventListener("click", function () {
-  // Получаем ID упражнения из атрибута id кнопки
-  const exerciseId = this.getAttribute("id");
+              // Находим кнопку "Add to favorites" в модальном окне
+              const addToFavoritesBtn = document.querySelector('.add-to-favorites-btn');
 
-  // Находим объект упражнения в массиве fromAPI по ID
-  const exercise = fromAPI.find(item => item._id === exerciseId);
+              // Назначаем обработчик клика на кнопку "Add to favorites"
+              addToFavoritesBtn.addEventListener("click", function () {
+                // Получаем ID упражнения из атрибута id кнопки
+                const exerciseId = this.getAttribute("id");
 
-  if (exercise) {
-    // Получаем текущий список избранных упражнений из локального хранилища или создаем новый, если его нет
-    let favorites = JSON.parse(localStorage.getItem(KEY_FAVORITE)) || [];
+                // Находим объект упражнения в массиве fromAPI по ID
+                const exercise = fromAPI.find(item => item._id === exerciseId);
 
-    // Проверяем, не добавлено ли упражнение уже в избранное
-    if (!favorites.some(item => item._id === exerciseId)) {
-      // Добавляем упражнение в список избранных
-      favorites.push(exercise);
+                if (exercise) {
+                  // Получаем текущий список избранных упражнений из локального хранилища или создаем новый, если его нет
+                  let favorites = JSON.parse(localStorage.getItem(KEY_FAVORITE)) || [];
 
-      // Сохраняем обновленный список избранных упражнений в локальное хранилище
-      localStorage.setItem(KEY_FAVORITE, JSON.stringify(favorites));
+                  // Проверяем, не добавлено ли упражнение уже в избранное
+                  if (!favorites.some(item => item._id === exerciseId)) {
+                    // Добавляем упражнение в список избранных
+                    favorites.push(exercise);
 
-      // Выводим сообщение об успешном добавлении в избранное
-      console.log(`Упражнение с ID ${exerciseId} добавлено в избранное.`);
-    } else {
-      // Если упражнение уже добавлено в избранное, выводим сообщение
-      console.log(`Упражнение с ID ${exerciseId} уже находится в избранном.`);
-    }
-  } else {
-    console.log(`Упражнение с ID ${exerciseId} не найдено.`);
-  }
-});
+                    // Сохраняем обновленный список избранных упражнений в локальное хранилище
+                    localStorage.setItem(KEY_FAVORITE, JSON.stringify(favorites));
+
+                    // Выводим сообщение об успешном добавлении в избранное
+                    console.log(`Упражнение с ID ${exerciseId} добавлено в избранное.`);
+                  } else {
+                    // Если упражнение уже добавлено в избранное, выводим сообщение
+                    console.log(`Упражнение с ID ${exerciseId} уже находится в избранном.`);
+                  }
+                } else {
+                  console.log(`Упражнение с ID ${exerciseId} не найдено.`);
+                }
+              });
 
             })
         }
@@ -89,15 +89,15 @@ addToFavoritesBtn.addEventListener("click", function () {
     modal.style.display = "none";
   });
   // Получение рейтинга с сервера 
-const rating = 3;
+  const rating = 3;
 
-// Находим все элементы звезд
-const stars = document.querySelectorAll('.star');
+  // Находим все элементы звезд
+  const stars = document.querySelectorAll('.star');
 
-// Отображаем звезды в соответствии с рейтингом
-for (let i = 0; i < rating; i++) {
+  // Отображаем звезды в соответствии с рейтингом
+  for (let i = 0; i < rating; i++) {
     stars[i].style.fill = 'yellow'; // Желтая звезда для оценки, меньшей, чем рейтинг
-}
+  }
 
 }
 
