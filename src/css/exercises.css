@@ -11,10 +11,6 @@
   display: flex;
   align-items: baseline;
 }
-.tui-pagination .tui-is-selected, .tui-pagination strong {
-  background-color:  #7E847F !important;
-  border-color: transparent !important;
-}
 
 .tui-page-btn:hover{
   color: #f6f6f6 !important;

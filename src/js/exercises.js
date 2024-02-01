@@ -51,7 +51,10 @@ async function getMusclePage(filter, page) {
         assignClicktoCards();
       })
       .catch(error => {
-        console.log(error.response.data.message);
+        iziToast.error({
+          title: 'Error',
+          message: error.response.data.message,
+        });
       });
   } catch (error) {
     iziToast.error({

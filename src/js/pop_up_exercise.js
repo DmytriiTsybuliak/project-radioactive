@@ -110,8 +110,8 @@ export function assignModal(actionName) {
           } else {
             // Если упражнение уже добавлено в избранное, выводим сообщение
 
-            iziToast.success({
-              title: 'Success',
+            iziToast.error({
+              title: 'Error',
               message: `Упражнение с ID ${exerciseId} уже находится в избранном.`,
             });
           }
