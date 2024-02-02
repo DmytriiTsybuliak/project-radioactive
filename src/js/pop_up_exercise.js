@@ -66,6 +66,9 @@ export function assignModal(actionName) {
               var modal = document.getElementById('pop-up-exercise');
               modal.style.display = 'flex';
               pushData = data;
+
+                      // Вызываем функцию для отображения рейтинга
+        displayRating(data.rating);
             });
         } catch (error) {
           iziToast.error({
@@ -132,16 +135,39 @@ export function assignModal(actionName) {
     const modal = document.getElementById('pop-up-exercise');
     modal.style.display = 'none';
   });
-  // Получение рейтинга с сервера
-  // const rating = 3;
 
-  // Находим все элементы звезд
-  // const stars = document.querySelectorAll('.star');
-
-  // // Отображаем звезды в соответствии с рейтингом
-  // for (let i = 0; i < rating; i++) {
-  //   stars[i].style.fill = 'yellow'; // Желтая звезда для оценки, меньшей, чем рейтинг
-  // }
 }
+
+// Функция для отображения рейтинга в виде звездочек
+function displayRating(rating) {
+    const ratingContainer = document.getElementById('rating-container');
+    
+    // Очистить контейнер рейтинга перед отображением нового рейтинга
+    ratingContainer.innerHTML = '';
+
+    // Ограничиваем рейтинг до 5 звездочек
+    const maxRating = 5;
+    const roundedRating = Math.min(Math.round(rating), maxRating);
+
+    // Создаем звездочки на основе рейтинга
+    for (let i = 0; i < maxRating; i++) {
+        const star = document.createElement('span');
+        star.classList.add('star');
+
+        // Если индекс текущей звездочки меньше рейтинга, то звезда будет желтой, иначе серой
+        if (i < roundedRating) {
+            star.innerHTML = '&#9733;'; // Желтая звезда
+        } else {
+            star.innerHTML = '&#9734;'; // Серая звезда
+        }
+
+        ratingContainer.appendChild(star);
+    }
+}
+
+// // Пример использования: вызов функции displayRating() с рейтингом, полученным с бэкэнда
+// const ratingFromBackend = 3.7; // Рейтинг, полученный с бэкэнда
+// displayRating(ratingFromBackend);
+
 
 export function deleteListener(params) { }
