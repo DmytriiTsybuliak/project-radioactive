@@ -75,6 +75,7 @@ export function assignModal(actionName) {
 
         }
       }
+
       // Отправляем запрос на сервер с учетом полученного exerciseId
       await getInfoByID();
       // Находим кнопку "Add to favorites" в модальном окне
